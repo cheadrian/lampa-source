@@ -1,0 +1,10 @@
+{
+  "head": {
+    "title": "Test Landing-Page",
+    "description": "Test description."
+  },
+  "intro": {
+    "title": "Test Page",
+    "subTitle": "Test subtitle"
+  }
+}
