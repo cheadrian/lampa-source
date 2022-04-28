@@ -12,6 +12,8 @@ import Torserver from './torserver'
 import Reguest from '../utils/reguest'
 import Android from '../utils/android'
 import Modal from './modal'
+import Broadcast from './broadcast'
+import Select from './select'
 
 let html = Template.get('player')
     html.append(Video.render())
@@ -22,6 +24,7 @@ let callback
 let work    = false
 let network = new Reguest()
 let launch_player
+let timer_ask
 
 let preloader = {
     wait: false
@@ -202,6 +205,16 @@ Panel.listener.follow('quality',(e)=>{
     if(work && work.timeline) work.timeline.continued = false
 })
 
+Panel.listener.follow('share',(e)=>{
+    Broadcast.open({
+        type: 'play',
+        object: {
+            player: work,
+            playlist: Playlist.get()
+        }
+    })
+})
+
 Playlist.listener.follow('select',(e)=>{
     let params = Video.saveParams()
 
@@ -318,9 +331,11 @@ function backward(){
  * Уничтожить
  */
 function destroy(){
-    if(work.timeline) work.timeline.handler(work.timeline.percent, work.timeline.time, work.timeline.duration)
+    if(work.timeline && work.timeline.handler) work.timeline.handler(work.timeline.percent, work.timeline.time, work.timeline.duration)
 
     if(work.viewed) work.viewed(viewing.time)
+
+    clearTimeout(timer_ask)
 
     work = false
 
@@ -429,25 +444,43 @@ function ask(){
         if(Storage.field('player_timecode') == 'ask'){
             work.timeline.waiting_for_user = true
 
-            Modal.open({
-                title: '',
-                html: $('<div style="text-align: center"><div class="selector about">Продолжить просмотр с '+Utils.secondsToTime(work.timeline.time)+'?</div></div>'),
-                overlay: true,
-                onSelect: ()=>{
-                    Modal.close()
-
+            Select.show({
+                title: 'Действие',
+                items: [
+                    {
+                        title: 'Продолжить просмотр с '+Utils.secondsToTime(work.timeline.time)+'?',
+                        yes: true
+                    },
+                    {
+                        title: 'Нет'
+                    }
+                ],
+                onBack: ()=>{
                     work.timeline.waiting_for_user = false
 
                     toggle()
-                },
-                onBack: ()=>{
-                    work.timeline.continued = true
 
-                    Modal.close()
-                    
+                    clearTimeout(timer_ask)
+                },
+                onSelect: (a)=>{
+                    if(a.yes)  work.timeline.waiting_for_user = false
+                    else       work.timeline.continued        = true
+
                     toggle()
+
+                    clearTimeout(timer_ask)
                 }
             })
+
+            clearTimeout(timer_ask)
+
+            timer_ask = setTimeout(()=>{
+                work.timeline.continued = true
+
+                Select.hide()
+                
+                toggle()
+            },8000)
         }
     }
 }
