@@ -9,3 +9,4 @@ svg/
 temp/
 .idea/
 package-lock.json
+.vscode/
