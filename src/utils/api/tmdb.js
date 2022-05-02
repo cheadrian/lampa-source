@@ -90,39 +90,39 @@ function main(params = {}, oncomplite, onerror){
     }
 
     get('movie/now_playing',params,(json)=>{
-        append('Сейчас смотрят','wath', json)
+        append(i18next.t("utils.api.tmdb.now_playing",'Сейчас смотрят'),'wath', json)
 
         VideoQuality.add(json.results)
     },status.error.bind(status))
 
     get('trending/moviews/day',params,(json)=>{
-        append('Сегодня в тренде','trend_day', json)
+        append(i18next.t("utils.api.tmdb.trending_day",'Сегодня в тренде'),'trend_day', json)
     },status.error.bind(status))
 
     get('trending/moviews/week',params,(json)=>{
-        append('В тренде за неделю','trend_week', json)
+        append(i18next.t("utils.api.tmdb.trending_week",'В тренде за неделю'),'trend_week', json)
     },status.error.bind(status))
 
     get('movie/upcoming',params,(json)=>{
-        append('Смотрите в кинозалах','upcoming', json)
+        append(i18next.t("utils.api.tmdb.upcoming",'Смотрите в кинозалах'),'upcoming', json)
     },status.error.bind(status))
 
     get('movie/popular',params,(json)=>{
-        append('Популярные фильмы','popular', json)
+        append(i18next.t("utils.api.tmdb.popular",'Популярные фильмы'),'popular', json)
 
         VideoQuality.add(json.results)
     },status.error.bind(status))
 
     get('tv/popular',params,(json)=>{
-        append('Популярные сериалы','popular_tv', json)
+        append(i18next.t("utils.api.tmdb.tv_popular",'Популярные сериалы'),'popular_tv', json)
     },status.error.bind(status))
 
     get('movie/top_rated',params,(json)=>{
-        append('Топ фильмы','top', json)
+        append(i18next.t("utils.api.tmdb.top_rated",'Топ фильмы'),'top', json)
     },status.error.bind(status))
 
     get('tv/top_rated',params,(json)=>{
-        append('Топ сериалы','top_tv', json)
+        append(i18next.t("utils.api.tmdb.tv_top_rated",'Топ сериалы'),'top_tv', json)
     },status.error.bind(status))
 }
 
@@ -136,8 +136,8 @@ function category(params = {}, oncomplite, onerror){
     status.onComplite = ()=>{
         let fulldata = []
 
-        if(books.length) fulldata.push({results: books,title: params.url == 'tv' ? 'Продолжить просмотр' : 'Вы смотрели'})
-        if(recomend.length) fulldata.push({results: recomend,title: 'Рекомендуем посмотреть'})
+        if(books.length) fulldata.push({results: books,title: params.url == 'tv' ? i18next.t("utils.api.tmdb.oncom_1",'Продолжить просмотр') : i18next.t("utils.api.tmdb.oncomp_2",'Вы смотрели')})
+        if(recomend.length) fulldata.push({results: recomend,title: i18next.t("utils.api.tmdb.oncomp_3",'Рекомендуем посмотреть')})
 
         if(status.data.continue && status.data.continue.results.length)      fulldata.push(status.data.continue)
         if(status.data.wath && status.data.wath.results.length)      fulldata.push(status.data.wath)
@@ -158,13 +158,13 @@ function category(params = {}, oncomplite, onerror){
     }
 
     get(params.url+'/now_playing',params,(json)=>{
-        append('Сейчас смотрят','wath', json)
+        append(i18next.t("utils.api.tmdb.now_playing_wath",'Сейчас смотрят'),'wath', json)
 
         if(show) VideoQuality.add(json.results)
     },status.error.bind(status))
 
     get(params.url+'/popular',params,(json)=>{
-        append('Популярное','popular', json)
+        append(i18next.t("utils.api.tmdb.popular_2",'Популярное'),'popular', json)
 
         if(show) VideoQuality.add(json.results)
     },status.error.bind(status))
@@ -181,19 +181,19 @@ function category(params = {}, oncomplite, onerror){
     get('discover/'+params.url,nparams,(json)=>{
         json.filter = nparams.filter
 
-        append('Новинки','new', json)
+        append(i18next.t("utils.api.tmdb.discover",'Новинки'),'new', json)
     },status.error.bind(status))
 
     get(params.url+'/airing_today',params,(json)=>{
-        append('Сегодня в эфире','tv_today', json)
+        append(i18next.t("utils.api.tmdb.airing",'Сегодня в эфире'),'tv_today', json)
     },status.error.bind(status))
 
     get(params.url+'/on_the_air',params,(json)=>{
-        append('На этой неделе','tv_air', json)
+        append(i18next.t("utils.api.tmdb.on_air",'На этой неделе'),'tv_air', json)
     },status.error.bind(status))
 
     get(params.url+'/top_rated',params,(json)=>{
-        append('В топе','top', json)
+        append(i18next.t("utils.api.tmdb.top_2",'В топе'),'top', json)
     },status.error.bind(status))
 }
 
@@ -265,13 +265,13 @@ function search(params = {}, oncomplite, onerror){
         status.onComplite = oncomplite
 
     get('search/movie',params,(json)=>{
-        json.title = 'Фильмы'
+        json.title = i18next.t("utils.api.tmdb.s_movie",'Фильмы')
 
         status.append('movie', json)
     },status.error.bind(status))
 
     get('search/tv',params,(json)=>{
-        json.title = 'Сериалы'
+        json.title = i18next.t("utils.api.tmdb.s_tv",'Сериалы')
 
         status.append('tv', json)
     },status.error.bind(status))
@@ -290,7 +290,7 @@ function person(params = {}, oncomplite, onerror){
 
     const convert = (credits, person) => {
         credits.crew.forEach(a=>{
-            a.department = a.department == 'Production' ? 'Производство' : a.department == 'Directing' ? 'Режиссура' : a.department 
+            a.department = a.department == 'Production' ? i18next.t("utils.api.tmdb.production",'Производство') : a.department == 'Directing' ? i18next.t("utils.api.tmdb.departament",'Режиссура') : a.department 
         })
 
         let cast = sortCredits(credits.cast),
@@ -302,9 +302,9 @@ function person(params = {}, oncomplite, onerror){
         //Наиболее известные работы человека
         //1. Группируем все работы по департаментам (Актер, Режиссер, Сценарист и т.д.)
         knownFor = Arrays.groupBy(crew, 'department');
-        let actorGender = person.gender === 1 ? 'Актриса' : 'Актер';
-        if(movie.length > 0) knownFor[`${actorGender} - Фильмы`] = movie;
-        if(tv.length > 0) knownFor[`${actorGender} - Сериалы`] = tv;
+        let actorGender = person.gender === 1 ? i18next.t("utils.api.tmdb.gender_1",'Актриса') : i18next.t("utils.api.tmdb.gender_2",'Актер');
+        if(movie.length > 0) knownFor[`${actorGender}`+ i18next.t("utils.api.tmdb.movie_g1",'- Фильмы')] = movie;
+        if(tv.length > 0) knownFor[`${actorGender}`+ i18next.t("utils.api.tmdb.tv_g2",'- Сериалы')] = tv;
 
         //2. Для каждого департамента суммируем кол-ва голосов (вроде бы сам TMDB таким образом определяет knownFor для людей)
         knownFor = Object.entries(knownFor).map(([depIdx, dep]) => {

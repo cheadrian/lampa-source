@@ -26,6 +26,14 @@ var babel = require('@rollup/plugin-babel').babel;
 var commonjs = require('@rollup/plugin-commonjs');
 // Add support for importing from node_modules folder like import x from 'module-name'
 var nodeResolve = require('@rollup/plugin-node-resolve');
+//i18n-scanner
+const gulp = require('gulp');
+const sort = require('gulp-sort');
+const scanner = require('i18next-scanner');
+const parser = import('i18next-parser');
+const hash = require('sha1');
+const parse5 = require('parse5');
+const ensureArray = require('ensure-array');
 
 var cache;
 
@@ -36,6 +44,79 @@ var bulFolder = './build/';
 var idxFolder = './index/';
 var plgFolder = './plugins/';
 
+//Modify parseAttrFromString to use HTML DOM value as defaultValue for key i18next-scanner
+const customTransform = function _transform(file, enc, done) {
+    const parser = this.parser;
+    const content = fs.readFileSync(file.path, enc);
+
+    const attrs = ensureArray(['data-i18n']);
+
+    const ast = parse5.parse(content);
+
+    const parseAttributeValue = (key, node) => {
+        //key = _.trim(key);
+        if (key.length === 0) {
+            return;
+        }
+        if (key.indexOf('[') === 0) {
+            const parts = key.split(']');
+            key = parts[1];
+        }
+        if (key.indexOf(';') === (key.length - 1)) {
+            key = key.substr(0, key.length - 2);
+        }
+        parser.set(key, node.childNodes[0].value);
+    };
+
+    const walk = (nodes) => {
+        nodes.forEach(node => {
+            if (node.attrs) {
+                node.attrs.forEach(attr => {
+                    if (attrs.indexOf(attr.name) !== -1) {
+                        const values = attr.value.split(';');
+                        values.forEach((item, index) => parseAttributeValue(item, node));
+                    }
+                });
+            }
+            if (node.childNodes) {
+                walk(node.childNodes);
+            }
+            if (node.content && node.content.childNodes) {
+                walk(node.content.childNodes);
+            }
+        });
+    };
+    walk(ast.childNodes);
+    
+    done();
+};
+
+function i18next_scan() {
+    return gulp.src(['src/**/*.{js,html}'])
+        .pipe(sort()) // Sort files in stream by path
+        .pipe(scanner({
+            lngs: ['en', 'ru'], // supported languages
+            attr: {
+                list: ['data-i18n'],
+                extensions: ['.html', '.htm', '.js', '.jsx']
+            },
+            func: {
+                list: ['i18next.t', 'i18n.t'],
+                extensions: ['.js', '.jsx']
+            },
+            //defaultValue: '',
+            resource: {
+                // the source path is relative to current working directory
+                loadPath: pubFolder + 'locales/{{lng}}/{{ns}}.json',
+                
+                // the destination path is relative to your `gulp.dest()` path
+                savePath: 'locales/{{lng}}/{{ns}}.json'
+            }
+        }, customTransform))
+        .pipe(gulp.dest(pubFolder));
+}
+
+gulp.task('i18next', i18next_scan);
 
 function merge(done) {
     let plugins = [babel({
@@ -73,6 +154,7 @@ function merge(done) {
       
     done();
 }
+
 
 function bubbleFile(name){
     let plug = [babel({
@@ -168,6 +250,7 @@ function sync_github(){
 
 /** Следим за изменениями в файлах **/
 function watch(done){
+    i18next_scan()
     var watcher = chokidar.watch([srcFolder,pubFolder,plgFolder], { persistent: true});
 
     var timer;
@@ -175,7 +258,6 @@ function watch(done){
         clearTimeout(timer)
 
         if(path.indexOf('app.css') > -1) return;
-
         timer = setTimeout(
             series(merge, plugins, sass_task, sync_web, build_web)
         ,100)
@@ -235,4 +317,4 @@ exports.pack_github  = series(sync_github, uglify_task, public_github, index_git
 exports.pack_plugins = series(plugins);
 exports.test         = series(test);
 
-exports.default = parallel(watch, browser_sync);
+exports.default = parallel(i18next_scan, watch, browser_sync);

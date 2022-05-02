@@ -1,10 +1,519 @@
 {
   "head": {
-    "title": "Test Landing-Page",
-    "description": "Test description."
+    "title": "EN Landing-Page",
+    "description": "EN description."
   },
   "intro": {
-    "title": "Test Page",
-    "subTitle": "Test subtitle"
+    "title": "EN Page",
+    "subTitle": "EN subtitle"
+  },
+  "about": {
+    "title": "About the application",
+    "desc": "The application is completely free and uses public links to get information about videos, new releases, popular movies, etc. All available information is used solely for educational purposes, the application does not use its own servers to distribute information.",
+    "donate": "Donate",
+    "version": "Version",
+    "group": "Group",
+    "contact": "Our channel"
+  },
+  "menu": {
+    "home": "Home",
+    "movies": "Movies",
+    "tvseries": "TV series",
+    "catalog": "Catalog",
+    "filter": "Filter",
+    "collections": "Collections",
+    "relise": "Relise",
+    "anime": "Anime",
+    "bookmark": "Bookmark",
+    "like": "Like",
+    "time": "Time",
+    "history": "History",
+    "timetable": "Time table",
+    "mytorrents": "Torrents",
+    "settings": "Settings",
+    "about": "About",
+    "console": "Console"
+  },
+  "utils": {
+    "account": {
+      "title": "Synchronization",
+      "i_title_1": "I confirm",
+      "i_subtitle_1": "All bookmarks will be transferred to the profile (",
+      "i_title_2": "Cancel",
+      "succes_notify": "All bookmarks have been successfully transferred",
+      "notify_1": "Failed to get list of profiles",
+      "token_1": "Authorized",
+      "token_2": "You are logged in ",
+      "token_3": "Login failed",
+      "token_4": "Waiting for login",
+      "network_silent": "General",
+      "network_silent_result_1": "Error",
+      "network_silent_result_2": "Error",
+      "network_silent_result_3": "No network connection"
+    },
+    "android": {
+      "no_native": "No Native request",
+      "voicestart": "Only works on Android TV",
+      "checkv_1": "Please update the app.<br>Version required: ",
+      "checkv_2": "<br>Current version: ",
+      "checkv_3": "Update the application.<br>Required version: "
+    },
+    "cloud": {
+      "renderStatus_1": "Disabled",
+      "renderStatus_2": "Turn on sync",
+      "renderStatus_3": "Not authorized",
+      "renderStatus_4": "Login required ",
+      "renderStatus_5": "Authorization failed",
+      "renderStatus_6": "Check the entered data and try again",
+      "renderStatus_7": "Entered",
+      "renderStatus_8": "You have successfully logged in",
+      "renderStatus_9": "Synchronized"
+    },
+    "api": {
+      "cub": {
+        "filter_1": "Now watching",
+        "filter_2": "Last addition",
+        "filter_3": "Films",
+        "filter_4": "Cartoons",
+        "filter_5": "TV series",
+        "filter_6": "Adventures",
+        "filter_7": "Comedy",
+        "filter_8": "Family",
+        "filter_9": "Horror",
+        "filter_10": "Fiction",
+        "filter_11": "Thriller",
+        "book_1": "Continue browsing",
+        "book_2": "You watched",
+        "recomend_1": "Recommended to watch",
+        "filter_12": "Now watching",
+        "filter_13": "New episodes",
+        "filter_14": "Popular",
+        "filter_15": "Last addition",
+        "filter_16": "News of this year",
+        "filter_17": "Highly Rated"
+      },
+      "ivi": {
+        "62": "War drama",
+        "73": "Crime dramas",
+        "217": "Historical Series",
+        "917": "Horror Thrillers",
+        "1246": "screen adaptations of detectives",
+        "1327": "Adventure Comedies",
+        "1335": "Crime Comedies",
+        "1411": "Romantic Drama",
+        "1413": "Fantastic Drama",
+        "1418": "Mystery Movies",
+        "2460": "Cartoons for the whole family",
+        "4495": "Foreign Series",
+        "4655": "Recommended to see",
+        "oncomp_1": "Continue browsing",
+        "oncomp_2": "You watched",
+        "movie_new": "Movie Premieres",
+        "movie_best": "Best Films",
+        "movie_popular": "Popular Now",
+        "movie_8448": "Ivi's Choice",
+        "movie_1984": "News",
+        "movie_1712": "Foreign",
+        "movie_935": "Russians",
+        "movie_12839": "Popular Now",
+        "movie_1057": "Ivi's Choice"
+      },
+      "okko": {
+        "cat_1": "New",
+        "cat_2": "Top New",
+        "cat_3": "Comedy Horror Movies",
+        "cat_4": "Films about maniacs",
+        "cat_5": "Witch Movies",
+        "cat_6": "Zombie Movies",
+        "cat_7": "Russians",
+        "cat_8": "New",
+        "cat_9": "Very scary",
+        "cat_10": "About maniacs",
+        "cat_11": "With black humor",
+        "cat_12": "Lungs",
+        "cat_13": "Comedy",
+        "cat_14": "Russians"
+      },
+      "parser": {
+        "err_1": "Specify URL for parsing Jackett",
+        "err_2": "Specify link for parsing TorLook",
+        "err_3": "Unable to get magnet link"
+      },
+      "tmdb": {
+        "now_playing": "Now watching",
+        "trending_day": "Today is in trend",
+        "trending_week": "Trendy for the week",
+        "upcoming": "Watch in cinema halls",
+        "popular": "Popular Movies",
+        "tv_popular": "Popular Series",
+        "top_rated": "Top movies",
+        "tv_top_rated": "Top series",
+        "oncom_1": "Continue browsing",
+        "oncomp_2": "You watched",
+        "oncomp_3": "Recommended to see",
+        "now_playing_wath": "Now watching",
+        "popular_2": "Popular",
+        "discover": "New",
+        "airing": "Today on the air",
+        "on_air": "This week",
+        "top_2": "Top",
+        "s_movie": "Films",
+        "s_tv": "TV series",
+        "production": "Production",
+        "departament": "Directed by",
+        "gender_1": "Actress",
+        "gender_2": "Actor",
+        "movie_g1": "- Films",
+        "tv_g2": "- TV series"
+      }
+    },
+    "plugins": {
+      "draw_1": "Install",
+      "loadmem_1": "When loading the application, some plugins could not be loaded",
+      "offlist_1": "View online",
+      "offlist_2": "View online",
+      "err_1": "Could not check if the plugin is working, but this does not mean that the plugin is not working. Restart the application to see if the plugin is loading.",
+      "err_2": "For the plugin to work, you need to restart the application.",
+      "sett_component_1": "This plugin is already installed.",
+      "cat_details": "- Settings",
+      "iscub_1": "Downloaded from CUB",
+      "iscun_2": "Click to test plugin"
+    },
+    "reguest": {
+      "jqxhr_1": "No network connection.",
+      "jqxhr_2": "The requested page was not found. [404]",
+      "jqxhr_3": "Authorization failed",
+      "jqxhr_4": "Internal server error. [500]",
+      "jqxhr_5": "The requested JSON parsing failed.",
+      "jqxhr_6": "Request timed out.",
+      "jqxhr_7": "The request was aborted.",
+      "jqxhr_8": "Unknown error: "
+    },
+    "math": {
+      "size_1": "0 Bytes",
+      "sizes_1024": {
+        "0": "Byte",
+        "1": "KB",
+        "2": "MB",
+        "3": "GB",
+        "4": "TB",
+        "5": "PB"
+      },
+      "sizes_1000": {
+        "0": "page",
+        "1": "Kbit",
+        "2": "Mbps",
+        "3": "Gbit",
+        "4": "Tbit",
+        "5": "Pbit"
+      },
+      "months_arr": {
+        "0": "January",
+        "1": "February",
+        "2": "March",
+        "3": "April",
+        "4": "May",
+        "5": "June",
+        "6": "July",
+        "7": "August",
+        "8": "September",
+        "9": "October",
+        "10": "November",
+        "11": "December"
+      },
+      "days_arr": {
+        "0": "Sunday",
+        "1": "Monday",
+        "2": "Tuesday",
+        "3": "Wednesday",
+        "4": "Thursday",
+        "5": "Friday",
+        "6": "Saturday"
+      }
+    }
+  },
+  "card_parser": {
+    "handing_out": "Handing out: ",
+    "pumping": "pumping: "
+  },
+  "company": {
+    "headquarters": "Headquarters:",
+    "site": "Site:",
+    "side": "Side:"
+  },
+  "filter": {
+    "specify": "Specify",
+    "sort": "Sort",
+    "filter": "Filter"
+  },
+  "full": {
+    "descr": {
+      "name_genres": "Genre",
+      "name_companies": "Production",
+      "name_relise": "date of release",
+      "name_budget": "Budget",
+      "name_countries": "Countries"
+    },
+    "review": {
+      "footer": "Like:"
+    },
+    "start": {
+      "torrents": "torrents",
+      "trailers": "Trailers"
+    }
+  },
+  "list_empty": {
+    "title": "empty",
+    "descr": "Nothing found for your filter, please refine your filter."
+  },
+  "more": {
+    "title": "\n        More\n    "
+  },
+  "player": {
+    "info": {
+      "size": "Loading..."
+    }
+  },
+  "plugins_catalog": {
+    "working": "Working plugins",
+    "working_descr": "Plugins that work exactly in the lamp.",
+    "popular": "Popular plugins among users",
+    "popular_descr": "Installation from unknown sources may cause the application to work incorrectly."
+  },
+  "search": {
+    "main": {
+      "title": "Search",
+      "input": "Enter text..."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "account": {
+      "account_use_name": "Synchronization",
+      "account_use_descr": "Synchronization with the CUB service: Synchronization of your bookmarks, browsing history, tags and timecodes. Website: https://cub.watch",
+      "account_user_hide": "",
+      "user_info_name": "Logged in as",
+      "user_profile_name": "Profile",
+      "user_sync_name": "Synchronize",
+      "user_sync_value": "Save local bookmarks to CUB account",
+      "user_out_name": "Sign out",
+      "signin": "Authorization",
+      "signin_name": "Password",
+      "status": "Status"
+    },
+    "cloud": {
+      "use_cloud_name": "Synchronization",
+      "use_cloud_descr": "Synchronization allows you to synchronize your bookmarks, browsing history, tags and timecodes. Connection instructions https://github.com/yumata/lampa/wiki",
+      "authorization": "Authorization",
+      "status": "Status"
+    },
+    "input": {
+      "links": "Favorites"
+    },
+    "interface": {
+      "size_name": "Interface size",
+      "background": "Background",
+      "background_name": "Show background",
+      "background_type_name": "Background type",
+      "performance": "Performance",
+      "animation_name": "Animation",
+      "animation_descr": "Animation of cards and content",
+      "mask_name": "attenuation",
+      "mask_descr": "Smooth fading of cards from below and from above",
+      "scroll_type_name": "Scrolling type",
+      "card_view_name": "Card view type",
+      "card_view_descr": "As you scroll the feed, the cards will be loaded gradually or all will be loaded."
+    },
+    "main": {
+      "account_name": "Account",
+      "interface_name": "Interface",
+      "player_name": "Player",
+      "parser_name": "Parser",
+      "torrserver_name": "TorrServer",
+      "plugins_name": "Plugins",
+      "cloud_name": "Synchronization",
+      "more_name": "Rest"
+    },
+    "more": {
+      "start_page_name": "start page",
+      "start_page_descr": "Which page to start at startup",
+      "source": "Source",
+      "source_name": "Main source",
+      "source_descr": "Where to get information about films",
+      "tmdb_lang_name": "TMDB",
+      "tmdb_lang_descr": "What language to display data from TMDB",
+      "poster_size_name": "Resolution of TMDB posters",
+      "screensaver": "Screensaver",
+      "screensaver_name": "Show splash screen when idle",
+      "screensaver_type_name": "Screen saver type",
+      "proxy": "Proxy",
+      "proxy_tmdb_name": "Proxy TMDB",
+      "proxy_other_name": "Proxy other resources",
+      "others": "More",
+      "pages_save_total_name": "How many pages to keep in memory",
+      "pages_save_total_descr": "Keep pages as you left them.",
+      "time_offset_name": "Shift Time",
+      "navigation_type_name": "Navigation type",
+      "device_name_name": "Device name",
+      "clear_storage_name": "Clear cache",
+      "clear_storage_value": "All settings and data will be cleared"
+    },
+    "parser": {
+      "parser_use_name": "Use parser",
+      "parser_use_descr": "Hereby, you agree to accept all responsibility for the use of public links to view torrent and online content.",
+      "parser_torrent_type_name": "Parser type for torrents",
+      "parser_type": "Jackett",
+      "jackett_url_name": "Link",
+      "jackett_url_descr": "Provide a link to the Jackett script",
+      "jackett_key_name": "Api key",
+      "jackett_key_descr": "Located in Jackett",
+      "torlook": "Torlook",
+      "torlook_parse_type_name": "TorLook site parsing method",
+      "parser_website_url_name": "Link to site parser",
+      "parser_website_url_descr": "Register on the site scraperapi.com, register the link api.scraperapi.com?api_key=...&url={q}",
+      "others": "More",
+      "parse_lang_name": "Search",
+      "parse_lang_descr": "What language to search in?",
+      "parse_in_search_name": "Parser in search",
+      "parse_in_search_descr": "Search results in search?"
+    },
+    "player": {
+      "player_name": "Player type",
+      "player_descr": "Which player to play",
+      "reset_player_name": "Reset default player",
+      "reset_player_descr": "Resets the selected Android player in the application",
+      "playlist_next_name": "Next series",
+      "playlist_next_descr": "Automatically switch to the next series after the end of the current one",
+      "player_timecode_name": "Timecode",
+      "player_timecode_descr": "Resume from last viewed location",
+      "player_scale_method_name": "Scaling method",
+      "player_scale_method_descr": "How to calculate video scaling",
+      "subtitle": "Subtitles",
+      "subtitles_start_name": "Turn on",
+      "subtitles_start_descr": "Always turn on subtitles after starting a video",
+      "subtitles_size_name": "Size ",
+      "subtitles_stroke_name": "Use edging",
+      "subtitles_stroke_descr": "Subtitles will be outlined in black for better readability",
+      "subtitles_backdrop_name": "Use Underlay",
+      "subtitles_backdrop_descr": "Subtitles will be displayed on a translucent background to improve readability",
+      "others": "More",
+      "video_quality_default_name": "Default video quality",
+      "video_quality_default_descr": "Preferred video quality to watch"
+    },
+    "plugins": {
+      "plugins_name": "Add plugin",
+      "plugins_descr": "To remove an added plugin, hold or double-click the OK button on it",
+      "install_name": "Install plugin",
+      "install_descr": "Install plugin from available list"
+    },
+    "server": {
+      "torrserver_use_link_name": "Use link",
+      "links": "Links",
+      "torrserver_url_name": "Main link",
+      "torrserver_url_descr": "Specify the main link to the TorrServer script",
+      "torrserver_url_two_name": "Extra Link",
+      "torrserver_url_two_descr": "Specify an additional link to the TorrServer script",
+      "additionally": "Additionally",
+      "internal_torrclient_name": "Built-in client",
+      "internal_torrclient_descr": "Use the built-in TorrServe JS client, otherwise the system one will start.",
+      "torrserver_savedb_name": "Save to database",
+      "torrserver_savedb_descr": "The torrent will be added to the TorrServer database",
+      "torrserver_preload_name": "Use preload buffer",
+      "torrserver_preload_descr": "Wait for TorrServer preload buffer to fill before playing",
+      "authorization": "Authorization",
+      "torrserver_auth_name": "Password Login",
+      "torrserver_login_name": "Login",
+      "torrserver_password_name": "Password"
+    }
+  },
+  "timeline_details": {
+    "viewed": "Viewed"
+  },
+  "torrent": {
+    "error": {
+      "checklist_descr": "Unable to connect to TorrServe, the problem may be different. Let's quickly go through the list of possible problems and check everything.",
+      "progress_steps": "Completed 0 out of 0",
+      "checklist_list_1": "Is TorrServe running",
+      "checklist_list_2": "Dynamic IP address",
+      "checklist_list_3": "Protocol",
+      "checklist_list_4": "Antivirus blocking",
+      "checklist_list_5": "Check for Availability",
+      "checklist_list_6": "Still doesn't work",
+      "checklist_info_1": "Make sure you have started TorrServe on the device where it is installed.",
+      "checklist_info_2": "Common error, the IP address of your device has changed. Please make sure that the IP address you entered {ip} matches the address of the device on which TorrServe is installed",
+      "checklist_info_3": "To contact TorrServe, you need port :8090 at the end of the address. Make sure that the port is registered at the end of your IP address, your current address is {ip}",
+      "checklist_info_4": "Frequent occurrence, antivirus or firewall may block access by IP address, try disabling antivirus and firewall.",
+      "checklist_info_5": "On any other device where TorrServe is not installed, open the {ip} address in a browser and check if a response from TorrServe is available",
+      "checklist_info_6": "If after all the checks it still doesn't work, try restarting TorrServe and the internet adapter.",
+      "checklist_info_7": "If the problem persists, write the group @lampa_group in telegram with the text (The lamp does not connect to TorrServe after all checks, the current address is {ip})",
+      "checklist_footer": "Start Check",
+      "nocheck": "Causes",
+      "nocheck_1": "Requestreturned an invalid format to ping",
+      "nocheck_2": "Answerfrom TorServer: ",
+      "nocheck_todo": "Whatmake?",
+      "nocheck_todo_1": "Umake sure you have the version of Matrix",
+      "nocheck_check": "How to check?",
+      "nocheck_check_1": "Open your browser and go to ",
+      "nocheck_check_2": "Make sure the response contains a code",
+      "noconnect_cause": "Causes",
+      "noconnect_cause_1": "using address:",
+      "noconnect_cause_2": "current address",
+      "noconnect_cause_3": "is incorrect!",
+      "noconnect_cause_4": "current response:",
+      "noconnect_howto": "How is it right?",
+      "noconnect_howto_1": "use address:",
+      "noconnect_howto_2": "Use the Matrix version",
+      "noconnect_howto_3": "on the same device, open a browser and go to the address",
+      "noconnect_howto_4": "If the browser does not respond, check if TorrServe is running, or restart it.",
+      "noconnect_howto_5": "if the browser responded, make sure the response contains a string",
+      "nohash_cause": "Causes",
+      "nohash_cause_1": "TorServer was unable to download the torrent file",
+      "nohash_cause_2": "Response from TorServer:",
+      "nohash_cause_3": "Link:",
+      "nohash_whatto": "What to do?",
+      "nohash_whatto_1": "Check if you configured Jackett correctly",
+      "nohash_whatto_2": "Private sources may not provide a link to the file",
+      "nohash_whatto_3": "Make sure Jackett can download the file too",
+      "nohash_whatto_4": "Write to our telegram group: @lampa_group",
+      "nohash_whatto_5": "Indicate which movie, which distribution and, if possible, a photo of this distribution"
+    },
+    "install": {
+      "trr_title": "TorrServe required",
+      "trr_descr": "TorrServe is an application that allows you to view content from torrent files online.",
+      "trr_label": "Telegram groups"
+    },
+    "item": {
+      "bitrate": "Bitrate:",
+      "speed": "Mb/s",
+      "seeds": "Distributing:",
+      "grabs": "Swing:"
+    },
+    "serial": {
+      "series": {
+        "output": "Выход"
+      },
+      "season": "Season"
+    }
+  },
+  "components": {
+    "menu": {
+      "act_1": "Films",
+      "act_2": "Anime",
+      "act_3": "TV series",
+      "act_4": "Home - ",
+      "about_title": "About the application",
+      "fav_1": "Bookmarks",
+      "fav_2": "Like",
+      "fav_3": "View History",
+      "fav_4": "Later",
+      "timetable_title": "Schedule",
+      "torrents_title": "My torrents",
+      "relise_title": "Digital Releases",
+      "collections_title": "Collections",
+      "collections_title_1": "Selections on ivi",
+      "collections_title_2": "Collections on okko",
+      "catalog_title": "Catalog",
+      "catalog_title_1": "Catalog -"
+    }
   }
 }

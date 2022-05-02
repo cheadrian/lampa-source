@@ -253,23 +253,23 @@ function create(){
         var msg = '';
 
         if (jqXHR.status === 0 && exception !== 'timeout') {
-            msg = 'Нет подключения к сети.';
+            msg = i18next.t("utils.reguest.jqxhr_1",'Нет подключения к сети.');
         } else if (jqXHR.status == 404) {
-            msg = 'Запрошенная страница не найдена. [404]';
+            msg = i18next.t("utils.reguest.jqxhr_2",'Запрошенная страница не найдена. [404]');
         } else if (jqXHR.status == 401) {
-            msg = 'Авторизация не удалась';
+            msg = i18next.t("utils.reguest.jqxhr_3",'Авторизация не удалась');
         } else if (jqXHR.status == 500) {
-            msg = 'Внутренняя ошибка сервера. [500]';
+            msg = i18next.t("utils.reguest.jqxhr_4",'Внутренняя ошибка сервера. [500]');
         } else if (exception === 'parsererror') {
-            msg = 'Запрошенный синтаксический анализ JSON завершился неудачно.';
+            msg = i18next.t("utils.reguest.jqxhr_5",'Запрошенный синтаксический анализ JSON завершился неудачно.');
         } else if (exception === 'timeout') {
-            msg = 'Время запроса истекло.';
+            msg = i18next.t("utils.reguest.jqxhr_6",'Время запроса истекло.');
         } else if (exception === 'abort') {
-            msg = 'Запрос был прерван.';
+            msg = i18next.t("utils.reguest.jqxhr_7",'Запрос был прерван.');
         } else if (exception === 'custom') {
             msg = jqXHR.responseText;
         } else {
-            msg = 'Неизвестная ошибка: ' + jqXHR.responseText;
+            msg = i18next.t("utils.reguest.jqxhr_8",'Неизвестная ошибка: ') + jqXHR.responseText;
         }
 
         return msg;

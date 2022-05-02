@@ -62,7 +62,7 @@ function httpReq(data, call){
     let index = Math.floor(Math.random() * 5000)
     reqCallback[index] = call
     if(checkVersion(16)) AndroidJS.httpReq(JSON.stringify(data), index)
-    else call.error({responseText: "No Native request"})
+    else call.error({responseText: i18next.t("utils.android.no_native","No Native request")})
 }
 
 function httpCall(index, callback){
@@ -84,7 +84,7 @@ function httpCall(index, callback){
 
 function voiceStart(){
     if(checkVersion(25)) AndroidJS.voiceStart()
-    else Lampa.Noty.show("Работает только на Android TV")
+    else Lampa.Noty.show(i18next.t("utils.android.voicestart","Работает только на Android TV"))
 }
 
 function showInput(inputText){
@@ -103,11 +103,11 @@ function checkVersion(needVersion){
             if (parseInt(versionCode, 10) >= needVersion) {
                 return true
             } else {
-                Lampa.Noty.show("Обновите приложение.<br>Требуется версия: " + needVersion + "<br>Текущая версия: " + versionCode)
+                Lampa.Noty.show(i18next.t("utils.android.checkv_1","Обновите приложение.<br>Требуется версия: ") + needVersion + i18next.t("utils.android.checkv_2","<br>Текущая версия: ") + versionCode)
                 return false
             }
         } catch (e) {
-            Lampa.Noty.show("Обновите приложение.<br>Требуется версия: " + needVersion)
+            Lampa.Noty.show(i18next.t("utils.android.checkv_3","Обновите приложение.<br>Требуется версия: ") + needVersion)
             return false
         }
     } else return false

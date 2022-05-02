@@ -316,7 +316,7 @@ function category(params, oncomplite, onerror){
     status.onComplite = ()=>{
         let fulldata = []
 
-        if(books.length) fulldata.push({results: books,title: params.url == 'tv' ? 'Продолжить просмотр' : 'Вы смотрели'})
+        if(books.length) fulldata.push({results: books,title: params.url == 'tv' ? i18next.t("utils.api.ivi.oncomp_1",'Продолжить просмотр') : i18next.t("utils.api.ivi.oncomp_2",'Вы смотрели')})
 
         if(status.data.new && status.data.new.results.length)           fulldata.push(status.data.new)
         if(status.data.best && status.data.best.results.length)         fulldata.push(status.data.best)
@@ -337,40 +337,40 @@ function category(params, oncomplite, onerror){
 
     if(params.url == 'movie'){
         collections({id:'8258'},(json)=>{
-            append('Премьеры фильмов', 'new', '8258', {results:json})
+            append(i18next.t("utils.api.ivi.movie_new",'Премьеры фильмов'), 'new', '8258', {results:json})
         },status.error.bind(status))
 
         collections({id:'942'},(json)=>{
-            append('Лучшие фильмы', 'best', '942', {results:json})
+            append(i18next.t("utils.api.ivi.movie_best",'Лучшие фильмы'), 'best', '942', {results:json})
         },status.error.bind(status))
         
         collections({id:'11512'},(json)=>{
-            append('Популярное сейчас', 'popular', '11512', {results:json})
+            append(i18next.t("utils.api.ivi.movie_popular",'Популярное сейчас'), 'popular', '11512', {results:json})
         },status.error.bind(status))
 
         collections({id:'8448'},(json)=>{
-            append('Выбор ivi', 'ivi', '8448', {results:json})
+            append(i18next.t("utils.api.ivi.movie_8448",'Выбор ivi'), 'ivi', '8448', {results:json})
         },status.error.bind(status))
     }
     else{
         collections({id:'1984'},(json)=>{
-            append('Новинки', 'new', '1984', {results:json})
+            append(i18next.t("utils.api.ivi.movie_1984",'Новинки'), 'new', '1984', {results:json})
         },status.error.bind(status))
 
         collections({id:'1712'},(json)=>{
-            append('Зарубежные', 'best', '1712', {results:json})
+            append(i18next.t("utils.api.ivi.movie_1712",'Зарубежные'), 'best', '1712', {results:json})
         },status.error.bind(status))
 
         collections({id:'935'},(json)=>{
-            append('Русские', 'rus', '935', {results:json})
+            append(i18next.t("utils.api.ivi.movie_935",'Русские'), 'rus', '935', {results:json})
         },status.error.bind(status))
 
         collections({id:'12839'},(json)=>{
-            append('Популярное сейчас', 'popular', '12839', {results:json})
+            append(i18next.t("utils.api.ivi.movie_12839",'Популярное сейчас'), 'popular', '12839', {results:json})
         },status.error.bind(status))
 
         collections({id:'1057'},(json)=>{
-            append('Выбор ivi', 'ivi', '1057', {results:json})
+            append(i18next.t("utils.api.ivi.movie_1057",'Выбор ivi'), 'ivi', '1057', {results:json})
         },status.error.bind(status))
     }
 }
@@ -399,55 +399,55 @@ function main(params, oncomplite, onerror){
     }
 
     collections({id:'4655'},(json)=>{
-        append('Рекомендуем вам посмотреть', '1', '4655', {results:json})
+        append(i18next.t("utils.api.ivi.4655",'Рекомендуем вам посмотреть'), '1', '4655', {results:json})
     },status.error.bind(status))
 
     collections({id:'2460'},(json)=>{
-        append('Мультики для всей семьи', '2', '2460', {results:json})
+        append(i18next.t("utils.api.ivi.2460",'Мультики для всей семьи'), '2', '2460', {results:json})
     },status.error.bind(status))
     
     collections({id:'917'},(json)=>{
-        append('Триллеры-ужасы', '3', '917', {results:json})
+        append(i18next.t("utils.api.ivi.917",'Триллеры-ужасы'), '3', '917', {results:json})
     },status.error.bind(status))
 
     collections({id:'1327'},(json)=>{
-        append('Приключенческие комедии', '4', '1327', {results:json})
+        append(i18next.t("utils.api.ivi.1327",'Приключенческие комедии'), '4', '1327', {results:json})
     },status.error.bind(status))
 
     collections({id:'1246'},(json)=>{
-        append('Экранизации детективов', '5', '1246', {results:json})
+        append(i18next.t("utils.api.ivi.1246",'Экранизации детективов'), '5', '1246', {results:json})
     },status.error.bind(status))
 
     collections({id:'1335'},(json)=>{
-        append('Криминальные комедии', '6', '1335', {results:json})
+        append(i18next.t("utils.api.ivi.1335",'Криминальные комедии'), '6', '1335', {results:json})
     },status.error.bind(status))
 
     collections({id:'1411'},(json)=>{
-        append('Романтические драмы', '7', '1411', {results:json})
+        append(i18next.t("utils.api.ivi.1411",'Романтические драмы'), '7', '1411', {results:json})
     },status.error.bind(status))
 
     collections({id:'73'},(json)=>{
-        append('Криминальные драмы', '8', '73', {results:json})
+        append(i18next.t("utils.api.ivi.73",'Криминальные драмы'), '8', '73', {results:json})
     },status.error.bind(status))
 
     collections({id:'1413'},(json)=>{
-        append('Фантастические драмы', '9', '1413', {results:json})
+        append(i18next.t("utils.api.ivi.1413",'Фантастические драмы'), '9', '1413', {results:json})
     },status.error.bind(status))
 
     collections({id:'62'},(json)=>{
-        append('Военные драмы', '10', '62', {results:json})
+        append(i18next.t("utils.api.ivi.62",'Военные драмы'), '10', '62', {results:json})
     },status.error.bind(status))
 
     collections({id:'1418'},(json)=>{
-        append('Мистические фильмы', '11', '1418', {results:json})
+        append(i18next.t("utils.api.ivi.1418",'Мистические фильмы'), '11', '1418', {results:json})
     },status.error.bind(status))
 
     collections({id:'4495'},(json)=>{
-        append('Зарубежные сериалы', '12', '4495', {results:json})
+        append(i18next.t("utils.api.ivi.4495",'Зарубежные сериалы'), '12', '4495', {results:json})
     },status.error.bind(status))
     
     collections({id:'217'},(json)=>{
-        append('Исторические сериалы', '13', '217', {results:json})
+        append(i18next.t("utils.api.ivi.217",'Исторические сериалы'), '13', '217', {results:json})
     },status.error.bind(status))
 }
 

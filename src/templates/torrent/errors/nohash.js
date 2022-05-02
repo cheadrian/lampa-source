@@ -8,28 +8,28 @@ let html = `<div class="error">
 
 <div class="torrent-error noconnect">
     <div>
-        <div>Причины</div>
+        <div data-i18n="torrent.error.nohash_cause">Причины</div>
         <ul>
-            <li>TorServer не смог скачать торрент файл</li>
-            <li>Ответ от TorServer: {echo}</li>
-            <li>Ссылка: <code>{url}</code></li>
+            <li data-i18n="torrent.error.nohash_cause_1">TorServer не смог скачать торрент файл</li>
+            <li><span data-i18n="torrent.error.nohash_cause_2">Ответ от TorServer:</span> {echo}</li>
+            <li><span data-i18n="torrent.error.nohash_cause_3">Ссылка:</span> <code>{url}</code></li>
         </ul>
     </div>
 
     <div class="is--jackett">
-        <div>Что делать?</div>
+        <div data-i18n="torrent.error.nohash_whatto">Что делать?</div>
         <ul>
-            <li>Проверьте правильно ли вы настроили Jackett</li>
-            <li>Приватные источники могут не выдавать ссылку на файл</li>
-            <li>Убедитесь что Jackett тоже может скачать файл</li>
+            <li data-i18n="torrent.error.nohash_whatto_1">Проверьте правильно ли вы настроили Jackett</li>
+            <li data-i18n="torrent.error.nohash_whatto_2">Приватные источники могут не выдавать ссылку на файл</li>
+            <li data-i18n="torrent.error.nohash_whatto_3">Убедитесь что Jackett тоже может скачать файл</li>
         </ul>
     </div>
 
     <div class="is--torlook">
-        <div>Что делать?</div>
+        <div data-i18n="torrent.error.nohash_whatto">Что делать?</div>
         <ul>
-            <li>Написать в нашу телеграм группу: @lampa_group</li>
-            <li>Укажите какой фильм, какая раздача и по возможности фото этой разадачи</li>
+            <li data-i18n="torrent.error.nohash_whatto_4">Написать в нашу телеграм группу: @lampa_group</li>
+            <li data-i18n="torrent.error.nohash_whatto_5">Укажите какой фильм, какая раздача и по возможности фото этой разадачи</li>
         </ul>
     </div>
 </div>`

@@ -327,63 +327,63 @@ function category(params, oncomplite, onerror){
 
         status.append(name, json)
     }
-
+    
     if(params.url == 'movie'){
         list({url: 'Novelty',type: 'COLLECTION',page: 1},(json)=>{
-            append('Новое','new','Novelty',json)
+            append(i18next.t("utils.api.okko.cat_1",'Новое'),'new','Novelty',json)
         },status.error.bind(status))
     
         list({url: 'topfilms',type: 'COLLECTION',page: 1},(json)=>{
-            append('Топ-новинки','top','topfilms',json)
+            append(i18next.t("utils.api.okko.cat_2",'Топ-новинки'),'top','topfilms',json)
         },status.error.bind(status))
 
         list({url: 'comedy-plus-horror-movies',type: 'COLLECTION',page: 1},(json)=>{
-            append('Комедийные фильмы ужасов','three','comedy-plus-horror-movies',json)
+            append(i18next.t("utils.api.okko.cat_3",'Комедийные фильмы ужасов'),'three','comedy-plus-horror-movies',json)
         },status.error.bind(status))
 
         list({url: 'collection_maniacs',type: 'COLLECTION',page: 1},(json)=>{
-            append('Фильмы про маньяков','four','collection_maniacs',json)
+            append(i18next.t("utils.api.okko.cat_4",'Фильмы про маньяков'),'four','collection_maniacs',json)
         },status.error.bind(status))
         
         list({url: 'witches',type: 'COLLECTION',page: 1},(json)=>{
-            append('Фильмы про ведьм','five','witches',json)
+            append(i18next.t("utils.api.okko.cat_5",'Фильмы про ведьм','five'),'witches',json)
         },status.error.bind(status))
         
         list({url: 'zombies',type: 'COLLECTION',page: 1},(json)=>{
-            append('Фильмы про зомби','six','zombies',json)
+            append(i18next.t("utils.api.okko.cat_6",'Фильмы про зомби'),'six','zombies',json)
         },status.error.bind(status))
 
         list({url: 'Russian-17490',type: 'COLLECTION',page: 1},(json)=>{
-            append('Русские','seven','Russian-17490',json)
+            append(i18next.t("utils.api.okko.cat_7",'Русские'),'seven','Russian-17490',json)
         },status.error.bind(status))
     }
     else{
         list({url: 'Serials',type: 'COLLECTION',page: 1},(json)=>{
-            append('Новое','new','Serials',json)
+            append(i18next.t("utils.api.okko.cat_8",'Новое'),'new','Serials',json)
         },status.error.bind(status))
 
         list({url: 'horror-serial-all-svod',type: 'COLLECTION',page: 1},(json)=>{
-            append('Очень страшные','top','horror-serial-all-svod',json)
+            append(i18next.t("utils.api.okko.cat_9",'Очень страшные'),'top','horror-serial-all-svod',json)
         },status.error.bind(status))
 
         list({url: 'series-about-serial-killers',type: 'COLLECTION',page: 1},(json)=>{
-            append('Про маньяков','three','series-about-serial-killers',json)
+            append(i18next.t("utils.api.okko.cat_10",'Про маньяков'),'three','series-about-serial-killers',json)
         },status.error.bind(status))
 
         list({url: 'black-humor-serial-all-svod',type: 'COLLECTION',page: 1},(json)=>{
-            append('С чёрным юмором','four','black-humor-serial-all-svod',json)
+            append(i18next.t("utils.api.okko.cat_11",'С чёрным юмором'),'four','black-humor-serial-all-svod',json)
         },status.error.bind(status))
 
         list({url: 'legkiye-serialy-all-svod',type: 'COLLECTION',page: 1},(json)=>{
-            append('Лёгкие','five','legkiye-serialy-all-svod',json)
+            append(i18next.t("utils.api.okko.cat_12",'Лёгкие'),'five','legkiye-serialy-all-svod',json)
         },status.error.bind(status))
 
         list({url: 'comedy-serial-all-svod',type: 'COLLECTION',page: 1},(json)=>{
-            append('Комедийные','six','comedy-serial-all-svod',json)
+            append(i18next.t("utils.api.okko.cat_13",'Комедийные'),'six','comedy-serial-all-svod',json)
         },status.error.bind(status))
 
         list({url: 'russian_tvseries',type: 'COLLECTION',page: 1},(json)=>{
-            append('Русские','seven','russian_tvseries',json)
+            append(i18next.t("utils.api.okko.cat_14",'Русские'),'seven','russian_tvseries',json)
         },status.error.bind(status))
 
     }

@@ -64,25 +64,25 @@ function renderStatus(){
             desc = item.find('.settings-param__descr')
 
         if(code == 0){
-            name.text('Отключено')
-            desc.text('Включите синхронизацию')
+            name.text(i18next.t("utils.cloud.renderStatus_1",'Отключено'))
+            desc.text(i18next.t("utils.cloud.renderStatus_2",'Включите синхронизацию'))
         }
         if(code == 1){
-            name.text('Не авторизованы')
-            desc.text('Необходимо авторизоваться ')
+            name.text(i18next.t("utils.cloud.renderStatus_3",'Не авторизованы'))
+            desc.text(i18next.t("utils.cloud.renderStatus_4",'Необходимо авторизоваться '))
         }
         if(code == 2){
-            name.text('Авторизация не удалась')
-            desc.text('Проверьте введённые данные и повторите попытку')
+            name.text(i18next.t("utils.cloud.renderStatus_5",'Авторизация не удалась'))
+            desc.text(i18next.t("utils.cloud.renderStatus_6",'Проверьте введённые данные и повторите попытку'))
         }
         if(code == 3){
-            name.text('Вошли')
-            desc.text('Вы успешно авторизовались')
+            name.text(i18next.t("utils.cloud.renderStatus_7",'Вошли'))
+            desc.text(i18next.t("utils.cloud.renderStatus_8",'Вы успешно авторизовались'))
         }
         if(code == 4){
             let time = Utils.parseTime(Storage.get('cloud_time','2021.01.01'))
 
-            name.text('Синхронизовано')
+            name.text(i18next.t("utils.cloud.renderStatus_9",'Синхронизовано'))
             desc.text(time.full + ' в ' + time.time)
         }
     }

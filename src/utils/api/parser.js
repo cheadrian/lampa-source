@@ -29,7 +29,7 @@ function get(params = {}, oncomplite, onerror){
             })
         }
         else{
-            error('Укажите ссылку для парсинга Jackett')
+            error(i18next.t("utils.api.parser.err_1",'Укажите ссылку для парсинга Jackett'))
         }
     }
     else{
@@ -44,7 +44,7 @@ function get(params = {}, oncomplite, onerror){
         else if(Storage.field('torlook_parse_type') == 'native'){
             torlook(params, complite, error)
         }
-        else error('Укажите ссылку для парсинга TorLook')
+        else error(i18next.t("utils.api.parser.err_2",'Укажите ссылку для парсинга TorLook'))
     }
 }
 
@@ -163,7 +163,7 @@ function marnet(element, oncomplite, onerror){
             oncomplite()
         }
         else{
-            onerror('Неудалось получить magnet ссылку')
+            onerror(i18next.t("utils.api.parser.err_3",'Неудалось получить magnet ссылку'))
         }
     },(a,c)=>{
         onerror(network.errorDecode(a,c))

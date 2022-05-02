@@ -70,49 +70,49 @@ function main(params = {}, oncomplite, onerror){
     }
 
     get('?sort=now_playing',params,(json)=>{
-        append('Сейчас смотрят','s1', json)
+        append(i18next.t("utils.api.cub.filter_1",'Сейчас смотрят'),'s1', json)
 
         VideoQuality.add(json.results)
     },status.error.bind(status))
 
     get('?sort=latest',params,(json)=>{
-        append('Последнее добавление','s2', json)
+        append(i18next.t("utils.api.cub.filter_2",'Последнее добавление'),'s2', json)
     },status.error.bind(status))
 
     get('movie/now',params,(json)=>{
-        append('Фильмы','s3', json)
+        append(i18next.t("utils.api.cub.filter_3",'Фильмы'),'s3', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=16',params,(json)=>{
-        append('Мультфильмы','s4', json)
+        append(i18next.t("utils.api.cub.filter_4",'Мультфильмы'),'s4', json)
     },status.error.bind(status))
 
     get('tv/now',params,(json)=>{
-        append('Сериалы','s5', json)
+        append(i18next.t("utils.api.cub.filter_5",'Сериалы'),'s5', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=12',params,(json)=>{
-        append('Приключения','s6', json)
+        append(i18next.t("utils.api.cub.filter_6",'Приключения'),'s6', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=35',params,(json)=>{
-        append('Комедии','s7', json)
+        append(i18next.t("utils.api.cub.filter_7",'Комедии'),'s7', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=10751',params,(json)=>{
-        append('Семейное','s8', json)
+        append(i18next.t("utils.api.cub.filter_8",'Семейное'),'s8', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=27',params,(json)=>{
-        append('Ужасы','s9', json)
+        append(i18next.t("utils.api.cub.filter_9",'Ужасы'),'s9', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=878',params,(json)=>{
-        append('Фантастика','s10', json)
+        append(i18next.t("utils.api.cub.filter_10",'Фантастика'),'s10', json)
     },status.error.bind(status))
 
     get('?sort=now&genre=53',params,(json)=>{
-        append('Триллер','s11', json)
+        append(i18next.t("utils.api.cub.filter_11",'Триллер'),'s11', json)
     },status.error.bind(status))
 }
 
@@ -131,8 +131,8 @@ function category(params = {}, oncomplite, onerror){
         let fulldata = []
         let data     = status.data
 
-        if(books.length)    fulldata.push({results: books,title: params.url == 'tv' ? 'Продолжить просмотр' : 'Вы смотрели'})
-        if(recomend.length) fulldata.push({results: recomend,title: 'Рекомендуем посмотреть'})
+        if(books.length)    fulldata.push({results: books,title: params.url == 'tv' ? i18next.t("utils.api.cub.book_1",'Продолжить просмотр') : i18next.t("utils.api.cub.book_2",'Вы смотрели')})
+        if(recomend.length) fulldata.push({results: recomend,title: i18next.t("utils.api.cub.recomend_1",'Рекомендуем посмотреть')})
 
         for(let i = 1; i <= total+1; i++){
             let ipx = 's'+i
@@ -151,33 +151,33 @@ function category(params = {}, oncomplite, onerror){
     }
 
     get('?cat='+params.url+'&sort=now_playing',params,(json)=>{
-        append('Сейчас смотрят','s1', json)
+        append(i18next.t("utils.api.cub.filter_12",'Сейчас смотрят','s1'), json)
 
         if(show) VideoQuality.add(json.results)
     },status.error.bind(status))
 
     if(params.url == 'tv'){
         get('?cat='+params.url+'&sort=update',params,(json)=>{
-            append('Новые серии','s2', json)
+            append(i18next.t("utils.api.cub.filter_13",'Новые серии'),'s2', json)
         },status.error.bind(status))
     }
 
     get('?cat='+params.url+'&sort=top',params,(json)=>{
-        append('Популярное','s3', json)
+        append(i18next.t("utils.api.cub.filter_14",'Популярное'),'s3', json)
 
         if(show) VideoQuality.add(json.results)
     },status.error.bind(status))
 
     get('?cat='+params.url+'&sort=latest',params,(json)=>{
-        append('Последнее добавление','s4', json)
+        append(i18next.t("utils.api.cub.filter_15",'Последнее добавление'),'s4', json)
     },status.error.bind(status))
 
     get('?cat='+params.url+'&sort=now',params,(json)=>{
-        append('Новинки этого года','s5', json)
+        append(i18next.t("utils.api.cub.filter_16",'Новинки этого года'),'s5', json)
     },status.error.bind(status))
 
     get('?cat='+params.url+'&sort=latest&vote=7',params,(json)=>{
-        append('С высоким рейтингом','s6', json)
+        append(i18next.t("utils.api.cub.filter_17",'С высоким рейтингом'),'s6', json)
     },status.error.bind(status))
 }
 

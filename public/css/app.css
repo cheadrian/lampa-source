@@ -239,11 +239,11 @@ body.menu--open .wrap__left {
 }
 
 body.platform--android .wrap__left {
-  background: -webkit-gradient(linear, left top, right top, from(#1d1f20), color-stop(70%, rgba(29, 31, 32, 0.95)), color-stop(75%, rgba(29, 31, 32, 0.9)), color-stop(80%, rgba(29, 31, 32, 0.8)), color-stop(85%, rgba(29, 31, 32, 0.6)), color-stop(90%, rgba(29, 31, 32, 0.4)), color-stop(95%, rgba(29, 31, 32, 0.2)), to(rgba(29, 31, 32, 0)));
-  background: -webkit-linear-gradient(left, #1d1f20 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
-  background: -moz-linear-gradient(left, #1d1f20 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
-  background: -o-linear-gradient(left, #1d1f20 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
-  background: linear-gradient(to right, #1d1f20 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgb(29, 31, 32)), color-stop(70%, rgba(29, 31, 32, 0.95)), color-stop(75%, rgba(29, 31, 32, 0.9)), color-stop(80%, rgba(29, 31, 32, 0.8)), color-stop(85%, rgba(29, 31, 32, 0.6)), color-stop(90%, rgba(29, 31, 32, 0.4)), color-stop(95%, rgba(29, 31, 32, 0.2)), to(rgba(29, 31, 32, 0)));
+  background: -webkit-linear-gradient(left, rgb(29, 31, 32) 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
+  background: -moz-linear-gradient(left, rgb(29, 31, 32) 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
+  background: -o-linear-gradient(left, rgb(29, 31, 32) 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
+  background: linear-gradient(to right, rgb(29, 31, 32) 0%, rgba(29, 31, 32, 0.95) 70%, rgba(29, 31, 32, 0.9) 75%, rgba(29, 31, 32, 0.8) 80%, rgba(29, 31, 32, 0.6) 85%, rgba(29, 31, 32, 0.4) 90%, rgba(29, 31, 32, 0.2) 95%, rgba(29, 31, 32, 0) 100%);
 }
 
 .head {
@@ -689,13 +689,13 @@ body.platform--android .wrap__left {
           border-radius: 100%;
 }
 .settings-param__status.wait {
-  background-color: #d6d6d6;
+  background-color: rgb(214, 214, 214);
 }
 .settings-param__status.error {
-  background-color: #f53f32;
+  background-color: rgb(245, 63, 50);
 }
 .settings-param__status.active {
-  background-color: #93d46d;
+  background-color: rgb(147, 212, 109);
 }
 .settings-param.focus {
   background-color: #353535;
@@ -826,10 +826,10 @@ body.settings--open .settings__content {
   overflow: hidden;
 }
 .scroll--mask {
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(8%, white), color-stop(92%, white), to(rgba(255, 255, 255, 0)));
-  -webkit-mask-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 8%, white 92%, rgba(255, 255, 255, 0) 100%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(8%, white), color-stop(92%, white), to(rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 8%, white 92%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(8%, rgb(255, 255, 255)), color-stop(92%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 8%, rgb(255, 255, 255) 92%, rgba(255, 255, 255, 0) 100%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(8%, rgb(255, 255, 255)), color-stop(92%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 8%, rgb(255, 255, 255) 92%, rgba(255, 255, 255, 0) 100%);
 }
 .scroll--mask .scroll__content {
   padding: 2.5em 0;
@@ -843,10 +843,10 @@ body.settings--open .settings__content {
   padding: 0 1.5em;
 }
 .scroll--horizontal.scroll--mask {
-  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(8%, white), color-stop(92%, white), to(rgba(255, 255, 255, 0)));
-  -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 8%, white 92%, rgba(255, 255, 255, 0) 100%);
-          mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(8%, white), color-stop(92%, white), to(rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 8%, white 92%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(8%, rgb(255, 255, 255)), color-stop(92%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 8%, rgb(255, 255, 255) 92%, rgba(255, 255, 255, 0) 100%);
+          mask-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(8%, rgb(255, 255, 255)), color-stop(92%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 8%, rgb(255, 255, 255) 92%, rgba(255, 255, 255, 0) 100%);
 }
 .scroll--horizontal.scroll--mask .scroll__content {
   padding: 0 2.5em;
@@ -1395,10 +1395,10 @@ body.settings--open .settings__content {
   height: 8em;
   margin-bottom: 1em;
   overflow: hidden;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(68%, white), to(rgba(255, 255, 255, 0)));
-  -webkit-mask-image: -webkit-linear-gradient(top, white 0%, white 68%, rgba(255, 255, 255, 0) 100%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(68%, white), to(rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(to bottom, white 0%, white 68%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(68%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 68%, rgba(255, 255, 255, 0) 100%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(68%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 68%, rgba(255, 255, 255, 0) 100%);
 }
 @media screen and (max-width: 767px) {
   .full-start__descr {
@@ -1550,10 +1550,10 @@ body.settings--open .settings__content {
   max-height: 70vh;
   overflow: hidden;
   max-height: 41vh;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, white), to(rgba(255, 255, 255, 0)));
-  -webkit-mask-image: -webkit-linear-gradient(top, white 0%, white 80%, rgba(255, 255, 255, 0) 100%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, white), to(rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(to bottom, white 0%, white 80%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(80%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 80%, rgba(255, 255, 255, 0) 100%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(80%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 80%, rgba(255, 255, 255, 0) 100%);
 }
 .full-descr__left {
   -webkit-box-flex: 1;
@@ -3246,10 +3246,10 @@ body.platform--orsay .category-full:after {
   height: 8em;
   margin-bottom: 1em;
   overflow: hidden;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(68%, white), to(rgba(255, 255, 255, 0)));
-  -webkit-mask-image: -webkit-linear-gradient(top, white 0%, white 68%, rgba(255, 255, 255, 0) 100%);
-          mask-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(68%, white), to(rgba(255, 255, 255, 0)));
-          mask-image: linear-gradient(to bottom, white 0%, white 68%, rgba(255, 255, 255, 0) 100%);
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(68%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 68%, rgba(255, 255, 255, 0) 100%);
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(68%, rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 68%, rgba(255, 255, 255, 0) 100%);
 }
 @media screen and (max-width: 580px) {
   .person-start__descr {
@@ -4864,7 +4864,7 @@ body.platform--orsay .menu__text {
   display: flex;
 }
 body.platform--orsay .player-panel .button.focus {
-  background-color: #524f4f;
+  background-color: rgb(82, 79, 79);
 }
 body.platform--orsay .player-panel .button > svg {
   position: absolute;

@@ -16,11 +16,11 @@ let body
 let network   = new Reguest()
 let official_list = [
     {
-        name: 'Просмотр онлайн',
+        name: i18next.t("utils.plugins.offlist_1",'Просмотр онлайн'),
         url: 'http://jin.energy/online.js'
     },
     {
-        name: 'Просмотр онлайн',
+        name: i18next.t("utils.plugins.offlist_2",'Просмотр онлайн'),
         url: 'http://arkmv.ru/vod'
     }
 ]
@@ -43,7 +43,7 @@ function init(){
 function showCheckResult(error){
     Modal.open({
         title: '',
-        html: $('<div class="about"><div class="selector">'+(error ? 'Не удалось проверить работоспособность плагина, однако это не означает, что плагин не работает. Перезагрузите приложение для выяснения загружается ли плагин.' : 'Для работы плагина, необходимо перезагрузить приложение.' )+'</div></div>'),
+        html: $('<div class="about"><div class="selector">'+(error ? i18next.t("utils.plugins.err_1",'Не удалось проверить работоспособность плагина, однако это не означает, что плагин не работает. Перезагрузите приложение для выяснения загружается ли плагин.') : i18next.t("utils.plugins.err_2",'Для работы плагина, необходимо перезагрузить приложение.') )+'</div></div>'),
         onBack: ()=>{
             Modal.close()
 
@@ -126,7 +126,7 @@ function showCatalog(){
             let item = $(`<div class="plugins-catalog__line selector">
                 <div class="plugins-catalog__url"></div>
                 <div class="plugins-catalog__detail"></div>
-                <div class="plugins-catalog__button">Установить</div>
+                <div class="plugins-catalog__button" data-i18n="utils.plugins.draw_1">Установить</div>
             </div>`)
 
             item.on('hover:enter',()=>{
@@ -143,12 +143,12 @@ function showCatalog(){
                     Params.listener.send('update_scroll')
                 }
                 else{
-                    Noty.show('Этот плагин уже установлен.')
+                    Noty.show(i18next.t("utils.plugins.sett_component_1",'Этот плагин уже установлен.'))
                 }
             })
 
             item.find('.plugins-catalog__url').text(plug.url)
-            item.find('.plugins-catalog__detail').text(plug.count ? plug.count + ' - Установок' : plug.name)
+            item.find('.plugins-catalog__detail').text(plug.count ? plug.count + i18next.t("utils.plugins.cat_details",' - Установок') : plug.name)
 
             container.append(item)
         }
@@ -179,7 +179,7 @@ function showCatalog(){
  * Рендер плагина
  */
 function renderPlugin(url, params = {}){
-    let item  = $('<div class="settings-param selector"><div class="settings-param__name">'+(params.is_cub && params.plugin.name ? params.plugin.name + ' - ' : '')+url+'</div><div class="settings-param__descr">'+(params.is_cub ? 'Загружено из CUB' : 'Нажмите для проверки плагина')+'</div><div class="settings-param__status"></div></div>')
+    let item  = $('<div class="settings-param selector"><div class="settings-param__name">'+(params.is_cub && params.plugin.name ? params.plugin.name + ' - ' : '')+url+'</div><div class="settings-param__descr">'+(params.is_cub ? i18next.t("utils.plugins.iscub_1",'Загружено из CUB') : i18next.t("utils.plugins.iscun_2",'Нажмите для проверки плагина'))+'</div><div class="settings-param__status"></div></div>')
     let check = ()=>{
         let status = $('.settings-param__status',item).removeClass('active error wait').addClass('wait')
         
@@ -305,7 +305,7 @@ function load(call){
 
                             Modal.open({
                                 title: '',
-                                html: $('<div class="about"><div class="selector">При загрузке приложения, часть плагинов не удалось загрузить ('+notload.join(', ')+')</div></div>'),
+                                html: $('<div class="about"><div class="selector"><span data-i18n="utils.plugins.loadmem_1">При загрузке приложения, часть плагинов не удалось загрузить</span> ('+notload.join(', ')+')</div></div>'),
                                 onBack: ()=>{
                                     Modal.close()
                         

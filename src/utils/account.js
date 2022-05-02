@@ -202,15 +202,15 @@ function renderPanel(){
                 account = Storage.get('account','{}')
 
                 Select.show({
-                    title: 'Синхронизация',
+                    title: i18next.t('utils.account.title', 'Синхронизация'), //'Синхронизация',
                     items: [
                         {
-                            title: 'Подтверждаю',
-                            subtitle: 'Все закладки будут перенесены в профиль ('+account.profile.name+')',
+                            title: i18next.t('utils.account.i_title_1', 'Подтверждаю'),
+                            subtitle: i18next.t('utils.account.i_subtitle_1', 'Все закладки будут перенесены в профиль (')+account.profile.name+')',
                             confirm: true
                         },
                         {
-                            title: 'Отменить'
+                            title: i18next.t('utils.account.i_title_2', 'Отменить')
                         }
                     ],
                     onSelect: (a)=>{
@@ -237,7 +237,7 @@ function renderPanel(){
                                 },
                                 success: function (j) {
                                     if(j.secuses){
-                                        Noty.show('Все закладки успешно перенесены')
+                                        Noty.show(i18next.t('utils.account.succes_notify', 'Все закладки успешно перенесены'))
 
                                         update()
                                     } 
@@ -305,7 +305,7 @@ function showProfiles(controller){
             Noty.show(result.text)
         }
     },()=>{
-        Noty.show('Не удалось получить список профилей')
+        Noty.show(i18next.t('utils.account.notify_1', 'Не удалось получить список профилей'))
     },false,{
         headers: {
             token: account.token
@@ -317,10 +317,10 @@ function check(){
     let account = Storage.get('account','{}')
 
     if(account.token){
-        renderStatus('Авторизованы','Вы вошли под аккаунтом ' + account.email)
+        renderStatus(i18next.t('utils.account.token_1', 'Авторизованы'),i18next.t('utils.account.token_2', 'Вы вошли под аккаунтом ') + account.email)
     }
     else{
-        renderStatus('Вход не выполнен','Ожидаем входа в аккаунт')
+        renderStatus(i18next.t('utils.account.token_3', 'Вход не выполнен'),i18next.t('utils.account.token_4', 'Ожидаем входа в аккаунт'))
     }
 }
 
@@ -361,7 +361,7 @@ function signin(){
                     token: result.user.token,
                     id: result.user.id,
                     profile: {
-                        name: 'Общий',
+                        name: i18next.t('utils.account.network_silent', 'Общий'),
                         id: 0
                     }
                 })
@@ -371,10 +371,10 @@ function signin(){
                 update()
             }
             else{
-                renderStatus('Ошибка',result.text)
+                renderStatus(i18next.t('utils.account.network_silent_result_1', 'Ошибка'),result.text)
             }
         },()=>{
-            renderStatus('Ошибка','Нет подключения к сети')
+            renderStatus(i18next.t('utils.account.network_silent_result_2', 'Ошибка'),i18next.t('utils.account.network_silent_result_3', 'Нет подключения к сети'))
         },{
             email: email,
             password: password

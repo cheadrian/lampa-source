@@ -45,7 +45,6 @@ import VideoQuality from './utils/video_quality'
 import TimeTable from './utils/timetable'
 import Broadcast from './interaction/broadcast'
 
-
 window.Lampa = {
     Listener: Subscribe(),
     Subscribe,

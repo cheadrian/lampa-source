@@ -67,7 +67,7 @@ function ready(){
         if(action == 'movie' || action == 'tv' || action == 'anime'){
             Activity.push({
                 url: action,
-                title: (action == 'movie' ? 'Фильмы' : action == 'anime' ? 'Аниме' : 'Сериалы') + ' - ' + Storage.field('source').toUpperCase(),
+                title: (action == 'movie' ? i18next.t("components.menu.act_1",'Фильмы') : action == 'anime' ? i18next.t("components.menu.act_2",'Аниме') : i18next.t("components.menu.act_3",'Сериалы')) + ' - ' + Storage.field('source').toUpperCase(),
                 component: 'category',
                 source: action == 'anime' ? 'cub' : Storage.field('source')
             })
@@ -76,7 +76,7 @@ function ready(){
         if(action == 'main'){
             Activity.push({
                 url: '',
-                title: 'Главная - ' + Storage.field('source').toUpperCase(),
+                title: i18next.t("components.menu.act_4",'Главная - ') + Storage.field('source').toUpperCase(),
                 component: 'main',
                 source: Storage.field('source')
             })
@@ -86,7 +86,7 @@ function ready(){
         if(action == 'settings') Controller.toggle('settings')
         if(action == 'about'){
             Modal.open({
-                title: 'О приложении',
+                title: i18next.t("components.menu.about_title",'О приложении'),
                 html: Template.get('about'),
                 size: 'medium',
                 onBack: ()=>{
@@ -100,7 +100,7 @@ function ready(){
         if(action == 'favorite'){
             Activity.push({
                 url: '',
-                title: type == 'book' ? 'Закладки' : type == 'like' ? 'Нравится' : type == 'history' ? 'История просмотров' : 'Позже',
+                title: type == 'book' ? i18next.t("components.menu.fav_1",'Закладки') : type == 'like' ? i18next.t("components.menu.fav_2",'Нравится') : type == 'history' ? i18next.t("components.menu.fav_3",'История просмотров') : i18next.t("components.menu.fav_4",'Позже'),
                 component: 'favorite',
                 type: type,
                 page: 1
@@ -110,7 +110,7 @@ function ready(){
         if(action == 'timetable'){
             Activity.push({
                 url: '',
-                title: 'Расписание',
+                title: i18next.t("components.menu.timetable_title",'Расписание'),
                 component: 'timetable',
                 page: 1
             })
@@ -119,7 +119,7 @@ function ready(){
         if(action == 'mytorrents'){
             Activity.push({
                 url: '',
-                title: 'Мои торренты',
+                title: i18next.t("components.menu.torrents_title",'Мои торренты'),
                 component: 'mytorrents',
                 page: 1
             })
@@ -128,7 +128,7 @@ function ready(){
         if(action == 'relise'){
             Activity.push({
                 url: '',
-                title: 'Цифровые релизы',
+                title: i18next.t("components.menu.relise_title",'Цифровые релизы'),
                 component: 'relise',
                 page: 1
             })
@@ -140,14 +140,14 @@ function ready(){
 
         if(action == 'collections'){
             Select.show({
-                title: 'Подборки',
+                title: i18next.t("components.menu.collections_title",'Подборки'),
                 items: [
                     {
-                        title: 'Подборки на ivi',
+                        title: i18next.t("components.menu.collections_title_1",'Подборки на ivi'),
                         source: 'ivi'
                     },
                     {
-                        title: 'Подборки на okko',
+                        title: i18next.t("components.menu.collections_title_2",'Подборки на okko'),
                         source: 'okko'
                     }
                 ],
@@ -180,14 +180,14 @@ function catalog(){
         source: Storage.field('source')
     },(menu)=>{
         Select.show({
-            title: 'Каталог',
+            title: i18next.t("components.menu.catalog_title",'Каталог'),
             items: menu,
             onSelect: (a)=>{
                 let tmdb = Storage.field('source') == 'tmdb' || Storage.field('source') == 'cub'
 
                 Activity.push({
                     url: Storage.field('source') == 'tmdb' ? 'movie' : '',
-                    title: 'Каталог - ' + a.title + ' - ' + Storage.field('source').toUpperCase(),
+                    title: i18next.t("components.menu.catalog_title_1",'Каталог - ') + a.title + ' - ' + Storage.field('source').toUpperCase(),
                     component: tmdb ? 'category' : 'category_full',
                     genres: a.id,
                     id: a.id,

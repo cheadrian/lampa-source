@@ -42,14 +42,14 @@ function declOfNum(n, text_forms) {
 function bytesToSize(bytes, speed) {
 
     if(bytes == 0) {
-        return '0 Байт';
+        return i18next.t("utils.math.size_1",'0 Байт');
     }
     var unitMultiple = 1024; 
-    var unitNames = ['Байт', 'КБ', 'МБ', 'ГБ', 'ТБ', 'ПБ'];
+    var unitNames = [i18next.t("utils.math.sizes_1024.0",'Байт'), i18next.t("utils.math.sizes_1024.1",'КБ'), i18next.t("utils.math.sizes_1024.2",'МБ'), i18next.t("utils.math.sizes_1024.3",'ГБ'), i18next.t("utils.math.sizes_1024.4",'ТБ'), i18next.t("utils.math.sizes_1024.5",'ПБ')];
 
     if(speed){
         unitMultiple = 1000;
-        unitNames = ['бит', 'Кбит', 'Мбит', 'Гбит', 'Тбит', 'Пбит'];
+        unitNames = [i18next.t("utils.math.sizes_1000.0",'бит'), i18next.t("utils.math.sizes_1000.1",'Кбит'), i18next.t("utils.math.sizes_1000.2",'Мбит'), i18next.t("utils.math.sizes_1000.3",'Гбит'), i18next.t("utils.math.sizes_1000.4",'Тбит'), i18next.t("utils.math.sizes_1000.5",'Пбит')];
     }
 
     var unitChanges = Math.floor(Math.log(bytes) / Math.log(unitMultiple));
@@ -80,27 +80,35 @@ function calcBitrate(byteSize, minutes){
 
 function time(html){
     let create = function(){
-        let months = [
-            'Январь',
-            'Февраль',
-            'Март',
-            'Апрель',
-            'Ма',
-            'Июнь',
-            'Июль',
-            'Август',
-            'Сентябрь',
-            'Октябрь',
-            'Ноябрь',
-            'Декабрь',
+            let months = [
+            i18next.t("utils.math.months_arr.0",'Январь'),
+            i18next.t("utils.math.months_arr.1",'Февраль'),
+            i18next.t("utils.math.months_arr.2",'Март'),
+            i18next.t("utils.math.months_arr.3",'Апрель'),
+            i18next.t("utils.math.months_arr.4",'Ма'),
+            i18next.t("utils.math.months_arr.5",'Июнь'),
+            i18next.t("utils.math.months_arr.6",'Июль'),
+            i18next.t("utils.math.months_arr.7",'Август'),
+            i18next.t("utils.math.months_arr.8",'Сентябрь'),
+            i18next.t("utils.math.months_arr.9",'Октябрь'),
+            i18next.t("utils.math.months_arr.10",'Ноябрь'),
+            i18next.t("utils.math.months_arr.11",'Декабрь'),
         ]
 
 
+        let days = [
+            i18next.t("utils.math.days_arr.0","Воскресенье"), 
+            i18next.t("utils.math.days_arr.1","Понедельник"), 
+            i18next.t("utils.math.days_arr.2","Вторник"), 
+            i18next.t("utils.math.days_arr.3","Среда"), 
+            i18next.t("utils.math.days_arr.4","Четверг"), 
+            i18next.t("utils.math.days_arr.5","Пятница"), 
+            i18next.t("utils.math.days_arr.6","Суббота")];
 
-        let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-
+        //TODO FIX
         this.moth = function(m){
             let n = months[m]
+            return n;
             let d = n.slice(-1)
 
             if(d == 'ь') return n.slice(0,n.length-1)+'я'
@@ -141,25 +149,35 @@ function time(html){
 }
 
 function parseTime(str){
-    let months = [
-        'Январь',
-        'Февраль',
-        'Март',
-        'Апрель',
-        'Ма',
-        'Июнь',
-        'Июль',
-        'Август',
-        'Сентябрь',
-        'Октябрь',
-        'Ноябрь',
-        'Декабрь',
+       let months = [
+        i18next.t("utils.math.months_arr.0",'Январь'),
+        i18next.t("utils.math.months_arr.1",'Февраль'),
+        i18next.t("utils.math.months_arr.2",'Март'),
+        i18next.t("utils.math.months_arr.3",'Апрель'),
+        i18next.t("utils.math.months_arr.4",'Ма'),
+        i18next.t("utils.math.months_arr.5",'Июнь'),
+        i18next.t("utils.math.months_arr.6",'Июль'),
+        i18next.t("utils.math.months_arr.7",'Август'),
+        i18next.t("utils.math.months_arr.8",'Сентябрь'),
+        i18next.t("utils.math.months_arr.9",'Октябрь'),
+        i18next.t("utils.math.months_arr.10",'Ноябрь'),
+        i18next.t("utils.math.months_arr.11",'Декабрь'),
     ]
 
-    let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"]
 
+    let days = [
+        i18next.t("utils.math.days_arr.0","Воскресенье"), 
+        i18next.t("utils.math.days_arr.1","Понедельник"), 
+        i18next.t("utils.math.days_arr.2","Вторник"), 
+        i18next.t("utils.math.days_arr.3","Среда"), 
+        i18next.t("utils.math.days_arr.4","Четверг"), 
+        i18next.t("utils.math.days_arr.5","Пятница"), 
+        i18next.t("utils.math.days_arr.6","Суббота")];
+
+    //TODO fix
     let mouth = function(m){
         let n = months[m]
+        return n;
         let d = (n + '').slice(-1)
 
         if(d == 'ь') return n.slice(0,n.length-1)+'я'
