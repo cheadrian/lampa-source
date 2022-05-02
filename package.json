@@ -27,7 +27,6 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify-es": "^3.0.0",
-    "i18next-parser": "^6.4.0",
     "parse5": "^7.0.0",
     "redis": "^4.0.2",
     "rollup": "~2.58.0",
