@@ -94,7 +94,7 @@ function createKeyboard(){
             results.search(input)
         }
         else{
-            search.find('.search__input').text('Введите текст...')
+            search.find('.search__input').text(i18next.t("components.search.find_1",'Введите текст...'))
         }
     })
 

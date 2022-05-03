@@ -6,7 +6,7 @@ import Scroll from './scroll'
 
 function create(params = {}){
     let line  = Template.get('filter').addClass('torrent-filter')
-    let empty = $('<div class="simple-button selector" style="margin: 2em auto 0 auto">Уточнить поиск</div>')
+    let empty = $('<div class="simple-button selector" style="margin: 2em auto 0 auto" data-i18n="interaction.filter.empty_1">Уточнить поиск</div>')
     let data  = {
         sort: [],
         filter: []
@@ -47,13 +47,13 @@ function create(params = {}){
         }
 
         search.push({
-            title: 'Указать название',
+            title: i18next.t("interaction.filter.search_1",'Указать название'),
             selected: selected == -1,
             query: ''
         })
 
         Select.show({
-            title: 'Уточнить',
+            title: i18next.t("interaction.filter.title_1",'Уточнить'),
             items: search,
             onBack: this.onBack,
             onSelect: (a)=>{
@@ -76,11 +76,11 @@ function create(params = {}){
     line.find('.filter--search').on('hover:enter',selectSearch.bind(this))
 
     line.find('.filter--sort').on('hover:enter',()=>{
-        this.show('Сортировать','sort')
+        this.show(i18next.t("interaction.filter.find_1",'Сортировать','sort'))
     })
 
     line.find('.filter--filter').on('hover:enter',()=>{
-        this.show('Фильтр','filter')
+        this.show(i18next.t("interaction.filter.find_2",'Фильтр','filter'))
     })
 
     buttons_scroll.append(line)

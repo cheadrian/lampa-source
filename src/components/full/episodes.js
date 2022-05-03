@@ -9,7 +9,7 @@ function create(data, params = {}){
     let html,scroll,last
 
     this.create = function(){
-        html   = Template.get('items_line',{title: 'Выход серий'})
+        html   = Template.get('items_line',{title: i18next.t("components.full.episodes.title_1",'Выход серий')})
         scroll = new Scroll({horizontal: true})
 
         scroll.render().find('.scroll__body').addClass('full-episodes')

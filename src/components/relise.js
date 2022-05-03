@@ -118,14 +118,14 @@ function component(object){
                                 })
                             }
                             else{
-                                Noty.show('Не удалось найти фильм.')
+                                Noty.show(i18next.t("components.relise.notify",'Не удалось найти фильм.'))
 
                                 Controller.toggle('content')
                             }
                         },()=>{
                             Modal.close()
                             
-                            Noty.show('Не удалось найти фильм.')
+                            Noty.show(i18next.t("components.relise.notify",'Не удалось найти фильм.'))
 
                             Controller.toggle('content')
                         })

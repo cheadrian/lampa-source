@@ -60,7 +60,7 @@ function component(object){
 
     this.empty = ()=>{
         let empty = new Empty({
-            descr: 'В этом разделе будут отображаться даты выхода новых серий'
+            descr: i18next.t("components.timetable.empty_1",'В этом разделе будут отображаться даты выхода новых серий')
         })
 
         html.append(empty.render())
@@ -85,7 +85,15 @@ function component(object){
         let air_date = date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2)
         let air_epis = []
         let day_week = Utils.parseTime(date.getTime())
-        let weeks    = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+        let weeks    = [
+            i18next.t("components.timetable.weeks_arr.0",'Вс'), 
+            i18next.t("components.timetable.weeks_arr.1",'Пн'), 
+            i18next.t("components.timetable.weeks_arr.2",'Вт'), 
+            i18next.t("components.timetable.weeks_arr.3",'Ср'), 
+            i18next.t("components.timetable.weeks_arr.4",'Чт'), 
+            i18next.t("components.timetable.weeks_arr.5",'Пт'), 
+            i18next.t("components.timetable.weeks_arr.6",'Сб')
+        ]
 
         table.forEach(elem=>{
             elem.episodes.forEach(ep=>{
@@ -110,7 +118,7 @@ function component(object){
             }
 
             if(air_epis.length == 1){
-                let preview = $('<div class="timetable__preview"><img><div>'+(air_epis[0].episode.name || 'Без названия')+'</div></div>')
+                let preview = $('<div class="timetable__preview"><img><div>'+(air_epis[0].episode.name || i18next.t("components.timetable.air_eips",'Без названия'))+'</div></div>')
 
                 Utils.imgLoad(preview.find('img'), Utils.protocol() + 'imagetmdb.cub.watch/t/p/w200/'+air_epis[0].episode.still_path,false,()=>{
                     preview.find('img').remove()
@@ -135,7 +143,7 @@ function component(object){
                 let noty = Template.get('notice_card',{
                     time: air_date,
                     title: elem.card.name,
-                    descr: 'Cезон - <b>'+elem.episode.season_number+'</b><br>Эпизод - <b>'+elem.episode.episode_number+'</b>'
+                    descr: 'Cезон - <b>'+elem.episode.season_number+i18next.t("components.timetable.air_eleme",'</b><br>Эпизод - <b>')+elem.episode.episode_number+'</b>'
                 })
 
                 Utils.imgLoad(noty.find('img'), elem.card.poster ? elem.card.poster : elem.card.img ? elem.card.img : Utils.protocol() + 'imagetmdb.cub.watch/t/p/w200/'+elem.card.poster_path)
@@ -157,7 +165,7 @@ function component(object){
             })
 
             Modal.open({
-                title: 'Сериалы',
+                title: i18next.t("components.timetable.modal_medium",'Сериалы'),
                 size: 'medium',
                 html: modal,
                 onBack: ()=>{

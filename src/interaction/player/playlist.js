@@ -16,7 +16,7 @@ function show(){
     let enabled = Controller.enabled()
 
     Select.show({
-        title: 'Плейлист',
+        title: i18next.t("interaction.player.playlist.title_1",'Плейлист'),
         items: playlist,
         onSelect: (a)=>{
             Controller.toggle(enabled.name)

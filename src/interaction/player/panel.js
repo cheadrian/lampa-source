@@ -222,7 +222,7 @@ elems.quality.text('auto').on('hover:enter',()=>{
         let enabled = Controller.enabled()
 
         Select.show({
-            title: 'Качество',
+            title: i18next.t("interaction.player.panel.title_1",'Качество'),
             items: qs,
             onSelect: (a)=>{
                 elems.quality.text(a.title)
@@ -250,13 +250,13 @@ elems.tracks.on('hover:enter',(e)=>{
             let name = []
 
             name.push(p + 1)
-            name.push(element.language || element.name || 'Неизвестно')
+            name.push(element.language || element.name || i18next.t("interaction.player.panel.title_121",'Неизвестно'))
 
             if(element.label) name.push(element.label)
 
             if(element.extra){
-                if(element.extra.channels) name.push('Каналов: ' + element.extra.channels)
-                if(element.extra.fourCC) name.push('Тип: ' + element.extra.fourCC)
+                if(element.extra.channels) name.push(i18next.t("interaction.player.panel.title_120",'Каналов: ') + element.extra.channels)
+                if(element.extra.fourCC) name.push(i18next.t("interaction.player.panel.title_119",'Тип: ') + element.extra.fourCC)
             }
             
             element.title = name.join(' / ')
@@ -265,7 +265,7 @@ elems.tracks.on('hover:enter',(e)=>{
         let enabled = Controller.enabled()
 
         Select.show({
-            title: 'Аудиодорожки',
+            title: i18next.t("interaction.player.panel.title_118",'Аудиодорожки'),
             items: tracks,
             onSelect: (a)=>{
                 tracks.forEach(element => {
@@ -294,20 +294,20 @@ elems.subs.on('hover:enter',(e)=>{
             let any_select = subs.find(s=>s.selected)
 
             Arrays.insert(subs, 0, {
-                title: 'Отключено',
+                title: i18next.t("interaction.player.panel.title_117",'Отключено'),
                 selected: any_select ? false : true,
                 index: -1
             })
         }
 
         subs.forEach((element, p) => {
-            if(element.index !== -1) element.title = p + ' / ' + (element.language || element.label || 'Неизвестно')
+            if(element.index !== -1) element.title = p + ' / ' + (element.language || element.label || i18next.t("interaction.player.panel.title_116",'Неизвестно'))
         })
 
         let enabled = Controller.enabled()
 
         Select.show({
-            title: 'Субтитры',
+            title: i18next.t("interaction.player.panel.title_115",'Субтитры'),
             items: subs,
             onSelect: (a)=>{
                 subs.forEach(element => {
@@ -337,14 +337,14 @@ html.find('.player-panel__size').on('hover:enter',(e)=>{
 
     let items = [
         {
-            title: 'По умолчанию',
-            subtitle: 'Размер видео по умолчанию',
+            title: i18next.t("interaction.player.panel.title_114",'По умолчанию'),
+            subtitle: i18next.t("interaction.player.panel.title_113",'Размер видео по умолчанию'),
             value: 'default',
             selected: select == 'default'
         },
         {
-            title: 'Расширить',
-            subtitle: 'Расширяет видео на весь экран',
+            title: i18next.t("interaction.player.panel.title_112",'Расширить'),
+            subtitle: i18next.t("interaction.player.panel.title_111",'Расширяет видео на весь экран'),
             value: 'cover',
             selected: select == 'cover'
         }
@@ -352,32 +352,32 @@ html.find('.player-panel__size').on('hover:enter',(e)=>{
 
     if(!(Platform.is('tizen') && Storage.field('player') == 'tizen')){
         items = items.concat([{
-            title: 'Заполнить',
-            subtitle: 'Вместить видео на весь экран',
+            title: i18next.t("interaction.player.panel.title_110",'Заполнить'),
+            subtitle: i18next.t("interaction.player.panel.title_109",'Вместить видео на весь экран'),
             value: 'fill',
             selected: select == 'fill'
         },
         {
-            title: 'Увеличить 115%',
-            subtitle: 'Увеличить видео на 115%',
+            title: i18next.t("interaction.player.panel.title_108",'Увеличить 115%'),
+            subtitle: i18next.t("interaction.player.panel.title_107",'Увеличить видео на 115%'),
             value: 's115',
             selected: select == 's115'
         },
         {
-            title: 'Увеличить 130%',
-            subtitle: 'Увеличить видео на 130%',
+            title: i18next.t("interaction.player.panel.title_106",'Увеличить 130%'),
+            subtitle: i18next.t("interaction.player.panel.title_105",'Увеличить видео на 130%'),
             value: 's130',
             selected: select == 's130'
         },
         {
-            title: 'По вертикали 115%',
-            subtitle: 'Увеличить видео на 115%',
+            title: i18next.t("interaction.player.panel.title_104",'По вертикали 115%'),
+            subtitle: i18next.t("interaction.player.panel.title_103",'Увеличить видео на 115%'),
             value: 'v115',
             selected: select == 'v115'
         },
         {
-            title: 'По вертикали 130%',
-            subtitle: 'Увеличить видео на 130%',
+            title: i18next.t("interaction.player.panel.title_102",'По вертикали 130%'),
+            subtitle: i18next.t("interaction.player.panel.title_101",'Увеличить видео на 130%'),
             value: 'v130',
             selected: select == 'v130'
         }])
@@ -389,7 +389,7 @@ html.find('.player-panel__size').on('hover:enter',(e)=>{
     }
 
     Select.show({
-        title: 'Размер видео',
+        title: i18next.t("interaction.player.panel.title_100",'Размер видео'),
         items: items,
         onSelect: (a)=>{
             listener.send('size',{size: a.value})

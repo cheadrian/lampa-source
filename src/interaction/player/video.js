@@ -64,10 +64,10 @@ function bind(){
 
         if(msg.indexOf('EMPTY SRC') == -1){
             if(error.code == 3){
-                listener.send('error', {error: 'Не удалось декодировать видео'})
+                listener.send('error', {error: i18next.t("interaction.player.video.error_1",'Не удалось декодировать видео')})
             }
             else if(error.code == 4){
-                listener.send('error', {error: 'Видео не найдено или повреждено'})
+                listener.send('error', {error: i18next.t("interaction.player.video.error_2",'Видео не найдено или повреждено')})
             }
             else if(typeof error.code !== 'undefined'){
                 listener.send('error', {error: 'code ['+error.code+'] details ['+msg+']'})

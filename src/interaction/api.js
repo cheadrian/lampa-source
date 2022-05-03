@@ -58,7 +58,7 @@ function search(params = {}, oncomplite, onerror){
                 number_of_seasons: 0
             }
         },(json)=>{
-            json.title = 'Парсер'
+            json.title = i18next.t("interaction.api.title_1",'Парсер')
             json.results = json.Results.slice(0,20)
             json.Results = null
 

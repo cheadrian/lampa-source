@@ -78,7 +78,7 @@ function create(_video){
             }
     
             add({
-                title: 'Отключить',
+                title: i18next.t("interaction.player.webos.title_1",'Отключить'),
                 selected: true
             },-1)
     
@@ -301,7 +301,7 @@ let subs = [],
     adsu = (i)=>{
         let sub = {
             index: i,
-            title: i == -1 ? 'Отключить' : '',
+            title: i == -1 ? i18next.t("interaction.player.webos.title_2",'Отключить') : '',
             selected: i == -1
         }
 

@@ -5,194 +5,194 @@ import Activity from './activity'
 let data = {}
 
 data.type = {
-    title: 'Тип',
+    title: i18next.t("interaction.content_filter.title_10",'Тип'),
     items: [
         {
-            title: 'Фильмы',
+            title: i18next.t("interaction.content_filter.title_11",'Фильмы'),
             selected: true,
             cat: 'movie'
         },
         {
-            title: 'Мультфильмы',
+            title: i18next.t("interaction.content_filter.title_12",'Мультфильмы'),
             cat: 'multmovie'
         },
         {
-            title: 'Сериалы',
+            title: i18next.t("interaction.content_filter.title_13",'Сериалы'),
             cat: 'tv'
         },
         {
-            title: 'Мультсериалы',
+            title: i18next.t("interaction.content_filter.title_14",'Мультсериалы'),
             cat: 'multtv'
         },
         {
-            title: 'Аниме',
+            title: i18next.t("interaction.content_filter.title_15",'Аниме'),
             cat: 'anime'
         }
     ]
 }
 
 data.rating = {
-    title: 'Рейтинг',
+    title: i18next.t("interaction.content_filter.title_16",'Рейтинг'),
     items: [
         {
-            title: 'Любой',
+            title: i18next.t("interaction.content_filter.title_17",'Любой'),
         },
         {
-            title: 'от 0 до 3',
+            title: i18next.t("interaction.content_filter.title_18",'от 0 до 3'),
             voite: '0-3'
         },
         {
-            title: 'от 3 до 6',
+            title: i18next.t("interaction.content_filter.title_19",'от 3 до 6'),
             voite: '3-6'
         },
         {
-            title: 'от 6 до 8',
+            title: i18next.t("interaction.content_filter.title_20",'от 6 до 8'),
             voite: '6-8'
         },
         {
-            title: 'от 8 до 10',
+            title: i18next.t("interaction.content_filter.title_21",'от 8 до 10'),
             voite: '8-10'
         }
     ]
 }
 
 data.country = {
-    title: 'Страна',
+    title: i18next.t("interaction.content_filter.title_22",'Страна'),
     items: [{
-        title: 'Украина',
+        title: i18next.t("interaction.content_filter.title_23",'Украина'),
         code: 'uk'
     }, {
-        title: 'США',
+        title: i18next.t("interaction.content_filter.title_24",'США'),
         code: 'en'
     }, {
-        title: 'Россия',
+        title: i18next.t("interaction.content_filter.title_25",'Россия'),
         code: 'ru'
     }, {
-        title: 'Япония', 
+        title: i18next.t("interaction.content_filter.title_26",'Япония'), 
         code: 'ja'
     }, {
-        title: 'Корея', 
+        title: i18next.t("interaction.content_filter.title_27",'Корея'), 
         code: 'ko'
     }, {
-        title: 'Азербайджан',
+        title: i18next.t("interaction.content_filter.title_28",'Азербайджан'),
         code: 'az'
     }, {
-        title: 'Албания',
+        title: i18next.t("interaction.content_filter.title_29",'Албания'),
         code: 'sq'
     }, {
-        title: 'Беларусь',
+        title: i18next.t("interaction.content_filter.title_30",'Беларусь'),
         code: 'be'
     }, {
-        title: 'Болгария',
+        title: i18next.t("interaction.content_filter.title_31",'Болгария'),
         code: 'bg'
     }, {
-        title: 'Германия',
+        title: i18next.t("interaction.content_filter.title_32",'Германия'),
         code: 'de'
     }, {
-        title: 'Грузия',
+        title: i18next.t("interaction.content_filter.title_33",'Грузия'),
         code: 'ka'
     }, {
-        title: 'Дания',
+        title: i18next.t("interaction.content_filter.title_34",'Дания'),
         code: 'da'
     }, {
-        title: 'Естония',
+        title: i18next.t("interaction.content_filter.title_35",'Естония'),
         code: 'et'
     }, {
-        title: 'Ирландия',
+        title: i18next.t("interaction.content_filter.title_36",'Ирландия'),
         code: 'ga'
     }, {
-        title: 'Испания',
+        title: i18next.t("interaction.content_filter.title_37",'Испания'),
         code: 'es'
     }, {
-        title: 'Италия',
+        title: i18next.t("interaction.content_filter.title_38",'Италия'),
         code: 'it'
     }, {
-        title: 'Китай',
+        title: i18next.t("interaction.content_filter.title_39",'Китай'),
         code: 'zh'
     }, {
-        title: 'Латвия',
+        title: i18next.t("interaction.content_filter.title_40",'Латвия'),
         code: 'lv'
     }, {
-        title: 'Непал',
+        title: i18next.t("interaction.content_filter.title_41",'Непал'),
         code: 'ne'
     }, {
-        title: 'Норвегия',
+        title: i18next.t("interaction.content_filter.title_42",'Норвегия'),
         code: 'no'
     }, {
-        title: 'Польша',
+        title: i18next.t("interaction.content_filter.title_43",'Польша'),
         code: 'pl'
     }, {
-        title: 'Румуния',
+        title: i18next.t("interaction.content_filter.title_44",'Румуния'),
         code: 'ro'
     }, {
-        title: 'Сербия',
+        title: i18next.t("interaction.content_filter.title_45",'Сербия'),
         code: 'sr'
     }, {
-        title: 'Словакия',
+        title: i18next.t("interaction.content_filter.title_46",'Словакия'),
         code: 'sk'
     }, {
-        title: 'Словения',
+        title: i18next.t("interaction.content_filter.title_47",'Словения'),
         code: 'sl'
     }, {
-        title: 'Таджикистан',
+        title: i18next.t("interaction.content_filter.title_48",'Таджикистан'),
         code: 'tg'
     }, {
-        title: 'Турция',
+        title: i18next.t("interaction.content_filter.title_49",'Турция'),
         code: 'tr'
     }, {
-        title: 'Узбекистан',
+        title: i18next.t("interaction.content_filter.title_50",'Узбекистан'),
         code: 'uz'
     }, {
-        title: 'Финляндия',
+        title: i18next.t("interaction.content_filter.title_51",'Финляндия'),
         code: 'fi'
     }, {
-        title: 'Франция',
+        title: i18next.t("interaction.content_filter.title_52",'Франция'),
         code: 'fr'
     }, {
-        title: 'Хорватия',
+        title: i18next.t("interaction.content_filter.title_53",'Хорватия'),
         code: 'hr'
     }, {
-        title: 'Чешская Республика',
+        title: i18next.t("interaction.content_filter.title_54",'Чешская Республика'),
         code: 'cs'
     }, {
-        title: 'Швеция',
+        title: i18next.t("interaction.content_filter.title_55",'Швеция'),
         code: 'sv'
     }, {
-        title: 'Эстония',
+        title: i18next.t("interaction.content_filter.title_56",'Эстония'),
         code: 'et'
     }]
 }
 
 data.genres = {
-    title: 'Жанр',
+    title: i18next.t("interaction.content_filter.title_57",'Жанр'),
     items: [
-        {"id":28,"title":"боевик",checkbox: true},
-        {"id":12,"title":"приключения",checkbox: true},
-        {"id":16,"title":"мультфильм",checkbox: true},
-        {"id":35,"title":"комедия",checkbox: true},
-        {"id":80,"title":"криминал",checkbox: true},
-        {"id":99,"title":"документальный",checkbox: true},
-        {"id":18,"title":"драма",checkbox: true},
-        {"id":10751,"title":"семейный",checkbox: true},
-        {"id":14,"title":"фэнтези",checkbox: true},
-        {"id":36,"title":"история",checkbox: true},
-        {"id":27,"title":"ужасы",checkbox: true},
-        {"id":10402,"title":"музыка",checkbox: true},
-        {"id":9648,"title":"детектив",checkbox: true},
-        {"id":10749,"title":"мелодрама",checkbox: true},
-        {"id":878,"title":"фантастика",checkbox: true},
-        {"id":10770,"title":"телевизионный фильм",checkbox: true},
-        {"id":53,"title":"триллер",checkbox: true},
-        {"id":10752,"title":"военный",checkbox: true},
-        {"id":37,"title":"вестерн",checkbox: true}
+        {"id":28,"title":i18next.t("interaction.content_filter.title_100","боевик"),checkbox: true},
+        {"id":12,"title":i18next.t("interaction.content_filter.title_101","приключения"),checkbox: true},
+        {"id":16,"title":i18next.t("interaction.content_filter.title_102","мультфильм"),checkbox: true},
+        {"id":35,"title":i18next.t("interaction.content_filter.title_103","комедия"),checkbox: true},
+        {"id":80,"title":i18next.t("interaction.content_filter.title_104","криминал"),checkbox: true},
+        {"id":99,"title":i18next.t("interaction.content_filter.title_105","документальный"),checkbox: true},
+        {"id":18,"title":i18next.t("interaction.content_filter.title_106","драма"),checkbox: true},
+        {"id":10751,"title":i18next.t("interaction.content_filter.title_107","семейный"),checkbox: true},
+        {"id":14,"title":i18next.t("interaction.content_filter.title_108","фэнтези"),checkbox: true},
+        {"id":36,"title":i18next.t("interaction.content_filter.title_109","история"),checkbox: true},
+        {"id":27,"title":i18next.t("interaction.content_filter.title_110","ужасы"),checkbox: true},
+        {"id":10402,"title":i18next.t("interaction.content_filter.title_111","музыка"),checkbox: true},
+        {"id":9648,"title":i18next.t("interaction.content_filter.title_112","детектив"),checkbox: true},
+        {"id":10749,"title":i18next.t("interaction.content_filter.title_113","мелодрама"),checkbox: true},
+        {"id":878,"title":i18next.t("interaction.content_filter.title_114","фантастика"),checkbox: true},
+        {"id":10770,"title":i18next.t("interaction.content_filter.title_115","телевизионный фильм"),checkbox: true},
+        {"id":53,"title":i18next.t("interaction.content_filter.title_116","триллер"),checkbox: true},
+        {"id":10752,"title":i18next.t("interaction.content_filter.title_117","военный"),checkbox: true},
+        {"id":37,"title":i18next.t("interaction.content_filter.title_118","вестерн"),checkbox: true}
     ]
 }
 
 data.year = {
-    title: 'Год',
+    title: i18next.t("interaction.content_filter.title_58",'Год'),
     items: [
         {
-            title: 'Любой',
+            title: i18next.t("interaction.content_filter.title_59",'Любой'),
             any: true
         }
     ]
@@ -226,19 +226,19 @@ function selected(where){
         if(a.selected || a.checked) title.push(a.title)
     })
 
-    where.subtitle = title.length ? title.join(', ') : 'Не выбрано'
+    where.subtitle = title.length ? title.join(', ') : i18next.t("interaction.content_filter.title_200",'Не выбрано')
 }
 
 function main(){
     for(var i in data) selected(data[i])
 
     let items = [{
-        title: 'Начать поиск',
+        title: i18next.t("interaction.content_filter.title_60",'Начать поиск'),
         search: true
     },data.type,data.rating,data.genres,data.country,data.year]
 
     Select.show({
-        title: 'Фильтр',
+        title: i18next.t("interaction.content_filter.title_61",'Фильтр'),
         items: items,
         onBack: ()=>{
             Controller.toggle('content')
@@ -299,7 +299,7 @@ function search(){
 
     let activity = {
         url: url,
-        title: 'Фильтр',
+        title: i18next.t("interaction.content_filter.title_62",'Фильтр'),
         component: 'category_full',
         source: 'tmdb',
         card_type: true,

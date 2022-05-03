@@ -32,32 +32,45 @@ function component(object){
     let last_filter
 
     let filter_items = {
-        quality: ['Любое','4k','1080p','720p'],
-        hdr: ['Не выбрано','Да','Нет'],
-        sub: ['Не выбрано','Да','Нет'],
+        quality: [
+            i18next.t("components.torrents.quality_arr.0",'Любое'),
+            i18next.t("components.torrents.quality_arr.1",'4k'),
+            i18next.t("components.torrents.quality_arr.2",'1080p'),
+            i18next.t("components.torrents.quality_arr.3",'720p')
+        ],
+        hdr: [
+            i18next.t("components.torrents.hdr_arr.0",'Не выбрано'),
+            i18next.t("components.torrents.hdr_arr.1",'Да'),
+            i18next.t("components.torrents.hdr_arr.2",'Нет')
+        ],
+        sub: [
+            i18next.t("components.torrents.sub_arr.0",'Не выбрано'),
+            i18next.t("components.torrents.sub_arr.1",'Да'),
+            i18next.t("components.torrents.sub_arr.2",'Нет')
+        ],
         voice: [],
-        tracker: ['Любой'],
-        year: ['Любой']
+        tracker: [i18next.t("components.torrents.tracker",'Любой')],
+        year: [i18next.t("components.torrents.year",'Любой')]
     }
 
     let filter_translate = {
-        quality: 'Качество',
-        hdr: 'HDR',
-        sub: 'Субтитры',
-        voice: 'Перевод',
-        tracker: 'Трекер',
-        year: 'Год'
+        quality: i18next.t("components.torrents.filter_quality",'Качество'),
+        hdr:  i18next.t("components.torrents.filter_hdr",'HDR'),
+        sub:  i18next.t("components.torrents.filter_sub",'Субтитры'),
+        voice:  i18next.t("components.torrents.filter_voice",'Перевод'),
+        tracker:  i18next.t("components.torrents.filter_tracker",'Трекер'),
+        year:  i18next.t("components.torrents.filter_year",'Год')
     }
 
     let filter_multiple = ['quality','voice','tracker']
 
     let sort_translate = {
-        Seeders: 'По раздающим',
-        Size: 'По размеру',
-        Title: 'По названию',
-        Tracker: 'По источнику',
-        PublisTime: 'По дате',
-        viewed: 'По просмотренным'
+        Seeders:  i18next.t("components.torrents.sortt_seeders",'По раздающим'),
+        Size: i18next.t("components.torrents.sortt_size",'По размеру'),
+        Title: i18next.t("components.torrents.sortt_title",'По названию'),
+        Tracker: i18next.t("components.torrents.sortt_tracker",'По источнику'),
+        PublisTime: i18next.t("components.torrents.sortt_publisti",'По дате'),
+        viewed: i18next.t("components.torrents.sortt_viewed",'По просмотренным')
     }
 
     let i = 20,
@@ -172,7 +185,7 @@ function component(object){
 
             this.activity.toggle()
         },(text)=>{
-            this.empty('Ответ: ' + text)
+            this.empty(i18next.t("components.torrents.empty",'Ответ: ') + text)
         })
 
         filter.onSearch = (value)=>{
@@ -215,27 +228,27 @@ function component(object){
         let need   = Storage.get('torrents_sort','Seeders')
         let select = [
             {
-                title: 'По раздающим',
+                title: i18next.t("components.torrents.buildsort_seeders",'По раздающим'),
                 sort: 'Seeders'
             },
             {
-                title: 'По размеру',
+                title: i18next.t("components.torrents.buildsort_size",'По размеру'),
                 sort: 'Size'
             },
             {
-                title: 'По названию',
+                title: i18next.t("components.torrents.buildsort_title",'По названию'),
                 sort: 'Title'
             },
             {
-                title: 'По источнику',
+                title: i18next.t("components.torrents.buildsort_tracker",'По источнику'),
                 sort: 'Tracker'
             },
             {
-                title: 'По дате',
+                title: i18next.t("components.torrents.buildsort_publisti",'По дате'),
                 sort: 'PublisTime'
             },
             {
-                title: 'По просмотренным',
+                title: i18next.t("components.torrents.buildsort_viewed",'По просмотренным'),
                 sort: 'viewed'
             }
         ]
@@ -297,8 +310,14 @@ function component(object){
             })
         }
 
-        filter_items.voice   = ["Любой","Дубляж","Многоголосый","Двухголосый","Любительский"]
-        filter_items.tracker = ['Любой']
+        filter_items.voice   = [
+            i18next.t("components.torrents.filter_voice_arr.0","Любой"),
+            i18next.t("components.torrents.filter_voice_arr.1","Дубляж"),
+            i18next.t("components.torrents.filter_voice_arr.2","Многоголосый"),
+            i18next.t("components.torrents.filter_voice_arr.3","Двухголосый"),
+            i18next.t("components.torrents.filter_voice_arr.4","Любительский")
+        ]
+        filter_items.tracker = [i18next.t("components.torrents.filter_tracker",'Любой')]
 
         results.Results.forEach(element => {
             let title = element.Title.toLowerCase(),
@@ -323,16 +342,16 @@ function component(object){
         Storage.set('torrents_filter', need)
 
         select.push({
-            title: 'Сбросить фильтр',
+            title: i18next.t("components.torrents.t_filter_1",'Сбросить фильтр'),
             reset: true
         })
 
-        add('quality','Качество')
-        add('hdr','HDR')
-        add('sub','Субтитры')
-        add('voice','Перевод')
-        add('tracker', 'Трекер')
-        add('year', 'Год')
+        add('quality',i18next.t("components.torrents.filter1_quality",'Качество'))
+        add('hdr',i18next.t("components.torrents.filter1_hdr",'HDR'))
+        add('sub',i18next.t("components.torrents.filter1_sub",'Субтитры'))
+        add('voice',i18next.t("components.torrents.filter1_voice",'Перевод'))
+        add('tracker', i18next.t("components.torrents.filter1_tracker",'Трекер'))
+        add('year', i18next.t("components.torrents.filter1_year",'Год'))
 
         filter.set('filter', select)
 
@@ -417,7 +436,7 @@ function component(object){
 
         if(results.Results.length) this.showResults()
         else{
-            this.empty('Не удалось получить результатов')
+            this.empty(i18next.t("components.torrents.result_show",'Не удалось получить результатов'))
         }
     }
 
@@ -595,7 +614,7 @@ function component(object){
 
         Modal.open({
             title: '',
-            html: Template.get('modal_pending',{text: 'Запрашиваю magnet ссылку'}),
+            html: Template.get('modal_pending',{text: i18next.t("components.torrents.pending_m",'Запрашиваю magnet ссылку')}),
             onBack: ()=>{
                 Modal.close()
 
@@ -637,7 +656,7 @@ function component(object){
                 movie: object.movie
             }
         },()=>{
-            Noty.show(object.movie.title + ' - добавлено в мои торренты')
+            Noty.show(object.movie.title + i18next.t("components.torrents.movie_title",' - добавлено в мои торренты'))
         })
     }
 
@@ -682,10 +701,10 @@ function component(object){
                 time_max = Utils.secondsToTimeHuman(time_max)
 
                 let details = $(`<div class="torrent-item__stat">
-                    <div>Среднее: ${time_avr}</div>
-                    <div>Минимальное: ${time_min}</div>
-                    <div>Максимальное: ${time_max}</div>
-                    <div>Запросов: ${element.viewing_request}</div>
+                    <div><span data-i18n="components.torrents.details_1">Среднее:</span> ${time_avr}</div>
+                    <div><span data-i18n="components.torrents.details_2">Минимальное:</span> ${time_min}</div>
+                    <div><span data-i18n="components.torrents.details_3">Максимальное:</span> ${time_max}</div>
+                    <div><span data-i18n="components.torrents.details_4">Запросов:</span> ${element.viewing_request}</div>
                 </div>`)
 
                 item.append(details)
@@ -716,20 +735,20 @@ function component(object){
                 let enabled = Controller.enabled().name
 
                 Select.show({
-                    title: 'Действие',
+                    title: i18next.t("components.torrents.select_show_1",'Действие'),
                     items: [
                         {
-                            title: 'Добавить в мои торренты',
+                            title: i18next.t("components.torrents.select_show_2",'Добавить в мои торренты'),
                             tomy: true
                         },
                         {
-                            title: 'Пометить',
-                            subtitle: 'Пометить раздачу с флагом (просмотрено)',
+                            title: i18next.t("components.torrents.select_show_3",'Пометить'),
+                            subtitle: i18next.t("components.torrents.select_show_4",'Пометить раздачу с флагом (просмотрено)'),
                             mark: true
                         },
                         {
-                            title: 'Снять отметку',
-                            subtitle: 'Снять отметку с раздачи (просмотрено)'
+                            title: i18next.t("components.torrents.select_show_5",'Снять отметку'),
+                            subtitle: i18next.t("components.torrents.select_show_6",'Снять отметку с раздачи (просмотрено)')
                         }
                     ],
                     onBack: ()=>{

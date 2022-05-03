@@ -81,7 +81,7 @@ function component(object){
                 Activity.push({
                     url: card_data.url,
                     id: card_data.id,
-                    title: 'Подборки - ' + card_data.title,
+                    title: i18next.t("components.collections.title_10",'Подборки - ') + card_data.title,
                     component: 'collections_view',
                     source: object.source,
                     page: 1

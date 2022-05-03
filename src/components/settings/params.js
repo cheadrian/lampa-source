@@ -15,25 +15,25 @@ let listener = Subscribe()
 function init(){
     if(Platform.is('tizen')){
         select('player',{
-            'inner': 'Встроенный',
+            'inner': i18next.t("components.settings.params.inner_1",'Встроенный'),
             'tizen': 'Tizen',
         },'tizen')
     }
     if(Platform.is('orsay')){
         select('player',{
-            'inner': 'Встроенный',
+            'inner': i18next.t("components.settings.params.inner_2",'Встроенный'),
             'orsay': 'Orsay',
         },'inner')
     }
     else if(Platform.is('webos')){
         select('player',{
-            'inner': 'Встроенный',
+            'inner': i18next.t("components.settings.params.inner_3",'Встроенный'),
             'webos': 'WebOS',
         },'inner')
     }
     else if (Platform.is('android')) {
         select('player', {
-            'inner': 'Встроенный',
+            'inner': i18next.t("components.settings.params.inner_4",'Встроенный'),
             'android': 'Android'
         }, 'android')
 
@@ -50,8 +50,8 @@ function init(){
  */
 function trigger(name,_default){
     values[name] = {
-        'true':'Да',
-        'false':'Нет'
+        'true': i18next.t("components.settings.params.trig_1",'Да'),
+        'false': i18next.t("components.settings.params.trig_2",'Нет')
     }
 
     defaults[name] = _default
@@ -144,7 +144,7 @@ function bind(elems){
             let enabled = Controller.enabled().name
 
             Select.show({
-                title: 'Выбрать',
+                title: i18next.t("components.settings.params.itm_1",'Выбрать'),
                 items: items,
                 onBack: ()=>{
                     Controller.toggle(enabled)
@@ -223,14 +223,14 @@ function field(name){
  * Добовляем селекторы
  */
 select('interface_size',{
-    'small': 'Меньше',
-    'normal': 'Нормальный'
+    'small': i18next.t("components.settings.params.isize_1",'Меньше'),
+    'normal': i18next.t("components.settings.params.isize_2",'Нормальный')
 },'normal')
 
 select('poster_size',{
-    'w200': 'Низкое',
-    'w300': 'Среднее',
-    'w500': 'Высокое'
+    'w200': i18next.t("components.settings.params.psize_1",'Низкое'),
+    'w300': i18next.t("components.settings.params.psize_2",'Среднее'),
+    'w500': i18next.t("components.settings.params.psize_3",'Высокое')
 },'w200')
 
 select('parser_torrent_type',{
@@ -239,14 +239,14 @@ select('parser_torrent_type',{
 },'jackett')
 
 select('torlook_parse_type',{
-    'native': 'Напрямую',
-    'site': 'Через API сайта',
+    'native': i18next.t("components.settings.params.torpar_1",'Напрямую'),
+    'site': i18next.t("components.settings.params.torpar_2",'Через API сайта'),
 },'native')
 
 select('background_type',{
-    'complex': 'Сложный',
-    'simple': 'Простой',
-    'poster': 'Картинка',
+    'complex': i18next.t("components.settings.params.bgtyp_1",'Сложный'),
+    'simple': i18next.t("components.settings.params.bgtyp_2",'Простой'),
+    'poster': i18next.t("components.settings.params.bgtyp_3",'Картинка'),
 },'simple')
 
 select('pages_save_total',{
@@ -258,44 +258,44 @@ select('pages_save_total',{
 },'5')
 
 select('player',{
-    'inner': 'Встроенный'
+    'inner': i18next.t("components.settings.params.player_1",'Встроенный')
 },'inner')
 
 select('torrserver_use_link',{
-    'one': 'Основную',
-    'two': 'Дополнительную'
+    'one': i18next.t("components.settings.params.torr_use_1",'Основную'),
+    'two': i18next.t("components.settings.params.torr_use_2",'Дополнительную')
 },'one')
 
 select('subtitles_size',{
-    'small': 'Маленькие',
-    'normal': 'Обычные',
-    'large': 'Большие',
+    'small': i18next.t("components.settings.params.subtz_1",'Маленькие'),
+    'normal': i18next.t("components.settings.params.subtz_2",'Обычные'),
+    'large': i18next.t("components.settings.params.subtz_3",'Большие'),
 },'normal')
 
 select('screensaver_type',{
-    'nature': 'Природа',
-    'chrome': 'ChromeCast'
+    'nature': i18next.t("components.settings.params.screens_1",'Природа'),
+    'chrome': i18next.t("components.settings.params.screens_2",'ChromeCast')
 },'chrome')
 
 select('tmdb_lang',{
-    'ru': 'Русский',
-    'en': 'Английский',
+    'ru': i18next.t("components.settings.params.tmdb_lg_1",'Русский'),
+    'en': i18next.t("components.settings.params.tmdb_lg_2",'Английский'),
 },'ru')
 
 select('parse_lang',{
-    'df': 'Оригинал',
-    'ru': 'Русский',
+    'df': i18next.t("components.settings.params.pars_lg_1",'Оригинал'),
+    'ru': i18next.t("components.settings.params.pars_lg_2",'Русский'),
 },'df')
 
 select('player_timecode',{
-    'again': 'Начать с начала',
-    'continue': 'Продолжить',
-    'ask': 'Спрашивать',
+    'again': i18next.t("components.settings.params.play_tmc_1",'Начать с начала'),
+    'continue': i18next.t("components.settings.params.play_tmc_2",'Продолжить'),
+    'ask': i18next.t("components.settings.params.play_tmc_3",'Спрашивать'),
 },'continue')
 
 select('player_scale_method',{
-    'transform': 'Transform',
-    'calculate': 'Рассчитать',
+    'transform': i18next.t("components.settings.params.play_scl_1",'Transform'),
+    'calculate': i18next.t("components.settings.params.play_scl_2",'Рассчитать'),
 },'transform')
 
 select('source',{
@@ -306,13 +306,13 @@ select('source',{
 },'tmdb')
 
 select('start_page', {
-    'main': 'Главная',
-    'favorite@book': 'Закладки',
-    'favorite@like': 'Нравится',
-    'favorite@wath': 'Позже',
-    'favorite@history': 'История просмотров',
-    'mytorrents': 'Мои торренты',
-    'last': 'Последняя'
+    'main': i18next.t("components.settings.params.start_pg_1",'Главная'),
+    'favorite@book': i18next.t("components.settings.params.start_pg_2",'Закладки'),
+    'favorite@like': i18next.t("components.settings.params.start_pg_3",'Нравится'),
+    'favorite@wath': i18next.t("components.settings.params.start_pg_4",'Позже'),
+    'favorite@history': i18next.t("components.settings.params.start_pg_5",'История просмотров'),
+    'mytorrents': i18next.t("components.settings.params.start_pg_6",'Мои торренты'),
+    'last': i18next.t("components.settings.params.start_pg_7",'Последняя')
 }, 'last')
 
 select('scroll_type', {
@@ -321,13 +321,13 @@ select('scroll_type', {
 }, 'css')
 
 select('card_views_type', {
-    'preload': 'Подгружать',
-    'view': 'Показать все'
+    'preload': i18next.t("components.settings.params.card_view_1",'Подгружать'),
+    'view': i18next.t("components.settings.params.card_view_2",'Показать все')
 }, 'preload')
 
 select('navigation_type', {
-    'controll': 'Пульт',
-    'mouse': 'Пульт с мышкой'
+    'controll': i18next.t("components.settings.params.nav_type_1",'Пульт'),
+    'mouse': i18next.t("components.settings.params.nav_type_2",'Пульт с мышкой')
 }, 'mouse')
 
 

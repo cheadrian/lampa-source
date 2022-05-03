@@ -93,7 +93,7 @@ function create(){
 
                 Activity.push({
                     url: '',
-                    title: 'Торренты',
+                    title: i18next.t("components.search.results.title_1",'Торренты'),
                     component: 'torrents',
                     search: query,
                     movie: {
@@ -108,7 +108,7 @@ function create(){
             else{
                 Activity.push({
                     url: 'search/' + type,
-                    title: 'Поиск - ' + query,
+                    title: i18next.t("components.search.results.title_2",'Поиск - ') + query,
                     component: 'category_full',
                     page: 2,
                     query: encodeURIComponent(query),
@@ -133,12 +133,12 @@ function create(){
 
                         Torrent.back(this.toggle.bind(this))
                     },(text)=>{
-                        Modal.update(Template.get('error',{title: 'Ошибка', text: text}))
+                        Modal.update(Template.get('error',{title: i18next.t("components.search.results.title_3",'Ошибка'), text: text}))
                     })
 
                     Modal.open({
                         title: '',
-                        html: Template.get('modal_pending',{text: 'Запрашиваю magnet ссылку'}),
+                        html: Template.get('modal_pending',{text: i18next.t("components.search.results.title_4",'Запрашиваю magnet ссылку')}),
                         onBack: ()=>{
                             Modal.close()
             

@@ -445,14 +445,14 @@ function ask(){
             work.timeline.waiting_for_user = true
 
             Select.show({
-                title: 'Действие',
+                title: i18next.t("interaction.player.title_1",'Действие'),
                 items: [
                     {
-                        title: 'Продолжить просмотр с '+Utils.secondsToTime(work.timeline.time)+'?',
+                        title: i18next.t("interaction.player.title_2",'Продолжить просмотр с ')+Utils.secondsToTime(work.timeline.time)+'?',
                         yes: true
                     },
                     {
-                        title: 'Нет'
+                        title: i18next.t("interaction.player.title_3",'Нет')
                     }
                 ],
                 onBack: ()=>{

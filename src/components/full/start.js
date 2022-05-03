@@ -46,7 +46,7 @@ function create(data, params = {}){
         html = Template.get('full_start',{
             title: data.movie.title,
             original_title: data.movie.original_title,
-            descr: Utils.substr(data.movie.overview || 'Без описания.', 420),
+            descr: Utils.substr(data.movie.overview || i18next.t("components.full.start.text_10",'Без описания.'), 420),
             time: Utils.secondsToTime(data.movie.runtime * 60,true),
             genres: Utils.substr(genres,30),
             r_themovie: parseFloat((data.movie.vote_average || 0) +'').toFixed(1),
@@ -70,7 +70,7 @@ function create(data, params = {}){
 
             let day = Math.round((air.getTime() - now)/(24*60*60*1000))
 
-            if(day > 0) $('.tag--episode',html).removeClass('hide').find('div').text('Следующая: ' + Utils.parseTime(data.movie.next_episode_to_air.air_date).short + ' / Осталось дней: ' + day)
+            if(day > 0) $('.tag--episode',html).removeClass('hide').find('div').text(i18next.t("components.full.start.text_11",'Следующая: ') + Utils.parseTime(data.movie.next_episode_to_air.air_date).short + i18next.t("components.full.start.text_12",' / Осталось дней: ') + day)
         }
 
         tbtn = html.find('.view--torrent')
@@ -82,7 +82,7 @@ function create(data, params = {}){
 
             Activity.push({
                 url: '',
-                title: 'Торренты',
+                title: i18next.t("components.full.start.text_13",'Торренты'),
                 component: 'torrents',
                 search: query,
                 search_one: data.movie.title,
@@ -110,7 +110,7 @@ function create(data, params = {}){
                 data.videos.results.forEach(element => {
                     items.push({
                         title: element.name,
-                        subtitle: element.official ? 'Официальный' : 'Неофициальный',
+                        subtitle: element.official ? i18next.t("components.full.start.text_14",'Официальный') : i18next.t("components.full.start.text_15",'Неофициальный'),
                         id: element.key,
                         player: element.player,
                         url: element.url
@@ -118,7 +118,7 @@ function create(data, params = {}){
                 });
 
                 Select.show({
-                    title: 'Трейлеры',
+                    title: i18next.t("components.full.start.text_16",'Трейлеры'),
                     items: items,
                     onSelect: (a)=>{
                         this.toggle()
@@ -191,7 +191,7 @@ function create(data, params = {}){
                 })
 
                 Select.show({
-                    title: 'Смотреть',
+                    title: i18next.t("components.full.start.text_17",'Смотреть'),
                     items: menu,
                     onBack: ()=>{
                         Controller.toggle(enabled)

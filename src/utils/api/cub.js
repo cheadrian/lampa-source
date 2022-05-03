@@ -151,7 +151,7 @@ function category(params = {}, oncomplite, onerror){
     }
 
     get('?cat='+params.url+'&sort=now_playing',params,(json)=>{
-        append(i18next.t("utils.api.cub.filter_12",'Сейчас смотрят','s1'), json)
+        append(i18next.t("utils.api.cub.filter_12",'Сейчас смотрят'),'s1', json)
 
         if(show) VideoQuality.add(json.results)
     },status.error.bind(status))

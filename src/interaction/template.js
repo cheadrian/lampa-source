@@ -131,7 +131,7 @@ let templates = {
 function get(name, vars = {}, like_static = false){
     var tpl = templates[name];
 
-    if(!tpl) throw 'Шаблон: '+name+' не найден!'
+    if(!tpl) throw i18next.t("interaction.template.throw_1",'Шаблон: ')+name+i18next.t("interaction.template.throw_2",' не найден!')
 
     for(var n in vars){
         tpl = tpl.replace(new RegExp('{'+n+'}','g'),vars[n]);

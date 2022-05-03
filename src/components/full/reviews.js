@@ -6,7 +6,7 @@ function create(data, params = {}){
     let html,scroll,last
 
     this.create = function(){
-        html   = Template.get('items_line',{title: 'Коментарии'})
+        html   = Template.get('items_line',{title: i18next.t("components.full.reviews.title_1",'Коментарии')})
         scroll = new Scroll({horizontal: true})
 
         scroll.render().find('.scroll__body').addClass('full-reviews')

@@ -335,7 +335,7 @@ function last(){
         if(action == 'favorite') {
             push({
                 url: '',
-                title: type == 'book' ? 'Закладки' : type == 'like' ? 'Нравится' : type == 'history' ? 'История просмотров' : 'Позже',
+                title: type == 'book' ? i18next.t("interaction.activity.book",'Закладки') : type == 'like' ? i18next.t("interaction.activity.like",'Нравится') : type == 'history' ? i18next.t("interaction.activity.history",'История просмотров') : i18next.t("interaction.activity.history_2",'Позже'),
                 component: 'favorite',
                 type: type,
                 page: 1
@@ -344,7 +344,7 @@ function last(){
         else if(action == 'mytorrents') {
             push({
                 url: '',
-                title: 'Мои торренты',
+                title: i18next.t("interaction.activity.mytorrents_1",'Мои торренты'),
                 component: 'mytorrents',
                 page: 1
             })
@@ -352,7 +352,7 @@ function last(){
         else {
             push({
                 url: '',
-                title: 'Главная - ' + Storage.field('source').toUpperCase(),
+                title: i18next.t("interaction.activity.start_pg_1",'Главная - ') + Storage.field('source').toUpperCase(),
                 component: 'main',
                 source: Storage.field('source'),
                 page: 1

@@ -66,7 +66,7 @@ let html = `<div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector" data-type="input" data-name="device_name" placeholder="Например: Моя Лампа">
+    <div class="settings-param selector" data-type="input" data-name="device_name" placeholder='${i18next.t("settings.more.device_placeholder", "Например: Моя Лампа")}'>
         <div class="settings-param__name" data-i18n="settings.more.device_name_name">Название устройства</div>
         <div class="settings-param__value"></div>
     </div>

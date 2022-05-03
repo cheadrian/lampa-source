@@ -29,6 +29,16 @@ function init(){
         Notice.open()
     })
 
+    html.find('.open--language').on('hover:enter',()=>{
+        if(i18next.language === 'ru'){
+            i18next.changeLanguage('en');
+        } else {
+            i18next.changeLanguage('ru');
+        }
+        localStorage.removeItem("activity");
+        location.reload();
+    })
+
     html.find('.open--search').on('hover:enter',()=>{
         Controller.toggle('search')
     })

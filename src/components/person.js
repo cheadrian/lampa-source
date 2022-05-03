@@ -42,14 +42,14 @@ function component(object){
                 } else {
                     //для обратной совместимости с иви и окко
                     if(data.movie && data.movie.results.length){
-                        data.movie.title   = 'Фильмы'
+                        data.movie.title   = i18next.t("components.person.movie_title",'Фильмы')
                         data.movie.noimage = true
 
                         this.build('line', data.movie)
                     }
 
                     if(data.tv && data.tv.results.length){
-                        data.tv.title   = 'Сериалы'
+                        data.tv.title   = i18next.t("components.person.tv_title",'Сериалы')
                         data.tv.noimage = true
 
                         this.build('line', data.tv)

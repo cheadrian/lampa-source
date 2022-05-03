@@ -8,7 +8,7 @@ function create(persons, params){
     let html,scroll,last
 
     this.create = function(){
-        html   = Template.get('items_line',{title: params.title || 'Актеры'})
+        html   = Template.get('items_line',{title: params.title || i18next.t("components.full.persons.title_1",'Актеры')})
         scroll = new Scroll({horizontal: true,scroll_by_item:true})
 
         scroll.render().find('.scroll__body').addClass('full-persons')
@@ -29,7 +29,7 @@ function create(persons, params){
             }).on('hover:enter',()=>{
                 Activity.push({
                     url: element.url,
-                    title: 'Персона',
+                    title: i18next.t("components.full.persons.title_2",'Персона'),
                     component: 'actor',
                     id: element.id,
                     source: params.object.source

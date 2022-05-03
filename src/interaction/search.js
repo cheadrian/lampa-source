@@ -32,7 +32,7 @@ function create(params = {}){
             search.find('.search-box__input').text(input)
         }
         else{
-            search.find('.search-box__input').text('Введите текст...')
+            search.find('.search-box__input').text(i18next.t("interaction.search.find_1",'Введите текст...'))
         }
     }
 

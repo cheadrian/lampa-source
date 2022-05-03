@@ -91,7 +91,7 @@ function details(params, str = ''){
 function secondsToTime(sec_num) {
     let hours   = Math.trunc(sec_num / 3600);
     let minutes = Math.floor((sec_num - hours * 3600) / 60);
-    return (hours ? hours + 'ч. ' : '') + minutes + 'м.';
+    return (hours ? hours + i18next.t("interaction.timeline.hours",'ч. ') : '') + minutes + i18next.t("interaction.timeline.minutes",'м.');
 }
 
 function format(params){

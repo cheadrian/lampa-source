@@ -69,7 +69,7 @@ function create(data, params = {}){
             let notice = notices[0]
 
             if(Utils.parseTime(notice.date).full == Utils.parseTime(Date.now()).full){
-                card.find('.card__view').append('<div class="card__new-episode"><div>Новая серия</div></div>')
+                card.find('.card__view').append('<div class="card__new-episode"><div data-i18n="interaction.card.view_1" data-i18n="interaction.card.find_2">Новая серия</div></div>')
             }
         }
     }
@@ -107,21 +107,21 @@ function create(data, params = {}){
         let status  = Favorite.check(data)
 
         Select.show({
-            title: 'Действие',
+            title: i18next.t("interaction.card.title_1",'Действие'),
             items: [
                 {
-                    title: status.book ? 'Убрать из закладок' : 'В закладки',
-                    subtitle: 'Смотрите в меню (Закладки)',
+                    title: status.book ? i18next.t("interaction.card.title_2",'Убрать из закладок') : i18next.t("interaction.card.title_3",'В закладки'),
+                    subtitle: i18next.t("interaction.card.title_4",'Смотрите в меню (Закладки)'),
                     where: 'book'
                 },
                 {
-                    title: status.like ? 'Убрать из понравившихся' : 'Нравится',
-                    subtitle: 'Смотрите в меню (Нравится)',
+                    title: status.like ? i18next.t("interaction.card.title_5",'Убрать из понравившихся') : i18next.t("interaction.card.title_6",'Нравится'),
+                    subtitle: i18next.t("interaction.card.title_7",'Смотрите в меню (Нравится)'),
                     where: 'like'
                 },
                 {
-                    title: status.wath ? 'Убрать из ожидаемых' : 'Смотреть позже',
-                    subtitle: 'Смотрите в меню (Позже)',
+                    title: status.wath ? i18next.t("interaction.card.title_8",'Убрать из ожидаемых') : i18next.t("interaction.card.title_9",'Смотреть позже'),
+                    subtitle: i18next.t("interaction.card.title_10",'Смотрите в меню (Позже)'),
                     where: 'wath'
                 }
             ],

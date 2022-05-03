@@ -6,13 +6,13 @@ let html = `<div>
 
     <div class="settings-param-title"><span data-i18n="settings.server.links">Ссылки</span></div>
 
-    <div class="settings-param selector" data-type="input" data-name="torrserver_url" placeholder="Например: 192.168.х">
+    <div class="settings-param selector" data-type="input" data-name="torrserver_url" placeholder='${i18next.t("settings.server.torrurl_placeholder", "Например: 192.168.х")}'>
         <div class="settings-param__name" data-i18n="settings.server.torrserver_url_name">Основная ссылка</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr" data-i18n="settings.server.torrserver_url_descr">Укажите основную ссылку на скрипт TorrServer</div>
     </div>
 
-    <div class="settings-param selector" data-type="input" data-name="torrserver_url_two" placeholder="Например: 192.168.х">
+    <div class="settings-param selector" data-type="input" data-name="torrserver_url_two" placeholder='${i18next.t("settings.server.torrurltwo_placeholder", "Например: 192.168.х")}'>
         <div class="settings-param__name" data-i18n="settings.server.torrserver_url_two_name">Дополнительная ссылка</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr" data-i18n="settings.server.torrserver_url_two_descr">Укажите дополнительную ссылку на скрипт TorrServer</div>
@@ -45,12 +45,12 @@ let html = `<div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector" data-type="input" data-name="torrserver_login" placeholder="Не указан">
+    <div class="settings-param selector" data-type="input" data-name="torrserver_login" placeholder='${i18next.t("settings.server.torrlogin_placeholder", "Не указан")}'>
         <div class="settings-param__name" data-i18n="settings.server.torrserver_login_name">Логин</div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector" data-type="input" data-name="torrserver_password" data-string="true" placeholder="Не указан">
+    <div class="settings-param selector" data-type="input" data-name="torrserver_password" data-string="true" placeholder='${i18next.t("settings.server.torrpass_placeholder", "Не указан")}'>
         <div class="settings-param__name" data-i18n="settings.server.torrserver_password_name">Пароль</div>
         <div class="settings-param__value"></div>
     </div>

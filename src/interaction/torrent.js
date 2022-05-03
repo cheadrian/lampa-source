@@ -109,8 +109,8 @@ function connect(){
         let ip = Torserver.ip()
 
         let tpl = Template.get('torrent_noconnect',{
-            title: 'Ошибка',
-            text: 'Не удалось подключиться к TorrServer',
+            title: i18next.t("interaction.torrent.tip_title",'Ошибка'),
+            text: i18next.t("interaction.torrent.tip_text",'Не удалось подключиться к TorrServer'),
             ip: ip,
             href: window.location.href,
             echo: echo
@@ -145,8 +145,8 @@ function hash(){
         let jac = Storage.field('parser_torrent_type') == 'jackett'
 
         let tpl = Template.get('torrent_nohash',{
-            title: 'Ошибка',
-            text: 'Не удалось получить HASH',
+            title: i18next.t("interaction.torrent.tip2_title",'Ошибка'),
+            text: i18next.t("interaction.torrent.tip2_title",'Не удалось получить HASH'),
             url: SERVER.object.MagnetUri || SERVER.object.Link,
             echo: echo
         })
@@ -174,7 +174,7 @@ function files(){
         })
 
         if(repeat >= 45){
-            Modal.update(Template.get('error',{title: 'Ошибка',text: 'Время ожидания истекло'}))
+            Modal.update(Template.get('error',{title: i18next.t("interaction.torrent.tip3_title",'Ошибка'),text: i18next.t("interaction.torrent.tip3_title",'Время ожидания истекло')}))
 
             Torserver.clear()
             Torserver.drop(SERVER.hash)
@@ -357,39 +357,39 @@ function list(items, params){
 
             let menu = [
                 {
-                    title: 'Сбросить таймкод',
+                    title: i18next.t("interaction.torrent.menu_title_1",'Сбросить таймкод'),
                     timeclear: true
                 }
             ]
 
             if(Platform.is('webos')){
                 menu.push({
-                    title: 'Запустить плеер - Webos',
+                    title: i18next.t("interaction.torrent.menu_title_2",'Запустить плеер - Webos'),
                     player: 'webos'
                 })
             }
             
             if(Platform.is('android')){
                 menu.push({
-                    title: 'Запустить плеер - Android',
+                    title: i18next.t("interaction.torrent.menu_title_3",'Запустить плеер - Android'),
                     player: 'android'
                 })
             }
             
             menu.push({
-                title: 'Запустить плеер - Lampa',
+                title: i18next.t("interaction.torrent.menu_title_4",'Запустить плеер - Lampa'),
                 player: 'lampa'
             })
 
             if(!Platform.tv()){
                 menu.push({
-                    title: 'Копировать ссылку на видео',
+                    title: i18next.t("interaction.torrent.menu_title_5",'Копировать ссылку на видео'),
                     link: true
                 })
             }
 
             Select.show({
-                title: 'Действие',
+                title: i18next.t("interaction.torrent.menu_title_6",'Действие'),
                 items: menu,
                 onBack: ()=>{
                     Controller.toggle(enabled)
@@ -406,9 +406,9 @@ function list(items, params){
 
                     if(a.link){
                         Utils.copyTextToClipboard(element.url,()=>{
-                            Noty.show('Ссылка скопирована в буфер обмена')
+                            Noty.show(i18next.t("interaction.torrent.noty_1",'Ссылка скопирована в буфер обмена'))
                         },()=>{
-                            Noty.show('Ошибка при копирование ссылки')
+                            Noty.show(i18next.t("interaction.torrent.noty_2",'Ошибка при копирование ссылки'))
                         })
                     }
 
@@ -426,8 +426,8 @@ function list(items, params){
         html.append(item)
     })
 
-    if(items.length == 0) html = Template.get('error',{title: 'Пусто',text: 'Не удалось извлечь подходящие файлы'})
-    else Modal.title('Файлы')
+    if(items.length == 0) html = Template.get('error',{title: i18next.t("interaction.torrent.temp_error_1",'Пусто'),text: i18next.t("interaction.torrent.temp_error_2",'Не удалось извлечь подходящие файлы')})
+    else Modal.title(i18next.t("interaction.torrent.modal_title_1",'Файлы'))
 
     Modal.update(html)
 }

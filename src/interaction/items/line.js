@@ -111,7 +111,7 @@ function create(data, params = {}){
             else{
                 Activity.push({
                     url: data.url,
-                    title: 'Категория',
+                    title: i18next.t("interaction.items.line_title",'Категория'),
                     component: 'category_full',
                     page: 2,
                     genres: params.genres,
@@ -133,7 +133,7 @@ function create(data, params = {}){
             onmore()
         }
 
-        let button = $('<div class="items-line__more selector">Еще</div>')
+        let button = $('<div class="items-line__more selector" data-i18n="interaction.items.button_1">Еще</div>')
 
         button.on('hover:enter',()=>{
             onmore()

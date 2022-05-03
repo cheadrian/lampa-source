@@ -1,11 +1,7 @@
 {
   "head": {
-    "title": "EN Landing-Page",
-    "description": "EN description."
-  },
-  "intro": {
-    "title": "EN Page",
-    "subTitle": "EN subtitle"
+    "title": "Lampa - EN",
+    "description": "Lampa gives you freedom to watch what you want."
   },
   "about": {
     "title": "About the application",
@@ -299,13 +295,16 @@
       "user_out_name": "Sign out",
       "signin": "Authorization",
       "signin_name": "Password",
-      "status": "Status"
+      "status": "Status",
+      "email_placeholder": "Not specified",
+      "password_placeholder": "Not specified"
     },
     "cloud": {
       "use_cloud_name": "Synchronization",
       "use_cloud_descr": "Synchronization allows you to synchronize your bookmarks, browsing history, tags and timecodes. Connection instructions https://github.com/yumata/lampa/wiki",
       "authorization": "Authorization",
-      "status": "Status"
+      "status": "Status",
+      "token_placeholder": "Not specified"
     },
     "input": {
       "links": "Favorites"
@@ -356,7 +355,8 @@
       "navigation_type_name": "Navigation type",
       "device_name_name": "Device name",
       "clear_storage_name": "Clear cache",
-      "clear_storage_value": "All settings and data will be cleared"
+      "clear_storage_value": "All settings and data will be cleared",
+      "device_placeholder": "For example: My Lamp"
     },
     "parser": {
       "parser_use_name": "Use parser",
@@ -375,7 +375,10 @@
       "parse_lang_name": "Search",
       "parse_lang_descr": "What language to search in?",
       "parse_in_search_name": "Parser in search",
-      "parse_in_search_descr": "Search results in search?"
+      "parse_in_search_descr": "Search results in search?",
+      "jackett_url_placeholder": "For example: 192.168.x",
+      "jackett_key_placeholder": "For example: sa0sk83d..",
+      "parser_web_placeholder": "For example: scraperapi.com"
     },
     "player": {
       "player_name": "Player type",
@@ -423,7 +426,11 @@
       "authorization": "Authorization",
       "torrserver_auth_name": "Password Login",
       "torrserver_login_name": "Login",
-      "torrserver_password_name": "Password"
+      "torrserver_password_name": "Password",
+      "torrurl_placeholder": "For example: 192.168.x",
+      "torrurltwo_placeholder": "For example: 192.168.x",
+      "torrlogin_placeholder": "Not specified",
+      "torrpass_placeholder": "Not specified"
     }
   },
   "timeline_details": {
@@ -490,7 +497,7 @@
     },
     "serial": {
       "series": {
-        "output": "Выход"
+        "output": "Output"
       },
       "season": "Season"
     }
@@ -514,6 +521,480 @@
       "collections_title_2": "Collections on okko",
       "catalog_title": "Catalog",
       "catalog_title_1": "Catalog -"
+    },
+    "favorite": {
+      "history_title": "Action",
+      "history_title_1": "Remove from history",
+      "history_subtitle_1": "Delete selected card",
+      "history_title_2": "Clear the history",
+      "history_subtitle_2": "Delete all cards from history",
+      "history_title_3": "Clear labels",
+      "history_subtitle_3": "Clear View Tags",
+      "history_title_4": "Clear Timecodes",
+      "history_subtitle_4": "Clear all timecodes",
+      "notify": "Marks cleared",
+      "notify_1": "Timecodes cleared"
+    },
+    "full": {
+      "person_1": "Director",
+      "coll_title": "Collection",
+      "rec_title": "Recommendations",
+      "sim_title": "Similar",
+      "descr": {
+        "text_1": "In detail",
+        "text_2": "No description.",
+        "text_3": "Company"
+      },
+      "episodes": {
+        "title_1": "Series release"
+      },
+      "persons": {
+        "title_1": "actors",
+        "title_2": "Person"
+      },
+      "reviews": {
+        "title_1": "Comments"
+      },
+      "start": {
+        "text_10": "No description.",
+        "text_11": "Next:",
+        "text_12": " / Days left:",
+        "text_13": "torrents",
+        "text_14": "Official",
+        "text_15": "Informal",
+        "text_16": "Trailers",
+        "text_17": "Look"
+      }
+    },
+    "mytorrents": {
+      "title_1": "Action",
+      "title_2": "Delete",
+      "subtitle_1": "The torrent will be removed from your list"
+    },
+    "relise": {
+      "notify": "The movie could not be found."
+    },
+    "search": {
+      "find_1": "Enter text...",
+      "history": {
+        "key": "Left - delete"
+      },
+      "results": {
+        "title_1": "torrents",
+        "title_2": "Search -",
+        "title_3": "Mistake",
+        "title_4": "Requesting a magnet link"
+      }
+    },
+    "settings": {
+      "component": {
+        "notify": "Cache and data cleared"
+      },
+      "input": {
+        "links_1": "Add",
+        "links_2": "Delete",
+        "links_3": " present value",
+        "links_4": "For torrents, Api key is empty",
+        "links_5": "For local TorrServ",
+        "show_1": "Links",
+        "show_2": "Added (",
+        "show_3": "Removed (",
+        "show_4": "Removed ("
+      },
+      "params": {
+        "inner_1": "built-in",
+        "inner_2": "built-in",
+        "inner_3": "built-in",
+        "inner_4": "built-in",
+        "trig_1": "Yes",
+        "trig_2": "Not",
+        "itm_1": "Choose",
+        "isize_1": "Smaller",
+        "isize_2": "Normal",
+        "psize_1": "Low",
+        "psize_2": "The average",
+        "psize_3": "High",
+        "torpar_1": "Directly",
+        "torpar_2": "Through the website API",
+        "bgtyp_1": "Complicated",
+        "bgtyp_2": "Simple",
+        "bgtyp_3": "Picture",
+        "player_1": "built-in",
+        "torr_use_1": "main",
+        "torr_use_2": "Additional",
+        "subtz_1": "small",
+        "subtz_2": "Ordinary",
+        "subtz_3": "Large",
+        "screens_1": "Nature",
+        "screens_2": "ChromeCast",
+        "tmdb_lg_1": "Russian",
+        "tmdb_lg_2": "English",
+        "pars_lg_1": "Original",
+        "pars_lg_2": "Russian",
+        "play_tmc_1": "Start over",
+        "play_tmc_2": "Proceed",
+        "play_tmc_3": "To ask",
+        "play_scl_1": "Transform",
+        "play_scl_2": "Calculate",
+        "start_pg_1": "home",
+        "start_pg_2": "Bookmarks",
+        "start_pg_3": "Like",
+        "start_pg_4": "Later",
+        "start_pg_5": "Browsing history",
+        "start_pg_6": "My torrents",
+        "start_pg_7": "Last",
+        "card_view_1": "Upload",
+        "card_view_2": "show all",
+        "nav_type_1": "Remote controller",
+        "nav_type_2": "Remote control with mouse"
+      }
+    },
+    "timetable": {
+      "empty_1": "This section will display the release dates of new episodes.",
+      "weeks_arr": {
+        "0": "Sun.",
+        "1": "Mon.",
+        "2": "Tue.",
+        "3": "Wed.",
+        "4": "Read",
+        "5": "Fri.",
+        "6": "Sat"
+      },
+      "air_eips": "Untitled",
+      "air_eleme": "</b><br>Episode - <b>",
+      "modal_medium": "TV series"
+    },
+    "torrents": {
+      "details_1": "The average:",
+      "details_2": "Minimum:",
+      "details_3": "Maximum:",
+      "details_4": "Requests:",
+      "quality_arr": {
+        "0": "Any",
+        "1": "4k",
+        "2": "1080p",
+        "3": "720p"
+      },
+      "hdr_arr": {
+        "0": "Not chosen",
+        "1": "Yes",
+        "2": "Not"
+      },
+      "sub_arr": {
+        "0": "Not chosen",
+        "1": "Yes",
+        "2": "Not"
+      },
+      "tracker": "Any",
+      "year": "Any",
+      "filter_quality": "Quality",
+      "filter_hdr": "HDR",
+      "filter_sub": "Subtitles",
+      "filter_voice": "Translation",
+      "filter_tracker": "tracker",
+      "filter_year": "Year",
+      "sortt_seeders": "By distributors",
+      "sortt_size": "To size",
+      "sortt_title": "by name",
+      "sortt_tracker": "By source",
+      "sortt_publisti": "By date",
+      "sortt_viewed": "Viewed",
+      "empty": "Answer:",
+      "buildsort_seeders": "By distributors",
+      "buildsort_size": "To size",
+      "buildsort_title": "by name",
+      "buildsort_tracker": "By source",
+      "buildsort_publisti": "By date",
+      "buildsort_viewed": "Viewed",
+      "filter_voice_arr": {
+        "0": "Any",
+        "1": "dubbing",
+        "2": "polyphonic",
+        "3": "two-voiced",
+        "4": "Amateur"
+      },
+      "t_filter_1": "Reset filter",
+      "filter1_quality": "Quality",
+      "filter1_hdr": "HDR",
+      "filter1_sub": "Subtitles",
+      "filter1_voice": "Translation",
+      "filter1_tracker": "tracker",
+      "filter1_year": "Year",
+      "result_show": "Failed to get results",
+      "pending_m": "Requesting a magnet link",
+      "movie_title": " - added to my torrents",
+      "select_show_1": "Action",
+      "select_show_2": "Add to my torrents",
+      "select_show_3": "Flag",
+      "select_show_4": "Flag a hand with a flag (viewed)",
+      "select_show_5": "Uncheck",
+      "select_show_6": "Remove the mark from the distribution (viewed)"
+    },
+    "collections": {
+      "title_10": "Collections -"
+    },
+    "person": {
+      "movie_title": "Films",
+      "tv_title": "TV series"
+    }
+  },
+  "interaction": {
+    "activity": {
+      "start_pg_1": "Home - ",
+      "book": "Bookmarks",
+      "like": "Like",
+      "history": "Browsing history",
+      "history_2": "Later",
+      "mytorrents_1": "My torrents"
+    },
+    "api": {
+      "title_1": "Parser"
+    },
+    "broadcast": {
+      "card_1": "Open card on another device",
+      "card_2": "Choose the device to watch on"
+    },
+    "card": {
+      "view_1": "New series",
+      "title_1": "Action",
+      "title_2": "Remove from bookmarks",
+      "title_3": "To bookmarks",
+      "title_4": "Look in the menu (Bookmarks)",
+      "title_5": "Remove from favorites",
+      "title_6": "Like",
+      "title_7": "Look at the menu (Like)",
+      "title_8": "Remove from expected",
+      "title_9": "Watch Later",
+      "title_10": "See the menu (Later)"
+    },
+    "content_filter": {
+      "title_10": "Type",
+      "title_11": "Films",
+      "title_12": "cartoons",
+      "title_13": "TV series",
+      "title_14": "Animated series",
+      "title_15": "Anime",
+      "title_16": "Rating",
+      "title_17": "Any",
+      "title_18": "from 0 to 3",
+      "title_19": "from 3 to 6",
+      "title_20": "from 6 to 8",
+      "title_21": "from 8 to 10",
+      "title_22": "Side",
+      "title_23": "Ukraine",
+      "title_24": "USA",
+      "title_25": "Russia",
+      "title_26": "Japan",
+      "title_27": "Korea",
+      "title_28": "Azerbaijan",
+      "title_29": "Albania",
+      "title_30": "Belarus",
+      "title_31": "Bulgaria",
+      "title_32": "Germany",
+      "title_33": "Georgia",
+      "title_34": "Denmark",
+      "title_35": "Estonia",
+      "title_36": "Ireland",
+      "title_37": "Spain",
+      "title_38": "Italy",
+      "title_39": "China",
+      "title_40": "Latvia",
+      "title_41": "Nepal",
+      "title_42": "Norway",
+      "title_43": "Poland",
+      "title_44": "Romania",
+      "title_45": "Serbia",
+      "title_46": "Slovakia",
+      "title_47": "Slovenia",
+      "title_48": "Tajikistan",
+      "title_49": "Turkey",
+      "title_50": "Uzbekistan",
+      "title_51": "Finland",
+      "title_52": "France",
+      "title_53": "Croatia",
+      "title_54": "Czech Republic",
+      "title_55": "Sweden",
+      "title_56": "Estonia",
+      "title_57": "Genre",
+      "title_100": "action movie",
+      "title_101": "adventures",
+      "title_102": "cartoon",
+      "title_103": "comedy",
+      "title_104": "crime",
+      "title_105": "documentary",
+      "title_106": "drama",
+      "title_107": "family",
+      "title_108": "fantasy",
+      "title_109": "history",
+      "title_110": "horror",
+      "title_111": "music",
+      "title_112": "detective",
+      "title_113": "melodrama",
+      "title_114": "fiction",
+      "title_115": "TV movie",
+      "title_116": "thriller",
+      "title_117": "military",
+      "title_118": "western",
+      "title_58": "Year",
+      "title_59": "Any",
+      "title_200": "Not chosen",
+      "title_60": "To start searching",
+      "title_61": "Filter",
+      "title_62": "Filter"
+    },
+    "empty": {
+      "title": "It's empty here",
+      "descr": "The list is currently empty."
+    },
+    "filter": {
+      "empty_1": "Refine Search",
+      "search_1": "Specify title",
+      "title_1": "Specify",
+      "find_1": "Sort",
+      "find_2": "Filter"
+    },
+    "info": {
+      "title_1": "More",
+      "title_2": "Show more results"
+    },
+    "items": {
+      "button_1": "More",
+      "line_title": "Category"
+    },
+    "keyboard": {
+      "rus": "Russian",
+      "search": "to find",
+      "noty_1": "Speak, I'm listening..",
+      "noty_2": "No microphone access"
+    },
+    "notice": {
+      "title_31": "Weekly",
+      "descr_31": "- New feature, popular torrents that are most often watched (test mode)<br>- Added catalog of plug-ins for quick installation.<br>- Broadcasting the card to other devices on the network.<br>- Checklist for checking the operation of TorrServe<br>- Copying links to videos from torrents.<br>- Added long click for mice and wheelbarrows.<br>- Collections appeared in the cards.<br>- Added notifications about the release of the movie in better quality.",
+      "title_30": "Update 1.3.7",
+      "descr_30": "1. Added voice search.<br>2. Fixed mouse bugs and added mouse support in the player.<br>3. Added account binding to CUB.<br>4. All sorts of other uninteresting little things.",
+      "title_29": "Update 1.3.6",
+      "descr_29": "1. Added new catalog CUB.<br>2. Release source changed, now it works even in MSX.<br>3. Added anime category ;)",
+      "title_28": "Update 1.3.5",
+      "descr_28": "1. Added screensaver from Google ChromeCast.<br>2. Releases run immediately without searching for .<br>3. The enter button has been removed from the keyboard.<br>4. The player has improved rewinding and added buttons (to the end / to the beginning).<br>5. Added synchronization via gist.github.com service.",
+      "title_27": "Update 1.3.4",
+      "descr_27": "1. Fixed timestamp when disabled property (continue from last place).<br>2. On samsung TVs fixed black dice in the player.<br>3. Added plugins in settings.",
+      "title_26": "Update 1.3.3",
+      "descr_26": "1. Added search by torrents.<br>2. Fixed loading main with selected source.<br>3. Added multiple selection in the filter.<br>4. Added more choices for video scaling.<br>5. Fixed other little things.",
+      "title_25": "Update 1.3.2",
+      "descr_25": "1. Fixed card search, each card has its own source (tmdb,ivi,okko)<br>2. Possibility to switch source to (tmdb,ivi,okko).<br>3. Updated background work.<br>4. Added scrolling in torrent files, scrolls left or right by 10 positions.<br>5. Changed NCR source.<br>6. Fixed browsing history, now a card is added if you start watching a video.<br>7. Added comments in ivi source.",
+      "title_24": "Update 1.3.1",
+      "descr_24": "1. Added collections with ivi and okko<br>2. Returned the ability to change the scale of the video.<br>3. Added digital releases, does not work in MSX.<br>4. In what language to display data TMDB.<br>5. In the screensaver added the ability to switch to nature.<br>6. Possibility to choose in what language to find torrents.<br>7. Ability to disable continue on timecode.",
+      "title_23": "Screensaver",
+      "descr_23": "Added screensaver, starts after 5 minutes if nothing is done.",
+      "title_22": "Update 1.2.6",
+      "descr_22": "1. Fixed torrent deletion error.<br>2. Fixed timestamp.<br>3. Added a visual for series, in torrent files you can see the series better.<br>4. Other little things.",
+      "title_21": "Good to know",
+      "descr_21": "Did you know? That if you hold down the (OK) button on the card for a long time, you can call up the menu for adding to bookmarks. The same method works on torrents, a long tap allows you to add a distribution to the list (My torrents)",
+      "title_20": "Update 1.2.4",
+      "descr_20": "1. Added menu (My torrents).<br>2. Updated filter and sorting in torrents.<br>3. Added tape (New) in movies and TV shows.<br>4. Fixed links for Torserver.<br>5. Added watch mark for serials.<br>6. Fixed several bugs and errors.",
+      "title_19": "Update 1.2.3",
+      "descr_19": "1. Mouse support added.<br>2. View position memory added (Movies)<br>3. Fixed a bug in the player with partially closed tiles.<br>4. Added additional link to Torserver<br>5. Viewed torrent mark<br>6. Added transition from torrent to movie card",
+      "title_18": "Update 1.2.2",
+      "descr_18": "1. Added Tizen player<br>2. Added webOS player<br>3. Added torrent download statistics to the player.<br>4. Added rewind bar in player<br>5. Fixed empty posters for Torserver<br>6. Fixed other minor bugs and bugs",
+      "title_17": "Update 1.2.1",
+      "descr_17": "1. Fixed bug with back button in MSX<br>2. Fixed bug with search<br>3. Added filter in torrents<br>4. Visually improved player<br>5. Added performance settings<br>6. Fixed names in torrent files<br>7. Fixed bug with pause in player<br>8. Fixed other minor bugs and bugs",
+      "title_16": "Update 1.0.10",
+      "descr_16": "1. Improved loading of cards in small mode<br>2. Added logs, to view the logs hover over the header and click up 10 times",
+      "title_15": "Update 1.0.9",
+      "descr_15": "1. Improved background in bookmarks and in movie<br>2. Changed instructions<br>3. Completed plugin for Orsay",
+      "title_14": "Update 1.0.8",
+      "descr_14": "1. Improved background<br>2. The button (Torrents)<br>3 is displayed. Added sorting of torrents<br>4. Finished output for Tizen and WebOS<br> 5. Maybe finished control buttons for Orsay",
+      "title_13": "Update 1.0.7",
+      "descr_13": "1. Optimized main page and catalogs<br>2. Added authorization for TorServer<br> 3. Added error hints to TorServer",
+      "title_12": "Fixes",
+      "descr_12": "1. Bug fixed (Unable to get HASH)<br>2. Completed parser for MSX, now you do not need to specify an explicit link, only if you wish<br> 3. Improved jac.red parser, now searches more accurately",
+      "title_11": "Fixed parser",
+      "descr_11": "A bug was found in the parser due to which jac.red did not produce results",
+      "title_10": "Welcome!",
+      "descr_10": "This is your first time running the app, we hope you enjoy it. Happy viewing.",
+      "descr_100": "New quality available<br><br>Quality - <b>",
+      "descr_101": "New Series<br><br>Season - <b>",
+      "descr_102": "</b><br>Episode - <b>",
+      "title_105": "Notifications"
+    },
+    "player": {
+      "title_1": "Action",
+      "title_2": "Continue browsing from",
+      "title_3": "Not",
+      "info": {
+        "ele_size": "Loading..."
+      },
+      "panel": {
+        "title_1": "Quality",
+        "title_121": "unknown",
+        "title_120": "Channels:",
+        "title_119": "Type:",
+        "title_118": "Audio tracks",
+        "title_117": "Disabled",
+        "title_116": "unknown",
+        "title_115": "Subtitles",
+        "title_114": "Default",
+        "title_113": "Default video size",
+        "title_112": "Expand",
+        "title_111": "Expands video to full screen",
+        "title_110": "Fill",
+        "title_109": "Fit video to full screen",
+        "title_108": "Zoom 115%",
+        "title_107": "Enlarge video by 115%",
+        "title_106": "Zoom 130%",
+        "title_105": "Enlarge video by 130%",
+        "title_104": "Vertical 115%",
+        "title_103": "Enlarge video by 115%",
+        "title_102": "Vertical 130%",
+        "title_101": "Enlarge video by 130%",
+        "title_100": "Video size"
+      },
+      "playlist": {
+        "title_1": "Playlist"
+      },
+      "video": {
+        "error_1": "Failed to decode video",
+        "error_2": "Video not found or corrupted"
+      },
+      "webos": {
+        "title_1": "Disable",
+        "title_2": "Disable"
+      }
+    },
+    "search": {
+      "find_1": "Enter text..."
+    },
+    "template": {
+      "throw_1": "Template:",
+      "throw_2": " not found!"
+    },
+    "timeline": {
+      "hours": "h.",
+      "minutes": "m."
+    },
+    "torrent": {
+      "tip_title": "Mistake",
+      "tip_text": "Failed to connect to TorrServer",
+      "tip2_title": "Mistake",
+      "tip3_title": "Mistake",
+      "menu_title_1": "Reset timecode",
+      "menu_title_2": "Launch player - Webos",
+      "menu_title_3": "Launch Player - Android",
+      "menu_title_4": "Launch player - Lampa",
+      "menu_title_5": "Copy video link",
+      "menu_title_6": "Action",
+      "noty_1": "Link copied to clipboard",
+      "noty_2": "Error copying link",
+      "temp_error_1": "empty",
+      "temp_error_2": "Failed to extract suitable files",
+      "modal_title_1": "Files"
+    },
+    "torrserver": {
+      "fail_network": "Failed to verify Matrix version",
+      "makestep": "Done",
+      "modify_1": "Further",
+      "modify_2": "To complete",
+      "modal_title": "Connection error"
     }
   }
 }

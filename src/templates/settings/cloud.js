@@ -7,7 +7,7 @@ let html = `<div>
 
     <div class="settings-param-title"><span data-i18n="settings.cloud.authorization">Авторизация</span></div>
 
-    <div class="settings-param selector" data-type="input" data-name="cloud_token" placeholder="Не указан">
+    <div class="settings-param selector" data-type="input" data-name="cloud_token" placeholder='${i18next.t("settings.cloud.token_placeholder", "Не указан")}'>
         <div class="settings-param__name">Token</div>
         <div class="settings-param__value"></div>
     </div>

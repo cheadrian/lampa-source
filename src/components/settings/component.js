@@ -26,7 +26,7 @@ function component(name){
     scrl.render().find('.scroll__content').addClass('layer--wheight').data('mheight',$('.settings__head'))
 
     comp.find('.clear-storage').on('hover:enter',()=>{
-        Noty.show('Кеш и данные очищены')
+        Noty.show(i18next.t("components.settings.component.notify",'Кеш и данные очищены'))
 
         localStorage.clear()
 

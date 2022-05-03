@@ -85,7 +85,7 @@ function toggle(status){
  * Уничтожить
  */
 function destroy(){
-    elems.size.text('Загрузка...')
+    elems.size.text(i18next.t("interaction.player.info.ele_size",'Загрузка...'))
     elems.stat.text('')
     elems.speed.text('')
     elems.error.addClass('hide')

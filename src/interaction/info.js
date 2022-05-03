@@ -36,8 +36,8 @@ function create(){
 
     this.empty = function(){
         this.update({
-            title: 'Еще',
-            original_title: 'Показать больше результатов',
+            title: i18next.t("interaction.info.title_1",'Еще'),
+            original_title: i18next.t("interaction.info.title_2",'Показать больше результатов'),
             vote_average: 0
         },true)
     }

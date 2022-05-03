@@ -6,8 +6,8 @@ import Arrays from '../utils/arrays'
 function create(params = {}){
 
     Arrays.extend(params,{
-        title: 'Здесь пусто',
-        descr: 'На данный момент список пустой'
+        title: i18next.t("interaction.empty.title",'Здесь пусто'),
+        descr: i18next.t("interaction.empty.descr",'На данный момент список пустой')
     })
 
     let html = Template.get('empty',params)

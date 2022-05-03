@@ -70,7 +70,7 @@ function component(object){
                 if(data.persons && data.persons.crew && data.persons.crew.length) {
                     const directors = data.persons.crew.filter(member => member.job === 'Director');
                     if(directors.length) {
-                        this.build('persons', directors, {title: 'Режиссер'});
+                        this.build('persons', directors, {title: i18next.t("components.full.person_1",'Режиссер')});
                     }
                 }
                 if(data.persons && data.persons.cast && data.persons.cast.length) this.build('persons', data.persons.cast)
@@ -78,21 +78,21 @@ function component(object){
                 if(data.comments && data.comments.length) this.build('comments', data)
 
                 if(data.collection && data.collection.results.length){
-                    data.collection.title   = 'Коллекция'
+                    data.collection.title   = i18next.t("components.full.coll_title",'Коллекция')
                     data.collection.noimage = true
 
                     this.build('recomend', data.collection)
                 }
 
                 if(data.recomend && data.recomend.results.length){
-                    data.recomend.title   = 'Рекомендации'
+                    data.recomend.title   = i18next.t("components.full.rec_title",'Рекомендации')
                     data.recomend.noimage = true
 
                     this.build('recomend', data.recomend)
                 }
 
                 if(data.simular && data.simular.results.length){
-                    data.simular.title   = 'Похожие'
+                    data.simular.title   = i18next.t("components.full.sim_title",'Похожие')
                     data.simular.noimage = true
 
                     this.build('simular', data.simular)

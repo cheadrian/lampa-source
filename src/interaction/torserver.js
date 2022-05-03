@@ -86,7 +86,7 @@ function connected(success, fail){
 
     network.silent(url()+'/settings',(json)=>{
         if(typeof json.CacheSize == 'undefined'){
-            fail('Не удалось подтвердить версию Matrix')
+            fail(i18next.t("interaction.torrserver.fail_network",'Не удалось подтвердить версию Matrix'))
         }
         else{
             success(json)
@@ -214,7 +214,7 @@ function error(){
 
         let total = list.length
 
-        comp.text('Выполнено ' + Math.max(0,position) + ' из ' + total)
+        comp.text(i18next.t("interaction.torrserver.makestep",'Выполнено ') + Math.max(0,position) + ' из ' + total)
 
         if(position > list.length){
             Modal.close()
@@ -231,7 +231,7 @@ function error(){
 
             list.slice(0, position).addClass('check')
 
-            btn.text(position < total ? 'Далее' : 'Завершить')
+            btn.text(position < total ? i18next.t("interaction.torrserver.modify_1",'Далее') : i18next.t("interaction.torrserver.modify_2",'Завершить'))
 
             next.text(next_step.length ? '- '+next_step.text() : '')
         }
@@ -243,7 +243,7 @@ function error(){
         makeStep()
     })
 
-    Modal.title('Ошибка подключения')
+    Modal.title(i18next.t("interaction.torrserver.modal_title",'Ошибка подключения'))
     Modal.update(temp)
 
     Controller.add('modal',{

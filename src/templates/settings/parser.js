@@ -12,13 +12,13 @@ let html = `<div>
 
     <div class="settings-param-title"><span data-i18n="settings.parser.parser_type">Jackett</span></div>
 
-    <div class="settings-param selector" data-type="input" data-name="jackett_url" placeholder="Например: 192.168.х">
+    <div class="settings-param selector" data-type="input" data-name="jackett_url" placeholder='${i18next.t("settings.parser.jackett_url_placeholder", "Например: 192.168.х")}'>
         <div class="settings-param__name" data-i18n="settings.parser.jackett_url_name">Ссылка</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr" data-i18n="settings.parser.jackett_url_descr">Укажите ссылку на скрипт Jackett</div>
     </div>
 
-    <div class="settings-param selector" data-type="input" data-name="jackett_key" placeholder="Например: sa0sk83d..">
+    <div class="settings-param selector" data-type="input" data-name="jackett_key" placeholder='${i18next.t("settings.parser.jackett_key_placeholder", "Например: sa0sk83d..")}'>
         <div class="settings-param__name" data-i18n="settings.parser.jackett_key_name">Api ключ</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr" data-i18n="settings.parser.jackett_key_descr">Находится в Jackett</div>
@@ -31,7 +31,7 @@ let html = `<div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector is--torllok" data-type="input" data-name="parser_website_url" placeholder="Например: scraperapi.com">
+    <div class="settings-param selector is--torllok" data-type="input" data-name="parser_website_url" placeholder='${i18next.t("settings.parser.parser_web_placeholder", "Например: scraperapi.com")}''>
         <div class="settings-param__name" data-i18n="settings.parser.parser_website_url_name">Ссылка на парсер сайтов</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr" data-i18n="settings.parser.parser_website_url_descr">Зарегистрируйтесь на сайте scraperapi.com, прописать ссылку api.scraperapi.com?api_key=...&url={q}<br>В {q} будет поставлятся сайт w41.torlook.info</div>

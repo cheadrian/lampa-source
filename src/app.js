@@ -45,6 +45,8 @@ import VideoQuality from './utils/video_quality'
 import TimeTable from './utils/timetable'
 import Broadcast from './interaction/broadcast'
 
+console.log("App.js Loading");
+
 window.Lampa = {
     Listener: Subscribe(),
     Subscribe,

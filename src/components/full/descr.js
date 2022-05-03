@@ -10,7 +10,7 @@ function create(data, params = {}){
     let html,body,last
     
     this.create = function(){
-        html = Template.get('items_line',{title: 'Подробно'})
+        html = Template.get('items_line',{title: i18next.t("components.full.descr.text_1",'Подробно')})
 
         let genres = data.movie.genres.map(a => {
             return '<div class="full-descr__tag selector" data-genre="'+a.id+'" data-url="'+a.url+'">'+a.name+'</div>'
@@ -25,7 +25,7 @@ function create(data, params = {}){
         }).join(', ')
 
         body = Template.get('full_descr',{
-            text: (data.movie.overview || 'Без описания.') + '<br><br>',
+            text: (data.movie.overview || i18next.t("components.full.descr.text_2",'Без описания.')) + '<br><br>',
             genres: genres,
             companies: companies,
             relise: (data.movie.release_date || data.movie.first_air_date),
@@ -54,7 +54,7 @@ function create(data, params = {}){
                 Api.clear()
 
                 Modal.open({
-                    title: 'Компания',
+                    title: i18next.t("components.full.descr.text_3",'Компания'),
                     html: Template.get('modal_loading'),
                     size: 'medium',
                     onBack: ()=>{

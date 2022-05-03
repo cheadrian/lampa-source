@@ -43,7 +43,7 @@ function edit(params, call){
         let links   = []
 
         links.push({
-            title: (members.indexOf(input.text()) == -1 ? 'Добавить' : 'Удалить') + ' текущее значение',
+            title: (members.indexOf(input.text()) == -1 ? i18next.t("components.settings.input.links_1",'Добавить') : i18next.t("components.settings.input.links_2",'Удалить')) + i18next.t("components.settings.input.links_3",' текущее значение'),
             subtitle: input.text(),
             add: true
         })
@@ -60,30 +60,30 @@ function edit(params, call){
         links = links.concat([
             {
                 title: 'jac.red',
-                subtitle: 'Для торрентов, Api ключ - пустой',
+                subtitle: i18next.t("components.settings.input.links_4",'Для торрентов, Api ключ - пустой'),
                 url: 'jac.red'
             },
             {
                 title: '127.0.0.1:8090',
-                subtitle: 'Для локального TorrServ',
+                subtitle: i18next.t("components.settings.input.links_5",'Для локального TorrServ'),
                 url: '127.0.0.1:8090'
             }
         ])
 
         Select.show({
-            title: 'Ссылки',
+            title: i18next.t("components.settings.input.show_1",'Ссылки'),
             items: links,
             onSelect: (a)=>{
                 if(a.add){
                     if(members.indexOf(a.subtitle) == -1){
                         Arrays.insert(members,0,a.subtitle)
 
-                        Noty.show('Добавлено ('+a.subtitle+')')
+                        Noty.show(i18next.t("components.settings.input.show_2",'Добавлено (')+a.subtitle+')')
                     }
                     else{
                         Arrays.remove(members, a.subtitle)
 
-                        Noty.show('Удалено ('+a.subtitle+')')
+                        Noty.show(i18next.t("components.settings.input.show_3",'Удалено (')+a.subtitle+')')
                     }
 
                     Storage.set('setting_member',members)
@@ -98,7 +98,7 @@ function edit(params, call){
                 if(a.member){
                     Arrays.remove(members, a.url)
 
-                    Noty.show('Удалено ('+a.url+')')
+                    Noty.show(i18next.t("components.settings.input.show_4",'Удалено (')+a.url+')')
 
                     Storage.set('setting_member',members)
 

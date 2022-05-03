@@ -83,11 +83,11 @@ function component(object){
                     let enabled = Controller.enabled().name
 
                     Select.show({
-                        title: 'Действие',
+                        title: i18next.t("components.mytorrents.title_1",'Действие'),
                         items: [
                             {
-                                title: 'Удалить',
-                                subtitle: 'Торрент будет удален из вашего списка'
+                                title: i18next.t("components.mytorrents.title_2",'Удалить'),
+                                subtitle: i18next.t("components.mytorrents.subtitle_1",'Торрент будет удален из вашего списка')
                             }
                         ],
                         onBack: ()=>{

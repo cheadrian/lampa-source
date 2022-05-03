@@ -82,7 +82,7 @@ let ping_auth
 Lampa.Params.select('filmix_token','','')
 
 Lampa.Template.add('settings_filmix',`<div>
-    <div class="settings-param selector" data-name="filmix_token" data-type="input" placeholder="Например: nxjekeb57385b..">
+    <div class="settings-param selector" data-name="filmix_token" data-type="input" placeholder='${i18next.t("plugins.online.filmxt_placeholder", "Например: nxjekeb57385b..")}'>
         <div class="settings-param__name">Добавить ТОКЕН от Filmix</div>
         <div class="settings-param__value"></div>
         <div class="settings-param__descr">Добавьте ТОКЕН для подключения подписки</div>

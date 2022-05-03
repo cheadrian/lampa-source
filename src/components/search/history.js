@@ -26,7 +26,7 @@ function create(){
     }
 
     this.append = function(value){
-        let key = $('<div class="search-history-key selector"><div><span>'+value+'</span><div>Влево - удалить</div></div></div>')
+        let key = $('<div class="search-history-key selector"><div><span>'+value+'</span><div data-i18n="components.search.history.key">Влево - удалить</div></div></div>')
 
         key.on('hover:enter',()=>{
             this.listener.send('enter', {value: value})

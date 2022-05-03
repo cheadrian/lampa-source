@@ -28,12 +28,12 @@ let html = `<div>
 
     <div class="settings-param-title settings--account-signin"><span data-i18n="settings.account.signin">Авторизация</span></div>
 
-    <div class="settings-param selector settings--account-signin" data-type="input" data-name="account_email" placeholder="Не указан">
+    <div class="settings-param selector settings--account-signin" data-type="input" data-name="account_email" placeholder='${i18next.t("settings.account.email_placeholder", "Не указан")}'>
         <div class="settings-param__name">Email</div>
         <div class="settings-param__value"></div>
     </div>
 
-    <div class="settings-param selector settings--account-signin" data-type="input" data-string="true" data-name="account_password" placeholder="Не указан">
+    <div class="settings-param selector settings--account-signin" data-type="input" data-string="true" data-name="account_password" placeholder='${i18next.t("settings.account.password_placeholder", "Не указан")}'>
         <div class="settings-param__name" data-i18n="settings.account.signin_name">Пароль</div>
         <div class="settings-param__value"></div>
     </div>

@@ -106,26 +106,26 @@ function component(object){
                     let enabled = Controller.enabled().name
 
                     Select.show({
-                        title: 'Действие',
+                        title: i18next.t("components.favorite.history_title",'Действие'),
                         items: [
                             {
-                                title: 'Удалить из истории',
-                                subtitle: 'Удалить выделенную карточку',
+                                title: i18next.t("components.favorite.history_title_1",'Удалить из истории'),
+                                subtitle: i18next.t("components.favorite.history_subtitle_1",'Удалить выделенную карточку'),
                                 one: true
                             },
                             {
-                                title: 'Очистить историю',
-                                subtitle: 'Удалить все карточки из истории',
+                                title: i18next.t("components.favorite.history_title_2",'Очистить историю'),
+                                subtitle: i18next.t("components.favorite.history_subtitle_2",'Удалить все карточки из истории'),
                                 all: true
                             },
                             {
-                                title: 'Очистить метки',
-                                subtitle: 'Очистить метки о просмотрах',
+                                title: i18next.t("components.favorite.history_title_3",'Очистить метки'),
+                                subtitle: i18next.t("components.favorite.history_subtitle_3",'Очистить метки о просмотрах'),
                                 label: true
                             },
                             {
-                                title: 'Очистить таймкоды',
-                                subtitle: 'Очистить все таймкоды',
+                                title: i18next.t("components.favorite.history_title_4",'Очистить таймкоды'),
+                                subtitle: i18next.t("components.favorite.history_subtitle_4",'Очистить все таймкоды'),
                                 timecode: true
                             },
                         ],
@@ -146,12 +146,12 @@ function component(object){
                                 Storage.set('online_view',[])
                                 Storage.set('torrents_view',[])
                                 
-                                Noty.show('Отметки очищены')
+                                Noty.show(i18next.t("components.favorite.notify",'Отметки очищены'))
                             }
                             else if(a.timecode){
                                 Storage.set('file_view',{})
                                 
-                                Noty.show('Таймкоды очищены')
+                                Noty.show(i18next.t("components.favorite.notify_1",'Таймкоды очищены'))
                             }
                             else{
                                 Favorite.clear('history', card_data)
