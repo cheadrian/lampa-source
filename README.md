@@ -9,6 +9,12 @@ To generate or update translation files you can use:
 
 This will use [i18next-scanner](https://github.com/i18next/i18next-scanner) to create .json files inside *./public/locales*.
 
+The english version of translation is done using automated procedure ([Google Translate - VSCode extension](https://marketplace.visualstudio.com/items?itemName=benshabatnoam.google-translate-ext)). Don't expect great quality of it even if there are some manual fixes.
+
+After you generated the translation files, you can use the extension mentioned above on the JSON file with a help with a simple regex to match RU sentences and words between " ":
+
+    (?<=: ".*)([а-яА-ЯёЁ].*)(?=")
+
 ## Compilation
 
     npm install 
