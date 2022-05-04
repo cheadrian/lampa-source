@@ -136,7 +136,7 @@ let html = `<div class="menu">
 
             <li class="menu__item selector" data-action="about">
                 <div class="menu__ico"><img src="./img/icons/menu/info.svg" /></div>
-                <div class="menu__text" data-i18n="menu.about">О приложении</div>
+                <div class="menu__text" data-i18n="menu.about">Информация</div>
             </li>
 
             <li class="menu__item selector" data-action="console">
