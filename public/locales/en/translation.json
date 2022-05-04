@@ -134,7 +134,8 @@
       "parser": {
         "err_1": "Specify URL for parsing Jackett",
         "err_2": "Specify link for parsing TorLook",
-        "err_3": "Unable to get magnet link"
+        "err_3": "Unable to get magnet link",
+        "err_5": "Request error"
       },
       "tmdb": {
         "now_playing": "Now watching",
@@ -357,7 +358,10 @@
       "device_name_name": "Device name",
       "clear_storage_name": "Clear cache",
       "clear_storage_value": "All settings and data will be cleared",
-      "device_placeholder": "For example: My Lamp"
+      "device_placeholder": "For example: My Lamp",
+      "hints_title": "",
+      "hints_name": "Show hints",
+      "hints_again_name": "Show tips for new"
     },
     "parser": {
       "parser_use_name": "Use parser",
@@ -601,7 +605,8 @@
         "show_2": "Added (",
         "show_3": "Removed (",
         "show_4": "Removed (",
-        "foreach_1": "Custom link"
+        "foreach_1": "Custom link",
+        "helper_1": "After entering the value, press the (back) button to save"
       },
       "params": {
         "inner_1": "built-in",
@@ -730,7 +735,8 @@
       "select_show_3": "Flag",
       "select_show_4": "Flag a hand with a flag (viewed)",
       "select_show_5": "Uncheck",
-      "select_show_6": "Remove the mark from the distribution (viewed)"
+      "select_show_6": "Remove the mark from the distribution (viewed)",
+      "helper_1": "Hold down the (OK) key to bring up the context menu"
     },
     "collections": {
       "title_10": "Collections -"
@@ -778,10 +784,10 @@
       "title_15": "Anime",
       "title_16": "Rating",
       "title_17": "Any",
-      "title_18": "from 0 to 3",
+      "title_18": "from 1 to 3",
       "title_19": "from 3 to 6",
       "title_20": "from 6 to 8",
-      "title_21": "from 8 to 10",
+      "title_21": "from 8 to 9",
       "title_22": "Country",
       "title_23": "Ukraine",
       "title_24": "USA",
@@ -842,7 +848,26 @@
       "title_200": "Not chosen",
       "title_60": "Start search selection",
       "title_61": "Filter",
-      "title_62": "Filter"
+      "title_62": "Filter",
+      "title_150": "of 8",
+      "title_151": "of 6",
+      "title_152": "of 4",
+      "title_153": "from 2",
+      "title_201": "Cartoon",
+      "title_202": "Comedy",
+      "title_203": "Crime",
+      "title_204": "Documentary",
+      "title_205": "Drama",
+      "title_206": "Family",
+      "title_207": "Children's",
+      "title_208": "Detective",
+      "title_209": "news",
+      "title_210": "Reality show",
+      "title_211": "Sci-Fi and Fantasy",
+      "title_212": "Soap opera",
+      "title_213": "Talk show",
+      "title_214": "War and Politics",
+      "title_215": "Western"
     },
     "empty": {
       "title": "It's empty here",
@@ -989,7 +1014,8 @@
       "noty_2": "Error copying link",
       "temp_error_1": "empty",
       "temp_error_2": "Failed to extract suitable files",
-      "modal_title_1": "Files"
+      "modal_title_1": "Files",
+      "helper_1": "To reset the timecode and call up the menu, hold down the (OK) key"
     },
     "torrserver": {
       "fail_network": "Failed to verify Matrix version",
@@ -998,6 +1024,9 @@
       "modify_1": "Further",
       "modify_2": "To complete",
       "modal_title": "Connection error"
+    },
+    "helper": {
+      "noty_1": "Successful, tips will be shown again"
     }
   }
 }
