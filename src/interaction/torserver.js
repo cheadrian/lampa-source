@@ -214,7 +214,7 @@ function error(){
 
         let total = list.length
 
-        comp.text(i18next.t("interaction.torrserver.makestep",'Выполнено ') + Math.max(0,position) + ' из ' + total)
+        comp.text(i18next.t("interaction.torrserver.makestep",'Выполнено ') + Math.max(0,position) + i18next.t("interaction.torrserver.makestep_1",' из ') + total)
 
         if(position > list.length){
             Modal.close()

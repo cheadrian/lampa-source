@@ -19,13 +19,13 @@ let html = `<div class="torrent-checklist">
         </div>
 
         <div class="torrent-checklist__info">
-            <div class="hide" data-i18n="torrent.error.checklist_info_1">Убедитесь, что вы запустили TorrServe на устройстве где он установлен.</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_2">Частая ошибка, изменился IP адрес вашего устройства. Убедитесь, что IP адрес который вы ввели {ip}, совпадает с адресом устройства на котором установлен TorrServe</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_3">Для обращения к TorrServe, необходим порт :8090 в конце адреса. Убедитесь, что в конце вашего IP адреса прописан порт, ваш текущий адрес {ip}</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_4">Частое явление, антивирус или брандмауэр может блокировать доступ по IP адресу, попробуйте отключить антивирус и брандмауэр.</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_5">На любом другом устройстве, где не установлен TorrServe, откройте в браузере адрес {ip} и проверьте, доступен ли ответ от TorrServe</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_6">Если после всех проверок все равно не работает, попробуйте перезагрузить TorrServe и интернет адаптер.</div>
-            <div class="hide" data-i18n="torrent.error.checklist_info_7">Если проблема не устранена, пишите в телеграм группу @lampa_group с текстом (Лампа не подключается к TorrServe после всех проверок, текущий адрес {ip})</div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_1">Убедитесь, что вы запустили TorrServe на устройстве где он установлен.<span></div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_2">Частая ошибка, изменился IP адрес вашего устройства. Убедитесь, что IP адрес который вы ввели IP, совпадает с адресом устройства на котором установлен TorrServe<span> {ip} </div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_3">Для обращения к TorrServe, необходим порт :8090 в конце адреса. Убедитесь, что в конце вашего IP адреса прописан порт, ваш текущий адрес<span> {ip} </div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_4">Частое явление, антивирус или брандмауэр может блокировать доступ по IP адресу, попробуйте отключить антивирус и брандмауэр.<span></div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_5">На любом другом устройстве, где не установлен TorrServe, откройте в браузере адрес и проверьте, доступен ли ответ от TorrServe<span> {ip} </div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_6">Если после всех проверок все равно не работает, попробуйте перезагрузить TorrServe и интернет адаптер.<span></div>
+            <div class="hide"><span data-i18n="torrent.error.checklist_info_7">Если проблема не устранена, пишите в телеграм группу @lampa_group с текстом (Лампа не подключается к TorrServe после всех проверок, текущий адрес)<span> {ip}</div>
         </div>
     </div>
 

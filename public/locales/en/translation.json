@@ -255,7 +255,7 @@
       "footer": "Like:"
     },
     "start": {
-      "torrents": "torrents",
+      "torrents": "Torrents",
       "trailers": "Trailers"
     }
   },
@@ -445,15 +445,15 @@
       "checklist_list_2": "Dynamic IP address",
       "checklist_list_3": "Protocol",
       "checklist_list_4": "Antivirus blocking",
-      "checklist_list_5": "Check for Availability",
+      "checklist_list_5": "Check for availability",
       "checklist_list_6": "Still doesn't work",
       "checklist_info_1": "Make sure you have started TorrServe on the device where it is installed.",
-      "checklist_info_2": "Common error, the IP address of your device has changed. Please make sure that the IP address you entered {ip} matches the address of the device on which TorrServe is installed",
-      "checklist_info_3": "To contact TorrServe, you need port :8090 at the end of the address. Make sure that the port is registered at the end of your IP address, your current address is {ip}",
+      "checklist_info_2": "Common error, the IP address of your device has changed. Please make sure that the IP address you entered IP matches the address of the device on which TorrServe is installed",
+      "checklist_info_3": "To contact TorrServe, you need port :8090 at the end of the address. Make sure that the port is registered at the end of your IP address, your current address is IP",
       "checklist_info_4": "Frequent occurrence, antivirus or firewall may block access by IP address, try disabling antivirus and firewall.",
-      "checklist_info_5": "On any other device where TorrServe is not installed, open the {ip} address in a browser and check if a response from TorrServe is available",
+      "checklist_info_5": "On any other device where TorrServe is not installed, open the IP address in a browser and check if a response from TorrServe is available",
       "checklist_info_6": "If after all the checks it still doesn't work, try restarting TorrServe and the internet adapter.",
-      "checklist_info_7": "If the problem persists, write the group @lampa_group in telegram with the text (The lamp does not connect to TorrServe after all checks, the current address is {ip})",
+      "checklist_info_7": "If the problem persists, write the group @lampa_group in telegram with the text (The lamp does not connect to TorrServe after all checks, the current address is IP)",
       "checklist_footer": "Start Check",
       "nocheck": "Causes",
       "nocheck_1": "Requestreturned an invalid format to ping",
@@ -560,7 +560,7 @@
         "text_10": "No description.",
         "text_11": "Next:",
         "text_12": " / Days left:",
-        "text_13": "torrents",
+        "text_13": "Torrents",
         "text_14": "Official",
         "text_15": "Informal",
         "text_16": "Trailers",
@@ -581,9 +581,9 @@
         "key": "Left - delete"
       },
       "results": {
-        "title_1": "torrents",
+        "title_1": "Torrents",
         "title_2": "Search -",
-        "title_3": "Mistake",
+        "title_3": "Error",
         "title_4": "Requesting a magnet link"
       }
     },
@@ -993,7 +993,8 @@
     },
     "torrserver": {
       "fail_network": "Failed to verify Matrix version",
-      "makestep": "Done",
+      "makestep": "Done ",
+      "makestep_1": " of ",
       "modify_1": "Further",
       "modify_2": "To complete",
       "modal_title": "Connection error"
