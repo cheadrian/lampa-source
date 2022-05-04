@@ -38,8 +38,8 @@ data.rating = {
             title: i18next.t("interaction.content_filter.title_17",'Любой'),
         },
         {
-            title: i18next.t("interaction.content_filter.title_18",'от 0 до 3'),
-            voite: '0-3'
+            title: i18next.t("interaction.content_filter.title_18",'от 1 до 3'),
+            voite: '1-3'
         },
         {
             title: i18next.t("interaction.content_filter.title_19",'от 3 до 6'),
@@ -50,8 +50,24 @@ data.rating = {
             voite: '6-8'
         },
         {
-            title: i18next.t("interaction.content_filter.title_21",'от 8 до 10'),
-            voite: '8-10'
+            title: i18next.t("interaction.content_filter.title_21",'от 8 до 9'),
+            voite: '8-9'
+        },
+        {
+            title: i18next.t("interaction.content_filter.title_150",'от 8'),
+            start: 8
+        },
+        {
+            title: i18next.t("interaction.content_filter.title_151",'от 6'),
+            start: 6
+        },
+        {
+            title: i18next.t("interaction.content_filter.title_152",'от 4'),
+            start: 4
+        },
+        {
+            title: i18next.t("interaction.content_filter.title_153",'от 2'),
+            start: 2
         }
     ]
 }
@@ -163,7 +179,7 @@ data.country = {
     }]
 }
 
-data.genres = {
+data.genres_movie = {
     title: i18next.t("interaction.content_filter.title_57",'Жанр'),
     items: [
         {"id":28,"title":i18next.t("interaction.content_filter.title_100","боевик"),checkbox: true},
@@ -187,6 +203,30 @@ data.genres = {
         {"id":37,"title":i18next.t("interaction.content_filter.title_118","вестерн"),checkbox: true}
     ]
 }
+
+data.genres_tv = {
+    title: 'Жанр',
+    items: [
+        {"id": 10759,"title": i18next.t("interaction.content_filter.title_200","Боевик и Приключения"),checkbox: true},
+        {"id": 16,"title": i18next.t("interaction.content_filter.title_201","Мультфильм"),checkbox: true},
+        {"id": 35,"title": i18next.t("interaction.content_filter.title_202","Комедия"),checkbox: true},
+        {"id": 80,"title": i18next.t("interaction.content_filter.title_203","Криминал"),checkbox: true},
+        {"id": 99,"title": i18next.t("interaction.content_filter.title_204","Документальный"),checkbox: true},
+        {"id": 18,"title": i18next.t("interaction.content_filter.title_205","Драма"),checkbox: true},
+        {"id": 10751,"title": i18next.t("interaction.content_filter.title_206","Семейный"),checkbox: true},
+        {"id": 10762,"title": i18next.t("interaction.content_filter.title_207","Детский"),checkbox: true},
+        {"id": 9648,"title": i18next.t("interaction.content_filter.title_208","Детектив"),checkbox: true},
+        {"id": 10763,"title": i18next.t("interaction.content_filter.title_209","Новости"),checkbox: true},
+        {"id": 10764, "title": i18next.t("interaction.content_filter.title_210","Реалити-шоу"),checkbox: true},
+        {"id": 10765,"title": i18next.t("interaction.content_filter.title_211","НФ и Фэнтези"),checkbox: true},
+        {"id": 10766,"title": i18next.t("interaction.content_filter.title_212","Мыльная опера"),checkbox: true},
+        {"id": 10767,"title": i18next.t("interaction.content_filter.title_213","Ток-шоу"),checkbox: true},
+        {"id": 10768,"title": i18next.t("interaction.content_filter.title_214","Война и Политика"),checkbox: true},
+        {"id": 37,"title": i18next.t("interaction.content_filter.title_215","Вестерн"),checkbox: true}
+    ]
+}
+
+
 
 data.year = {
     title: i18next.t("interaction.content_filter.title_58",'Год'),
@@ -232,10 +272,13 @@ function selected(where){
 function main(){
     for(var i in data) selected(data[i])
 
+    let cat  = data.type.items.find(s=>s.selected).cat
+    let type = cat.indexOf('movie') >= 0 ? 'movie' : 'tv'
+
     let items = [{
         title: i18next.t("interaction.content_filter.title_60",'Начать поиск'),
         search: true
-    },data.type,data.rating,data.genres,data.country,data.year]
+    },data.type,data.rating,data['genres_'+type],data.country,data.year]
 
     Select.show({
         title: i18next.t("interaction.content_filter.title_61",'Фильтр'),
@@ -260,9 +303,14 @@ function search(){
     let countrys = []
 
     data.rating.items.forEach(a=>{
-        if(a.selected && a.voite){
-            query.push('vote_average.gte='+a.voite.split('-')[0])
-            query.push('vote_average.lte='+a.voite.split('-')[1])
+        if(a.selected && (a.voite || a.start)){
+            if(a.start){
+                query.push('vote_average.gte='+a.start)
+            }
+            else{
+                query.push('vote_average.gte='+a.voite.split('-')[0])
+                query.push('vote_average.lte='+a.voite.split('-')[1])
+            }
         }
     })
 
@@ -279,7 +327,7 @@ function search(){
         }
     })
 
-    data.genres.items.forEach(a=>{
+    data['genres_'+type].items.forEach(a=>{
         if(a.checked)  genres.push(a.id)
     })
 

@@ -43,7 +43,7 @@ function init(){
 function showCheckResult(error){
     Modal.open({
         title: '',
-        html: $('<div class="about"><div class="selector">'+(error ? i18next.t("utils.plugins.err_1",'Не удалось проверить работоспособность плагина, однако это не означает, что плагин не работает. Перезагрузите приложение для выяснения загружается ли плагин.') : i18next.t("utils.plugins.err_2",'Для работы плагина, необходимо перезагрузить приложение.') )+'</div></div>'),
+        html: $('<div class="about"><div class="selector">'+(error ? i18next.t("utils.plugins.err_1",'Не удалось проверить работоспособность плагина. Однако это не означает, что плагин не работает. Перезагрузите приложение для выяснения, загружается ли плагин.') : i18next.t("utils.plugins.err_2",'Для работы плагина необходимо перезагрузить приложение.') )+'</div></div>'),
         onBack: ()=>{
             Modal.close()
 

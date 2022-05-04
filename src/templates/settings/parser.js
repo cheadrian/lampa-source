@@ -47,7 +47,7 @@ let html = `<div>
     <div class="settings-param selector" data-type="toggle" data-name="parse_in_search">
         <div class="settings-param__name" data-i18n="settings.parser.parse_in_search_name">Парсер в поиске</div>
         <div class="settings-param__value"></div>
-        <div class="settings-param__descr" data-i18n="settings.parser.parse_in_search_descr">Искать результаты в поиске?</div>
+        <div class="settings-param__descr" data-i18n="settings.parser.parse_in_search_descr">Показывать результаты в поиске?</div>
     </div>
 </div>`
 

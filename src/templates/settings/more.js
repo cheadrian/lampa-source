@@ -47,6 +47,17 @@ let html = `<div>
         <div class="settings-param__name" data-i18n="settings.more.proxy_other_name">Проксировать остальные ресурсы</div>
         <div class="settings-param__value"></div>
     </div>
+
+    <div class="settings-param-title" data-i18n="settings.more.hints_title"><span>Подсказки</span></div>
+
+    <div class="settings-param selector" data-type="toggle" data-name="helper">
+        <div class="settings-param__name" data-i18n="settings.more.hints_name">Показывать подсказки</div>
+        <div class="settings-param__value"></div>
+    </div>
+
+    <div class="settings-param selector helper--start-again" data-static="true">
+        <div class="settings-param__name" data-i18n="settings.more.hints_again_name">Показывать подсказки по новой</div>
+    </div>
     
     <div class="settings-param-title"><span data-i18n="settings.more.others">Еще</span></div>
 

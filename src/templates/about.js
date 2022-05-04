@@ -15,7 +15,7 @@ let html = `<div class="about">
 
         <div>
             <small data-i18n="about.version">Версия</small><br>
-            1.3.8
+            1.3.9
         </div>
     </div>
 

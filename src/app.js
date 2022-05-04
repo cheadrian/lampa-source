@@ -44,6 +44,7 @@ import Recomends from './utils/recomend'
 import VideoQuality from './utils/video_quality'
 import TimeTable from './utils/timetable'
 import Broadcast from './interaction/broadcast'
+import Helper from './interaction/helper'
 
 console.log("App.js Loading");
 
@@ -88,7 +89,8 @@ window.Lampa = {
     Recomends,
     VideoQuality,
     TimeTable,
-    Broadcast
+    Broadcast,
+    Helper
 }
 
 Console.init()
@@ -119,6 +121,7 @@ function startApp(){
     Recomends.init()
     VideoQuality.init()
     TimeTable.init()
+    Helper.init()
 
     Storage.set('account_password','') //надо зачиcтить, не хорошо светить пароль ;)
 
