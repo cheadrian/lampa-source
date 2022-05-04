@@ -280,7 +280,7 @@ select('screensaver_type',{
 select('tmdb_lang',{
     'ru': i18next.t("components.settings.params.tmdb_lg_1",'Русский'),
     'en': i18next.t("components.settings.params.tmdb_lg_2",'Английский'),
-},'ru')
+},'en')
 
 select('parse_lang',{
     'df': i18next.t("components.settings.params.pars_lg_1",'Оригинал'),

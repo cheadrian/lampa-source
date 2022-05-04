@@ -32,8 +32,12 @@ function init(){
     html.find('.open--language').on('hover:enter',()=>{
         if(i18next.language === 'ru'){
             i18next.changeLanguage('en');
+            window.localStorage.setItem('parse_lang', 'df');
+            window.localStorage.setItem('tmdb_lang', 'en');
         } else {
             i18next.changeLanguage('ru');
+            window.localStorage.setItem('parse_lang', 'ru');
+            window.localStorage.setItem('tmdb_lang', 'ru');
         }
         localStorage.removeItem("activity");
         location.reload();

@@ -51,7 +51,7 @@ function edit(params, call){
         members.forEach(link => {
             links.push({
                 title: link,
-                subtitle: 'Пользовательская ссылка',
+                subtitle: i18next.t("components.settings.input.foreach_1",'Пользовательская ссылка'),
                 url: link,
                 member: true
             })

@@ -9,7 +9,8 @@
     "donate": "Donate",
     "version": "Version",
     "group": "Group",
-    "contact": "Our channel"
+    "contact": "Our channel",
+    "translation": "Translator"
   },
   "menu": {
     "home": "Home",
@@ -18,7 +19,7 @@
     "catalog": "Catalog",
     "filter": "Filter",
     "collections": "Collections",
-    "relise": "Relise",
+    "relise": "Releases",
     "anime": "Anime",
     "bookmark": "Bookmark",
     "like": "Like",
@@ -69,7 +70,7 @@
       "cub": {
         "filter_1": "Now watching",
         "filter_2": "Last addition",
-        "filter_3": "Films",
+        "filter_3": "Movies",
         "filter_4": "Cartoons",
         "filter_5": "TV series",
         "filter_6": "Adventures",
@@ -105,7 +106,7 @@
         "oncomp_1": "Continue browsing",
         "oncomp_2": "You watched",
         "movie_new": "Movie Premieres",
-        "movie_best": "Best Films",
+        "movie_best": "Best Movies",
         "movie_popular": "Popular Now",
         "movie_8448": "Ivi's Choice",
         "movie_1984": "News",
@@ -118,7 +119,7 @@
         "cat_1": "New",
         "cat_2": "Top New",
         "cat_3": "Comedy Horror Movies",
-        "cat_4": "Films about maniacs",
+        "cat_4": "Movies about maniacs",
         "cat_5": "Witch Movies",
         "cat_6": "Zombie Movies",
         "cat_7": "Russians",
@@ -153,13 +154,13 @@
         "airing": "Today on the air",
         "on_air": "This week",
         "top_2": "Top",
-        "s_movie": "Films",
+        "s_movie": "Movies",
         "s_tv": "TV series",
         "production": "Production",
         "departament": "Directed by",
         "gender_1": "Actress",
         "gender_2": "Actor",
-        "movie_g1": "- Films",
+        "movie_g1": "- Movies",
         "tv_g2": "- TV series"
       }
     },
@@ -317,7 +318,7 @@
       "performance": "Performance",
       "animation_name": "Animation",
       "animation_descr": "Animation of cards and content",
-      "mask_name": "attenuation",
+      "mask_name": "Border fade",
       "mask_descr": "Smooth fading of cards from below and from above",
       "scroll_type_name": "Scrolling type",
       "card_view_name": "Card view type",
@@ -334,11 +335,11 @@
       "more_name": "Rest"
     },
     "more": {
-      "start_page_name": "start page",
+      "start_page_name": "Start page",
       "start_page_descr": "Which page to start at startup",
       "source": "Source",
       "source_name": "Main source",
-      "source_descr": "Where to get information about films",
+      "source_descr": "Where to get information about movies",
       "tmdb_lang_name": "TMDB",
       "tmdb_lang_descr": "What language to display data from TMDB",
       "poster_size_name": "Resolution of TMDB posters",
@@ -351,7 +352,7 @@
       "others": "More",
       "pages_save_total_name": "How many pages to keep in memory",
       "pages_save_total_descr": "Keep pages as you left them.",
-      "time_offset_name": "Shift Time",
+      "time_offset_name": "Shift time",
       "navigation_type_name": "Navigation type",
       "device_name_name": "Device name",
       "clear_storage_name": "Clear cache",
@@ -374,8 +375,8 @@
       "others": "More",
       "parse_lang_name": "Search",
       "parse_lang_descr": "What language to search in?",
-      "parse_in_search_name": "Parser in search",
-      "parse_in_search_descr": "Search results in search?",
+      "parse_in_search_name": "Parser for search",
+      "parse_in_search_descr": "Using parser for search results?",
       "jackett_url_placeholder": "For example: 192.168.x",
       "jackett_key_placeholder": "For example: sa0sk83d..",
       "parser_web_placeholder": "For example: scraperapi.com"
@@ -397,7 +398,7 @@
       "subtitles_size_name": "Size ",
       "subtitles_stroke_name": "Use edging",
       "subtitles_stroke_descr": "Subtitles will be outlined in black for better readability",
-      "subtitles_backdrop_name": "Use Underlay",
+      "subtitles_backdrop_name": "Use underlay",
       "subtitles_backdrop_descr": "Subtitles will be displayed on a translucent background to improve readability",
       "others": "More",
       "video_quality_default_name": "Default video quality",
@@ -414,7 +415,7 @@
       "links": "Links",
       "torrserver_url_name": "Main link",
       "torrserver_url_descr": "Specify the main link to the TorrServer script",
-      "torrserver_url_two_name": "Extra Link",
+      "torrserver_url_two_name": "Extra link",
       "torrserver_url_two_descr": "Specify an additional link to the TorrServer script",
       "additionally": "Additionally",
       "internal_torrclient_name": "Built-in client",
@@ -424,7 +425,7 @@
       "torrserver_preload_name": "Use preload buffer",
       "torrserver_preload_descr": "Wait for TorrServer preload buffer to fill before playing",
       "authorization": "Authorization",
-      "torrserver_auth_name": "Password Login",
+      "torrserver_auth_name": "Password login",
       "torrserver_login_name": "Login",
       "torrserver_password_name": "Password",
       "torrurl_placeholder": "For example: 192.168.x",
@@ -504,18 +505,18 @@
   },
   "components": {
     "menu": {
-      "act_1": "Films",
+      "act_1": "Movies",
       "act_2": "Anime",
       "act_3": "TV series",
       "act_4": "Home - ",
       "about_title": "About the application",
       "fav_1": "Bookmarks",
       "fav_2": "Like",
-      "fav_3": "View History",
+      "fav_3": "View history",
       "fav_4": "Later",
       "timetable_title": "Schedule",
       "torrents_title": "My torrents",
-      "relise_title": "Digital Releases",
+      "relise_title": "Digital releases",
       "collections_title": "Collections",
       "collections_title_1": "Selections on ivi",
       "collections_title_2": "Collections on okko",
@@ -529,8 +530,8 @@
       "history_title_2": "Clear the history",
       "history_subtitle_2": "Delete all cards from history",
       "history_title_3": "Clear labels",
-      "history_subtitle_3": "Clear View Tags",
-      "history_title_4": "Clear Timecodes",
+      "history_subtitle_3": "Clear view Tags",
+      "history_title_4": "Clear timecodes",
       "history_subtitle_4": "Clear all timecodes",
       "notify": "Marks cleared",
       "notify_1": "Timecodes cleared"
@@ -599,7 +600,8 @@
         "show_1": "Links",
         "show_2": "Added (",
         "show_3": "Removed (",
-        "show_4": "Removed ("
+        "show_4": "Removed (",
+        "foreach_1": "Custom link"
       },
       "params": {
         "inner_1": "built-in",
@@ -607,23 +609,23 @@
         "inner_3": "built-in",
         "inner_4": "built-in",
         "trig_1": "Yes",
-        "trig_2": "Not",
+        "trig_2": "No",
         "itm_1": "Choose",
         "isize_1": "Smaller",
         "isize_2": "Normal",
-        "psize_1": "Low",
-        "psize_2": "The average",
-        "psize_3": "High",
+        "psize_1": "Small",
+        "psize_2": "Medium",
+        "psize_3": "Large",
         "torpar_1": "Directly",
         "torpar_2": "Through the website API",
         "bgtyp_1": "Complicated",
         "bgtyp_2": "Simple",
         "bgtyp_3": "Picture",
         "player_1": "built-in",
-        "torr_use_1": "main",
-        "torr_use_2": "Additional",
-        "subtz_1": "small",
-        "subtz_2": "Ordinary",
+        "torr_use_1": "Main link",
+        "torr_use_2": "Extra link",
+        "subtz_1": "Small",
+        "subtz_2": "Medium",
         "subtz_3": "Large",
         "screens_1": "Nature",
         "screens_2": "ChromeCast",
@@ -633,7 +635,7 @@
         "pars_lg_2": "Russian",
         "play_tmc_1": "Start over",
         "play_tmc_2": "Proceed",
-        "play_tmc_3": "To ask",
+        "play_tmc_3": "Ask",
         "play_scl_1": "Transform",
         "play_scl_2": "Calculate",
         "start_pg_1": "home",
@@ -643,10 +645,10 @@
         "start_pg_5": "Browsing history",
         "start_pg_6": "My torrents",
         "start_pg_7": "Last",
-        "card_view_1": "Upload",
-        "card_view_2": "show all",
+        "card_view_1": "Lazy load",
+        "card_view_2": "Show all",
         "nav_type_1": "Remote controller",
-        "nav_type_2": "Remote control with mouse"
+        "nav_type_2": "Remote control and mouse"
       }
     },
     "timetable": {
@@ -678,12 +680,12 @@
       "hdr_arr": {
         "0": "Not chosen",
         "1": "Yes",
-        "2": "Not"
+        "2": "No"
       },
       "sub_arr": {
         "0": "Not chosen",
         "1": "Yes",
-        "2": "Not"
+        "2": "No"
       },
       "tracker": "Any",
       "year": "Any",
@@ -734,7 +736,7 @@
       "title_10": "Collections -"
     },
     "person": {
-      "movie_title": "Films",
+      "movie_title": "Movies",
       "tv_title": "TV series"
     }
   },
@@ -780,7 +782,7 @@
       "title_19": "from 3 to 6",
       "title_20": "from 6 to 8",
       "title_21": "from 8 to 10",
-      "title_22": "Side",
+      "title_22": "Country",
       "title_23": "Ukraine",
       "title_24": "USA",
       "title_25": "Russia",
@@ -838,7 +840,7 @@
       "title_58": "Year",
       "title_59": "Any",
       "title_200": "Not chosen",
-      "title_60": "To start searching",
+      "title_60": "Start search selection",
       "title_61": "Filter",
       "title_62": "Filter"
     },
@@ -920,7 +922,7 @@
     "player": {
       "title_1": "Action",
       "title_2": "Continue browsing from",
-      "title_3": "Not",
+      "title_3": "No",
       "info": {
         "ele_size": "Loading..."
       },

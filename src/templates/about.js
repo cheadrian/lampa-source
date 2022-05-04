@@ -24,6 +24,10 @@ let html = `<div class="about">
             <small data-i18n="about.donate">Донат</small><br>
             www.boosty.to/lampatv
         </div>
+        <div>
+            <small data-i18n="about.translation">переводчик</small><br>
+            Implemented i18next - Github: <a style="color:white;" href="https://github.com/cheadrian/">@cheadrian</a>
+        </div>
     </div>
 </div>`
 
