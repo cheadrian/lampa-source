@@ -333,7 +333,7 @@
       "torrserver_name": "TorrServer",
       "plugins_name": "Plugins",
       "cloud_name": "Synchronization",
-      "more_name": "Rest"
+      "more_name": "Other settings"
     },
     "more": {
       "start_page_name": "Start page",
@@ -358,10 +358,10 @@
       "device_name_name": "Device name",
       "clear_storage_name": "Clear cache",
       "clear_storage_value": "All settings and data will be cleared",
-      "device_placeholder": "For example: My Lamp",
-      "hints_title": "",
+      "device_placeholder": "For example: My Lampa",
+      "hints_title": "Tips & tricks",
       "hints_name": "Show hints",
-      "hints_again_name": "Show tips for new"
+      "hints_again_name": "Show tips again"
     },
     "parser": {
       "parser_use_name": "Use parser",
