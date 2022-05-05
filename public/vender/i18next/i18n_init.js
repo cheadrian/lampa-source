@@ -34,7 +34,11 @@ $(function () {
       fallbackLng: 'en',
       load: 'languageOnly',
       saveMissing: false,
-      preload:['en']
+      preload:['en'],
+      backend: { 
+        crossDomain: true,
+        loadPath: './locales/{{lng}}/{{ns}}.json'
+      }
     }, (err, t) => {
       if (err) {
         $('body').append('<div style="margin: 15px;color: white;z-index: 999;position: absolute;">Error loading translation: i18next init.</div>');

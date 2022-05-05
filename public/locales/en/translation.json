@@ -1030,5 +1030,14 @@
     "helper": {
       "noty_1": "Successful, tips will be shown again"
     }
+  },
+  "app": {
+    "title_exit": "Quit",
+    "title_exit_1": "Yes, get out",
+    "title_exit_2": "Don't exit",
+    "book": "Bookmarks",
+    "like": "Like",
+    "history": "Browsing history",
+    "history_1": "Later"
   }
 }

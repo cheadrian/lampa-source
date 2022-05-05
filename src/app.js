@@ -134,14 +134,14 @@ function startApp(){
             let enabled = Controller.enabled()
 
             Select.show({
-                title: 'Выход',
+                title: i18next.t("app.title_exit",'Выход'),
                 items: [
                     {
-                        title: 'Да, выйти',
+                        title: i18next.t("app.title_exit_1",'Да, выйти'),
                         out: true
                     },
                     {
-                        title: 'Продолжить'
+                        title: i18next.t("app.title_exit_2",'Продолжить')
                     }
                 ],
                 onSelect: (a)=>{
@@ -264,7 +264,7 @@ function startApp(){
                 
                 Activity.push({
                     url: '',
-                    title: type == 'book' ? 'Закладки' : type == 'like' ? 'Нравится' : type == 'history' ? 'История просмотров' : 'Позже',
+                    title: type == 'book' ? i18next.t("app.book",'Закладки') : type == 'like' ? i18next.t("app.like",'Нравится') : type == 'history' ? i18next.t("app.history",'История просмотров') : i18next.t("app.history_1",'Позже'),
                     component: 'favorite',
                     type: type,
                     page: 1

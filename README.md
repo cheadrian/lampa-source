@@ -29,6 +29,10 @@ You can also generate files for different environements:
 
     npm run start [pack_webos,pack_tizen,pack_github,pack_plugins,test]
 
+## Releases
+
+You can find releases here: https://github.com/cheadrian/lampa
+
 ## Original description
 
 Все исходники приложения **lampa**, всем желаюшим прошу до хаты :)
