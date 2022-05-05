@@ -1,6 +1,7 @@
 /*
  * Regex to select RU on .json file: (?<=: ".*)([а-яА-ЯёЁ].*)(?=")
  * Regex to find RU in files (?<=['">])([а-яА-ЯёЁ].*?)(?=['"<])
+ * i18next@20.6.1 compatible with older (e.g. Chrome v38) version for WebOS
  */
 
 const lngs = {
@@ -8,7 +9,7 @@ const lngs = {
   ru: { nativeName: 'Russian' }
 };
 
-const rerender = () => {
+const rerender = function() {
   // start localizing, details:
   // https://github.com/i18next/jquery-i18next#usage-of-selector-function
   $('body').localize();
@@ -30,16 +31,18 @@ $(function () {
     // init i18next
     // for all options read: https://www.i18next.com/overview/configuration-options
     .init({
-      debug: true,
-      fallbackLng: 'en',
+      compatibilityJSON: 'v3',
+      debug: false,
+      supportedLngs: ['en', 'ru'],
+      //lng: "en",
+      fallbackLng: ['en'],
       load: 'languageOnly',
       saveMissing: false,
       preload:['en'],
       backend: { 
-        crossDomain: true,
-        loadPath: './locales/{{lng}}/{{ns}}.json'
+        loadPath: 'locales/{{lng}}/{{ns}}.json',
       }
-    }, (err, t) => {
+    }, function(err, t) {
       if (err) {
         $('body').append('<div style="margin: 15px;color: white;z-index: 999;position: absolute;">Error loading translation: i18next init.</div>');
         return console.error(err);
@@ -49,19 +52,19 @@ $(function () {
       // https://github.com/i18next/jquery-i18next#initialize-the-plugin
       jqueryI18next.init(i18next, $, { useOptionsAttr: false, parseDefaultValueFromContent: true });
 
-      $('body').append('<script id="lampa-app" src="app.js"></script>');
+      $('body').append('<script id="lampa-app" src="app.min.js"></script>');
       
       // fill language switcher
-      Object.keys(lngs).map((lng) => {
+      Object.keys(lngs).map(function(lng) {
         const opt = new Option(lngs[lng].nativeName, lng);
         if (lng === i18next.resolvedLanguage) {
           opt.setAttribute("selected", "selected");
         }
         $('#languageSwitcher').append(opt);        
       });
-      $('#languageSwitcher').change((a, b, c) => {
+      $('#languageSwitcher').change(function(a, b, c) {
         const chosenLng = $(this).find("option:selected").attr('value');
-        i18next.changeLanguage(chosenLng, () => {
+        i18next.changeLanguage(chosenLng, function(){
           localStorage.removeItem("activity");
           location.reload();
           //$('#lampa-app').remove();
@@ -75,32 +78,12 @@ $(function () {
     });
 });
 
-//Wait for translation to load
-//while(!i18next.isInitialized) {
-    //Nothing
-//}
-
-//$(function(){
-  //setInterval(()=> $("body").localize(), 250);
-//});
-
-//$("body").on("hover:enter", function(){ $(this).localize() });
-
 //Observe changes in DOM using MutationObserver, bind class to localize
 $(function(){
 const targetNode = document.getElementsByTagName('body')[0];
 const config = { attributes: true, childList: false, subtree: false };
-//var lang_filled = false;
 const callback = function(mutationsList, observer) {
-  /*if(!lang_filled){
-  *  const someDiv = document.getElementById('languageSwitcher');
-  *  if(someDiv !== null)
-  *  {
-  *    lang_filled = true;
-  *    
-  *  }
-  }*/
-  for(const mutation of mutationsList) {
+  for(var mutation of mutationsList) {
     if (mutation.type === 'attributes') {
       if(mutation.attributeName === 'class'){
         $("body").localize();
@@ -108,7 +91,6 @@ const callback = function(mutationsList, observer) {
     }
   }
 };
-
 const observer = new MutationObserver(callback);
 observer.observe(targetNode, config);
-})
+});
