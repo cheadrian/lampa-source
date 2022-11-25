@@ -1,3 +1,6 @@
+# Achived
+Language picker was added in the [upstream](https://github.com/ProgressoRU/lampa-source).
+
 # Lampa
 ## i18next - translation
 
